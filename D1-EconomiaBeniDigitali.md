@@ -177,13 +177,13 @@ Enti non ufficiali e Consorzi:
 
 I requisiti per l’affermarsi di uno standard sono:
 
- 	1. Capacità di **innovare**, aumento del valore del prodotto
-     2. **Accettazione** degli utenti
-     3. **Controllo** sulla base installata di utenti
-     4. **Diritti** sulla proprietà intellettuale
-     5. Vantaggi della **prima mossa**
-     6. Forza nei **mercati** dei prodotti complementari
-     7. **Brand** riconosciuto e reputazione
+1. Capacità di **innovare**, aumento del valore del prodotto
+2. **Accettazione** degli utenti
+3. **Controllo** sulla base installata di utenti
+4. **Diritti** sulla proprietà intellettuale
+5. Vantaggi della **prima mossa**
+6. Forza nei **mercati** dei prodotti complementari
+7. **Brand** riconosciuto e reputazione
 
 ## Co-opetition
 
