@@ -48,9 +48,7 @@ Nelle tappe di avvicinamento all’e-book troviamo lavori pionieristici e intuiz
 
 - Memex, anni ‘40 di Vannevar Bush: dispositivo di lettura di testi conservati su microfilm, per semplificare ritrovamento e organizzazione dei testi. Più vicino all’idea di ipertesto che al libro
 
-  ```bash
-  ![rete](img/donnalibro.png)
-  ```
+  
 
 Studio delle interfacce di lettura e digitalizzazione elettronica dei testi:
 
@@ -257,7 +255,9 @@ Un documento EPUB è un contenitore di contenuti, un contenitore in grado di add
 - Usato principalmente per Magazine e periodici, ma utile
   anche per enhanced eBook
 
-![](img/indesigncc.png)
+
+
+[![Foo](img/indesigncc.png)](https://www.youtube.com/watch?v=FaJG3buRh2Y)
 
 
 
@@ -453,10 +453,10 @@ Un documento EPUB è un contenitore di contenuti, un contenitore in grado di add
 #### MANUALI DI CALIBRE
 
 - Editing eBooks :
-  - [manual.calibre-ebook.com/edit.html]()
+  - https://manual.calibre-ebook.com/edit.html
 - Video tutorial per diverse funzionalità (Grand Tour) e per
   editing:
-  - [](calibre-ebook.com/demo#tutorials)
+  - https://calibre-ebook.com/demo#tutorials
 
 #### CONVERSIONE DI FORMATI IN CALIBRE
 
@@ -520,11 +520,11 @@ Per facilitare la conversione in formato ePUB occorre:
   permette, ad esempio per annotazioni condivise o per logging
   delle azioni degli utenti serve una soluzione serverside
   fruibile con qualsiasi browser
--  [EPUB.js](lukesblog.it) questa soluzione per pagina web ospitate su
+-  [EPUB.js](https://github.com/futurepress/epub.js/) questa soluzione per pagina web ospitate su
   un server che include la libreria
   - Inclusione di un documento ePUB
   - Riferimento a porzioni del documento tramite URI
-  - Annotazioni attraverso [hypothes.is](lukesblog.it)
+  - Annotazioni attraverso [hypothes.is](https://web.hypothes.is/)
 
 
 
@@ -532,12 +532,12 @@ Per facilitare la conversione in formato ePUB occorre:
 
 
 
-- Il progetto [hypothes.is](lukesblog.it) intende realizzare un layer di
+- Il progetto [hypothes.is](https://web.hypothes.is/) intende realizzare un layer di
   annotazioni che può essere usato da gruppi di lavoro che
   intendono annotare pagine web
 - Distinzione tra owner e user di una risorsa weB
 -  Per annottare è richiesto un account a hypothes.is
-- Esistono delle [API](lukesblog.it) per accedere alle annotazioni
+- Esistono delle [API](https://h.readthedocs.io/en/latest/api-reference/v2/#tag/annotations) per accedere alle annotazioni
 
 
 
