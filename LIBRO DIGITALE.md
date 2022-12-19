@@ -488,7 +488,7 @@ Per facilitare la conversione in formato ePUB occorre:
 - Salvare in formato rtf e con Calibre esportare in ePUB
 
 - con OpenOffice o LibreOffice convertire in .ePUB tramite
-  l’estensione Writer2ePub scaricabile da [](lukesblog.it)
+  l’estensione Writer2ePub scaricabile da [lukesblog](https://lukesblog.it/)
 - salvare in HTML e intervenire sul codice aggiungendo stili con CSS
 - salvare in txt e intervenire molto pesantemente sul codice e
   sugli stili
