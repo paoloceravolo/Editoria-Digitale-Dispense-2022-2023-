@@ -13,7 +13,7 @@ Le caratteristiche principali di questa invenzione furono:
 
 Grazie a queste caratteristiche la sua tecnica in breve tempo si diffuse in tutta Europa.
 
-L'italia ebbe un compito importante nella diffusione dell'industria dell'editoria, in particolare **Venezia**,  che viene considerata la **prima capitale dell’industria editoriale**.
+L'Italia ebbe un compito importante nella diffusione dell'industria dell'editoria, in particolare **Venezia**,  che viene considerata la **prima capitale dell’industria editoriale**.
 Questo fu possibile grazie alle sue  numerose rotte commerciali, la presenza di grossi capitali, di varie comunità nazionali e l’assenza di censura.
 
 - Nel ‘500 a Venezia si stampava la metà dei libri pubblicati in tutta Europa.
@@ -52,9 +52,9 @@ Vi è un grosso aumento della domanda grazie a:
 - Istruzione
 - Intrattenimento
 
-L’illuminismo è periodo di grande fermento
+L’Illuminismo è periodo di grande fermento
 
-Il romanticismo rafforza il valore dell’opera e dell’autore come strumenti di costruzione dello spirito nazionale. 
+Il Romanticismo rafforza il valore dell’opera e dell’autore come strumenti di costruzione dello spirito nazionale. 
 
 Il novecento inizierà a mettere in discussione questi valori, pur continuando a praticarli. 
 
