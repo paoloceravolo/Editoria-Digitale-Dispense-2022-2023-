@@ -106,7 +106,7 @@ Il grado di complessità e internazionalizzazione del mercato influisce sulla ri
 
 Storicamente si osservano **diverse fasi**, con una differenza tra approccia anglosassone **più liberale** e approccio continentale **più statalista**.
 
-fine del XIX secolo - metà del XX secolo: legittimazione di monopoli acquisiti o definizione per legge di monopoli
+Fine del XIX secolo - metà del XX secolo: legittimazione di monopoli acquisiti o definizione per legge di monopoli
 
 Seconda metà del XX secolo: liberalizzazione dei mercati
 
@@ -118,7 +118,7 @@ Si possono distinguere diversi tipi di standard :
 
 - **Proprietari** vs. **non** **proprietari** (aperti)
 - **Prescrittivi** vs. **descrittivi**
-- **De** **Jure** vs. **de** **Facto**
+- **De** **Jure** (legge) vs. **de** **Facto** (uso comune)
 
 Ci sono diverse modalità con le quali viene creato uno standard:
 
@@ -130,8 +130,10 @@ Ci sono diverse modalità con le quali viene creato uno standard:
 
 L’impatto degli standard nelle Tecnologie dell’Informazione coinvolge:
 
-- **Interoperabilità**: fare in modo che i sistemi lavorino insieme (ad esempio, permettere che software diversi accedano agli stessi dati)
-- **Portabilità**: permettere che il software funzioni su architetture diverse (ad esempio, un linguaggio di programmazione comune)
+- **Interoperabilità**: fare in modo che i sistemi lavorino insieme
+  (*ex:* permettere che software diversi accedano agli stessi dati)
+- **Portabilità**: permettere che il software funzioni su architetture diverse
+  (*ex:* un linguaggio di programmazione comune)
 
 Sul piano dell'adozione della tecnologia:
 
@@ -161,15 +163,15 @@ Nazionali:
 
 Internazionali:
 
-- **ISO**
-- **IEC**
-- **ITU**
+- **ISO** (International Organization for Standardization)
+- **IEC** (International Electrotechnical Commission)
+- **ITU** (International Telecommunication Union)
 
 Enti non ufficiali e Consorzi:
 
-- **W3C**
-- **OASIS**
-- **OMG**
+- **W3C** (World Wide Web Consortium)
+- **OASIS** (Organization for the Advancement of Structured Information Standards)
+- **OMG** (Object Management Group)
 
 ## Evoluzione di uno standard
 
