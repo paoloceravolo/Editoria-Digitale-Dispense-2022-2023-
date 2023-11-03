@@ -33,7 +33,7 @@ Un mercato raggiunge l'equilibrio quando la quantità domandata in corrispondenz
 
 ![Grafico-DomandaOfferta](img/Grafico-DomandaOfferta.png)
 
-- **P > P0**: il prezzo è superiore al prezzo di equilibrio, **eccedenza**. A questo prezzo la quantità offerta supera la quantità domandata I venditori si troveranno con merce invenduta e, per liberare i magazzini, comincieranno a praticare sconti ed a diminuire gli ordini. Il prezzo scende a causa di un eccesso di offerta.
+- **P > P0**: il prezzo è superiore al prezzo di equilibrio, **eccedenza**. A questo prezzo la quantità offerta supera la quantità domandata I venditori si troveranno con merce invenduta e, per liberare i magazzini, cominceranno a praticare sconti ed a diminuire gli ordini. Il prezzo scende a causa di un eccesso di offerta.
 - **P < P0**: il prezzo è inferiore al prezzo di equilibrio, **carenza**. I compratori chiedono maggiori quantità di quelle disponibili. I venditori si rendono conto che anche alzando il prezzo non riescono a tener dietro alla domanda. Il prezzo sale a causa di una carenza di offerta (o eccesso di domanda).
 
 ## Prezzi positivi 
@@ -45,14 +45,14 @@ Tra le strategie per ottenere profitti positivi possiamo trovare le **Barriere**
 - **Lock-in tecnologico** le aziende che vogliono interfacciarsi su quel tipo di mercato sono impossibilitate a dotarsi delle tecnologie necessarie. 
   *ex: brevetti*
 - **Lock-in normativo** regolamenti e norme che impediscono oppure ostacolano l'ingresso nel mercato da parte delle nuove imprese. 
-  *ex: concessioni autrostradali*
+  *ex: concessioni autostradali*
 
 Oltre a queste troviamo la **fidelizzazione** e la **differenziazione del prodotto** ovvero:
 
 - **Branding** processo effettuato dalle imprese per differenziare la propria offerta da altre analoghe
 - **Versioning** più versioni dello stesso prodotto differenziate da diversi gradi di completezza
 - **Binding** accessori inseriti alla vendita 
-  *ex: internet explorer inserito all'interno di prodotti microsoft*
+  *ex: Internet Explorer inserito all'interno di prodotti microsoft*
 
 ## Beni digitali
 
