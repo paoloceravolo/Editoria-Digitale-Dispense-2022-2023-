@@ -31,7 +31,7 @@ Tutto questo ha impatto sul sistema degli scambi, quindi sulla società e sui mo
 
 Un mercato raggiunge l'equilibrio quando la quantità domandata in corrispondenza di un certo prezzo è uguale all'offerta per quello stesso prezzo `( Q0; P0 )`. In condizioni di equilibrio tutte le persone che desiderano acquistare un dato bene o servizio a un particolare prezzo sono soddisfatte. 
 
-![Grafico-DomandaOfferta](img/Grafico-DomandaOfferta.png)
+![Grafico-DomandaOfferta](img/L1-EconomiaBeniDIgitali/Grafico-DomandaOfferta.png)
 
 - **P > P0**: il prezzo è superiore al prezzo di equilibrio, **eccedenza**. A questo prezzo la quantità offerta supera la quantità domandata I venditori si troveranno con merce invenduta e, per liberare i magazzini, cominceranno a praticare sconti ed a diminuire gli ordini. Il prezzo scende a causa di un eccesso di offerta.
 - **P < P0**: il prezzo è inferiore al prezzo di equilibrio, **carenza**. I compratori chiedono maggiori quantità di quelle disponibili. I venditori si rendono conto che anche alzando il prezzo non riescono a tener dietro alla domanda. Il prezzo sale a causa di una carenza di offerta (o eccesso di domanda).
@@ -71,7 +71,7 @@ In alcuni mercati la rete incrementa il valore di un servizio, la rete ha quindi
 - **Positivo**, quando il valore di un bene per un individuo aumenta all'aumentare delle persone che posseggono lo stesso bene (esternalità di rete dirette), o all'aumentare dei prodotti complementari (esternalità di rete indirette). Gli standard sono strumenti per creare esternalità di rete positive. 
 - **Negativo**, quando l'utilità di una infrastruttura diminuisce all'aumentare dell'utilizzo che se ne fa, ad esempio a causa di fenomeni di congestione. 
 
-![rete](img/Rete.png)
+![Esternalità della rete](img/L1-EconomiaBeniDIgitali/EsternalitaRete.png)
 
 Questo effetto influenza in maniera determinante la coordinazione di un mercato:
 
@@ -87,6 +87,7 @@ La **perfetta contendibilità** richiede che l’impresa potenziale entrante:
 -  abbia la **stessa tecnologia**, la stessa informazione e la stessa possibilità di produzione dell’impresa presente nel mercato
 -  abbia **costi non recuperabili pari a zero**, così che l’uscita dal mercato sia senza costi, e non esistano barriere all’uscita
 -  possa entrare effettivamente prima che l’impresa già operante sia in grado di abbassare i prezzi
+![Modelli di Business per i Beni Digitali](img/L1-EconomiaBeniDIgitali/ModelliBusinnesPerBeniDigitali.png)
 
 ## La notazione di standard
 
