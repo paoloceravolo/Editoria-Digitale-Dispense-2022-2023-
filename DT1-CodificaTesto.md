@@ -112,7 +112,7 @@ Su questa base è stato creato il codice ASCII, basato appunto sull’uso di 7 b
 |     B     | 1000010 |
 |     b     | 1100000 |
 
-![ASCII_Code_Chart](img/1920px-ASCII_Code_Chart.png)
+![ASCII_Code_Chart](img/LT1-CodificaTesto/1920px-ASCII_Code_Chart.png)
 
 ### Limiti di ASCII 
 
@@ -162,7 +162,7 @@ Usato per situazioni dove si vuole bilanciare l'uso di memoria con la velocità 
 Caratteri codificati da 4 byte (32 bit). 
 Usato quando non si ritiene di avere problemi di memoria oppure se si fa uso di vocabolari poco frequenti
 
-![Unicode_UTF_8-16-32](img/UTF.png)
+![Unicode_UTF_8-16-32](img/LT1-CodificaTesto/UTF.png)
 
 ## Problemi di codifica
 
