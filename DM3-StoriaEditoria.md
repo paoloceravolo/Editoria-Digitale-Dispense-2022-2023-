@@ -30,7 +30,7 @@ Tra la fine del ‘400 e la prima metà del ‘500 a Venezia furono attivi cent
   - Invenzione del formato in ottavo, precursore del tascabile
   - Il primo o proporre un catalogo delle opere edite dalla sua casa
 
-​	![MappaEditoria](img/diffusioneEditoria.jpeg)
+​	![MappaEditoria](img/LM3-StoriaEditoria/diffusioneEditoria.jpeg)
 
 Nella seconda metà del ‘500 la leadership nella pubblicazione di libri passò per un certo periodo ai Paesi Bassi.
 Ad esempio la serie di testi a duodecimo (di piccolo formato) dei classici latini che gli Elzeviri (casa fondata nel 1593) iniziarono a pubblicare nel 1629 era più che all'altezza delle precedenti edizioni Aldine in termini di qualità ma era proposta a un prezzo più contenuto.
@@ -120,7 +120,7 @@ Il termine testo (dal latino textus "intreccio, tessuto") sta ad indicare un ins
 
 Per lungo tempo l’opera è tale se è riconosciuta da degli esperti come tale, se rispetta certi canoni, se ha un valore culturale definito e condiviso.
 
-![opera](img/opera.jpg)
+![opera](img/LM3-StoriaEditoria/opera.gif)
 
 ## Crisi della Nozione di Opera
 
@@ -160,13 +160,15 @@ Il livello di istruzione si conferma l’elemento determinante: legge libri il 7
 
 L’abitudine alla lettura continua ad essere più diffusa nelle regioni del Nord: ha letto almeno un libro il 48,2% delle persone residenti nel Nord-ovest, il 48,5% di quelle del Nord-est, il 44,3% delle regioni del Centro e il 29,2% dei residenti al Sud.
 
-![grafico1-storiaEditoria](img/grafico1-storiaEditoria.webp)
+![grafico1-storiaEditoria](img/LM3-StoriaEditoria/grafico_istat_01.png)
 
-![grafico2-storiaEditoria](img/grafico2-storiaEditoria.png)
+![grafico2-storiaEditoria](img/LM3-StoriaEditoria/grafico_istat_02.png)
 
-![grafico3-storiaEditoria](img/grafico3-storiaEditoria.webp)
+![grafico3-storiaEditoria](img/LM3-StoriaEditoria/grafico_istat_03.png)
 
-![grafico3-storiaEditoria](img/grafico4-storiaEditoria.png)
+![grafico4-storiaEditoria](img/LM3-StoriaEditoria/grafico_istat_04.png)
+
+![grafico5-storiaEditoria](img/LM3-StoriaEditoria/grafico_istat_05.png)
 
 ## Sfide dell'Editoria nell'Era Digitale
 
