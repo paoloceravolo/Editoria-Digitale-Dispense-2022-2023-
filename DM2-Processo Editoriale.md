@@ -4,7 +4,7 @@ Il processo di produzione editoriale è il complesso insieme di attività coinvo
 La sfida è fare in modo che l’opera passi dal concepimento alla sua disponibilità per il pubblico
 Il processo può variare, tradizionalmente le fasi chiave sono:
 
-Processo_prod_editoriale.png
+![Fasi del processo di produzione editoriale](img/LM2-ProcessoEditoriale/Processo_prod_editoriale.png)
 
 ## Multicanalità
 
