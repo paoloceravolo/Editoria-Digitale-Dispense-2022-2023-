@@ -8,7 +8,7 @@ Si tratta di aspetti che richiedono un approccio multidisciplinare (ci sono molt
 - Conoscenza della tecnologia e dei suoi trend di sviluppo
 - Misurazione delle proprietà di un sistema
   
-![Technology_Acceptance_Model](/img/LM4-Accettazione della tecnologia/Technology_Acceptance_Model.png)
+![Technology_Acceptance_Model](/img/LM4-AccettazioneDellaTecnologia/Technology_Acceptance_Model.png)
 
 ## Fattori del TAM
 
@@ -45,9 +45,9 @@ Per definire questi passaggi le organizzazioni si aiutano spesso attraverso dei 
 Tutti i modelli di maturità presentano diversi livelli crescenti di avanzamento che possono essere assegnati a diverse elementi del sistema.
 Uno dei più noti è il Capability Maturity Model Integration (CMMI), che prevede cinque livelli.
 
-![Caratteristiche di capacità del Maturity Model](/img/LM4-Accettazione della tecnologia/Characteristics_of_Capability_Maturity_Model.png)
+![Caratteristiche di capacità del Maturity Model](img/LM4-AccettazioneDellaTecnologia/Characteristics_of_Capability_Maturity_Model.png)
 
-![Maturity Model del IBM](/img/LM4-Accettazione della tecnologia/maturity-model-IBM.png)
+![Maturity Model del IBM](img/LM4-AccettazioneDellaTecnologia/maturity-model-IBM.png)
 
 Source: [Use an IT maturity model by Antonella Bertoletti IBM, Cloud Adoption Leader, IBM](https://www.ibm.com/garage/method/practices/think/it-maturity-model/)
 
@@ -55,12 +55,14 @@ Source: [Use an IT maturity model by Antonella Bertoletti IBM, Cloud Adoption Le
 
 #### iPod -> Apple Store -> iPhone
 
-![Timeline iPod](/img/LM4-Accettazione della tecnologia/ipod_timeline.png)
+![Timeline iPod](img/LM4-AccettazioneDellaTecnologia/ipod_timeline.png)
 
 Prima di lanciare iPhone e le sue app, Apple ha introdotto gradualmente agli utenti il nuove interfacce fino ad arrivare all'iPod Touch che è molto somigliante al primo iPhone.
 
-![Confronto Itunes con AppStore](/img/LM4-Accettazione della tecnologia/itunes-appstore.jpg)]
+![Confronto Itunes con AppStore](img/LM4-AccettazioneDellaTecnologia/itunes-appstore.jpg)
 
 Man mano hanno persino reso simile iTunes al primo App Store in modo che gli utenti si abituassero ad utilizzarlo
 
 #### OpenAI
+![Timeline OpenAI](img/LM4-AccettazioneDellaTecnologia/OpenAI_timeline.png)
+
