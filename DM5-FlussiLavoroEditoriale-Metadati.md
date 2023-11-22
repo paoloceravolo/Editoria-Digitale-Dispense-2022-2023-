@@ -2,6 +2,7 @@
 
 ## Gestione documentale
 Nella produzione editoriale possono esistere diversi flussi di creazione e gestione dei documenti.
+
 Differiscono in base a:
 - Flusso di lavoro
   - Qualità contenuti
@@ -45,24 +46,25 @@ I metadati sono ovunque, a volte invisibili ma presenti.
 
 ![Mappa con il tracciamento di cellulari](img/LM5-FlussiLavoroEditoriale-Metadati/TabulatiTelefonici.webp)
 > (A) Traccia di un utente di telefonia mobile anonimizzato durante un giorno. I punti rappresentano gli orari e i luoghi in cui l'utente ha effettuato o ricevuto una chiamata. Ogni volta che l'utente ha un'interazione di questo tipo, viene registrata l'antenna più vicina che instrada la chiamata.
-<br/>  
-(B) La traccia dello stesso utente registrata in un database della mobilità. Il reticolo di Voronoi, rappresentato dalle linee grigie, è un'approssimazione delle aree di ricezione delle antenne, l'informazione di localizzazione più precisa a nostra disposizione. I tempi di interazione dell'utente sono qui registrati con una precisione di un'ora.
-<br/> 
-(C) La traccia dello stesso individuo quando abbassiamo la risoluzione del nostro set di dati attraverso l'aggregazione spaziale e temporale. Le antenne vengono aggregate in cluster di dimensione due e le regioni associate vengono unite. Le interazioni dell'utente sono registrate con una precisione di due ore. L'aggregazione spaziale e temporale rende indistinguibili le interazioni delle 8:32 e delle 9:15 del mattino.
+> <br/>
+> (B) La traccia dello stesso utente registrata in un database della mobilità. Il reticolo di Voronoi, rappresentato dalle linee grigie, è un'approssimazione delle aree di ricezione delle antenne, l'informazione di localizzazione più precisa a nostra disposizione. I tempi di interazione dell'utente sono qui registrati con una precisione di un'ora.
+> <br/>
+> (C) La traccia dello stesso individuo quando abbassiamo la risoluzione del nostro set di dati attraverso l'aggregazione spaziale e temporale. Le antenne vengono aggregate in cluster di dimensione due e le regioni associate vengono unite. Le interazioni dell'utente sono registrate con una precisione di due ore. L'aggregazione spaziale e temporale rende indistinguibili le interazioni delle 8:32 e delle 9:15 del mattino.
 
 Source: [Unique in the crowd: the privacy bounds of human mobility](http://www.nature.com/articles/srep01376)
 
 ## Metadati sono dati
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/SoggettoPredicatoOggetto.png" width="300">
+
 - Metadati sono dati sui dati
-  - Metadati sono descrizioni di un oggetto
-    ![Ho un Soggetto applico un Predicato e così indico un Oggetto](img/LM5-FlussiLavoroEditoriale-Metadati/SoggettoPredicatoOggetto.png)
+  - Metadati sono descrizioni di un oggetto    
   - Le descrizioni sono affermazioni su un oggetto, informazioni sull’oggetto
   - Siccome possiamo collegare oggetti a risorse informative che li descrivono e identificano possiamo dire che i metadati possono riferirsi a qualsiasi oggetto
     - Questa risorsa è un libro
     - Questo libro ha un autore
     - Questo autore ha un nome
 
-​![Ho dei dati che riguardano altri dati](img/L5.2-FlussiLavoroEditoriale-Metadati/EsempioDatiSuiDati.jpg)
+​![Ho dei dati che riguardano altri dati](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioDatiSuiDati.png)
 
 ### Cosa sono i dati e cosa i metadati
 Il censimento raccoglie metadati descrittivi sulla famiglia
@@ -70,7 +72,7 @@ Il censimento raccoglie metadati descrittivi sulla famiglia
   - I metadati sono diventati dati
 - **Conclusione:** cosa siano i dati e cosa siano i metadati dipende dal punto di vista
 
-![Cosa sono i dati e cosa i metadati](img/L5.2-FlussiLavoroEditoriale-Metadati/DatiMetadati.png)​
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/DatiMetadati.png" width="700">​
 
 ## Perché i metadati
 - Per potere catalogare e concettualizzare i dati
@@ -88,8 +90,8 @@ Il censimento raccoglie metadati descrittivi sulla famiglia
   - Amministrativi
   - Tecnici    
   - Utilizzo
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/TipiDiMetadati.png" width="700">
 
-![Elenco tipi di metadati](img/LM5-FlussiLavoroEditoriale-Metadati/TipiDiMetadati.png)
 [Esempi](https://www.getty.edu/publications/intrometadata/setting-the-stage/)
 
 ## Oggetto vs. Collezione
@@ -179,7 +181,8 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
    - L’insieme delle coppie Elemento/Valore, cioè le frasi che si possono usare per zescrivere le risorsa
 
 #### *Esempio*
-![Foto della Monna Franky](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg)
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
+
 >Title: Monna Franky
 <br/> Creator: Leonardo da Vinci
 <br/> Subject: Franky del Giocondo
@@ -200,7 +203,8 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
   - No a due record per la stessa risorsa
 
 #### *Esempio*
-![Foto della Monna Franky](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg)
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
+
 > Title: Monna Franky
 <br/> Creator: Leonardo da Vinci
 <br/> Subject: Franky del Giocondo
@@ -235,7 +239,8 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 ```
 
 ### *Esempio*
-![Foto della Monna Franky](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg)
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
+
 > Title: Monna Franky
 <br/> Creator: Leonardo da Vinci
 <br/> Subject: Franky del Giocondo
@@ -246,7 +251,8 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 
 </br></br>
 
-![Immagine digitale della Monna Franky](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisa.jpg)
+<img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisa.jpg" width="200">
+
 > Title: Monna Franky
 <br/> Creator: chi ha creato img digitale
 <br/> Subject: Franky del Giocondo
@@ -271,6 +277,7 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 
 #### *Esempio*
 ![Sito con metadati](img/LM5-FlussiLavoroEditoriale-Metadati/EsempioSitoMetadati.jpeg)
+
 Le informazioni relative alle diverse aree di un sito sono costruite grazie ai metadati.
 
 - È possibile verificare la struttura dei metadati utilizzando [Rich Results Test](https://search.google.com/test/rich-results) di Google o lo [Schema Markup Validator](https://validator.schema.org/) di schema.org
@@ -288,6 +295,7 @@ Ogni parola e ogni frase può essere usata per classificare
   - Flicker usa tag completamente liberi
 
 *Esempio*: Metadati di Youtube
+
 ![Pagina di caricamento video di Youtube, puoi scrivere la maggior parte dei metadati nel titolo, descrizione e tag del video](img/LM5-FlussiLavoroEditoriale-Metadati/YouTubeMetadata.png)
 
 ## Tesauro o vocabolario controllato
