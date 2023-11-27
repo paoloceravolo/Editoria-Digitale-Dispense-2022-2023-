@@ -285,87 +285,59 @@ Microsoft ha reso disponibile in forma di preview la prima build di Fluid Framew
 - Documenti tradotti contemporaneamente in più lingue
 - Fluid potrà interfacciarsi con Cortana o con altri servizi di intelligenza artifciale, cosi da offrire immagini, video o altri dati basati sui contenuti scritti nel documento
 
-#### DEMO
+### Video DEMO
 [![Video della demo di Fluid Framework](https://img.youtube.com/vi/RMzXmkrlFNg/0.jpg)](https://www.youtube.com/watch?v=RMzXmkrlFNg)
 
-## INDESIGN CC
-
-- InDesign Creative Cloud di Adobe
+## InDesign CC
+InDesign Creative Cloud di Adobe
 - leader mondiale nel mercato del Desktop publishing
-- Strumenti per l’impaginazione e stampa su carta e creazione
-  di documenti e libri digitali
+- Strumenti per l’impaginazione e stampa su carta e creazione di documenti e libri digitali
 - Importare le prodotti con InDesign o Word
-- Applicare gli stili in InDesign, molto importante per
-  l’ottimizzazione del codice
+- Applicare gli stili in InDesign, molto importante per l’ottimizzazione del codice
 - Definire la sequenza degli elementi
 - Esportare nel formato .ePUB o KF8 per Kindle
 - Utilizza un formato proprietario .folio
-- Permette di produrre materiale ricco di elementi
-  multimediali e con layout complesso
-- Convertire in App e pubblicare su Apps store
-- Usato principalmente per Magazine e periodici, ma utile
-  anche per enhanced eBook
+  - Permette di produrre materiale ricco di elementi multimediali e con layout complesso
+  - Convertire in App e pubblicare su Apps store
+- Usato principalmente per Magazine e periodici, ma utile anche per enhanced eBook
 
-[](https://www.youtube.com/watch?v=FaJG3buRh2Y)
+[![Video HOw to Create a Book in Adobe InDesign](https://img.youtube.com/vi/FaJG3buRh2Y/0.jpg)](https://www.youtube.com/watch?v=FaJG3buRh2Y)
 
-## IBOOKS AUTHOR
+## iBooks Author
 
 - Applicativo Apple per creare eBook
 - Formato proprietario di Apple: Multi-touch (iBooks2)
-- Basato su ePUB3
-- Se si vuole vendere un eBook prodotto è obbligatorio
-  transitare da iBookstore
+  - Basato su ePUB3
+  - Se si vuole vendere un eBook prodotto è obbligatorio transitare da iBookstore
 - Dal 2020 dismesso e sostituito da Apple Pages
-- Il flusso di produzione è solo in uscita, non è possibile
-  editare le esistenti
+- Il flusso di produzione è solo in uscita, non è possibile editare le esistenti
 
-## LIBRE OFFICE / OPEN OFFICE
+## Libre Office / Open Office
+Suite di produttività individuale, Open Source, sviluppato da The Document Foundation e da Apache Software Foundation.
 
-- Suite di produttività individuale, Open Source, sviluppato da
-  The Document Foundation e da Apache Software Foundation.
-  Contengono:
-  
-  - Writer - elaboratore testi
+Contengono:
+  - Writer:: elaboratore testi 
+  - Calc: foglio elettronico
+  - Impress: editor di presentazioni
+  - Draw: editor grafco
+  - Base: front-end per database compatibile con MySQL, PostgreSQL o Microsoft Access e altre fonti di dati    
+  - Math: editor di equazioni
     
-  - Calc - foglio elettronico
-    
-  - Impress - editor di presentazioni
-    
-  - Draw - editor gra co
-    
-  - Base - front-end per database compatibile con MySQL,
-    PostgreSQL o Microsoft Access e altre fonti di dati
-    
-  - Math - editor di equazioni
-    
+## Writer2ePub
+Estensione per LibreOffice o OpenOffice per convertire in eBook in formato ePub documenti di testo
+- Scaricabile al link: http://writer2epub.softonic.it/
 
-## WRITER2EPUB
-
-- Estensione per LibreO ce o OpenO ce per convertire in
-  eBook in formato ePub documenti di testo
-  
-- Scaricabile da : http://writer2epub.softonic.it/
-  
-
-## SIGIL
-
-- Un ePub editor multipiattaforma libero, open source
-  
+## Sigil
+Un ePub editor multipiattaforma libero, open source 
 - un editor ePub wysiwyg ma anche via codice
-  
-- un editor TOC Table Of Content
-  
-- un ePub Validator e un editor per HTML
-  
-- Importa file html e testo TXT
-  
+- un editor TOC Table Of Content  
+- un ePub Validator e un editor per HTML  
+- Importa file html e testo TXT  
 - Supporta ePUB2 e alcune speci che di ePUB3
-  
-- Audio e video
-  
-- sito:https://code.google.com/p/sigil/
-  
-- repository: https://github.com/user-none/Sigil
+  - Audio e video
+
+- Sito: https://code.google.com/p/sigil/
+- Repository: https://github.com/user-none/Sigil
   
 
 ## Kindle Direct Publishing
@@ -376,50 +348,30 @@ Microsoft ha reso disponibile in forma di preview la prima build di Fluid Framew
 ## LULU
 
 - Lulu è una casa editrice on demand. Nasce nel 2002 in Canada per iniziativa di Bob Young, fondatore anche di Red Hat
-- Lulu fornisce agli autori un sistema automatizzato per la produzione editoriale, dalla creazione della copertina al formato del libro; ma si possono creare anche ebook, calendari e album fotogra ci
+- Lulu fornisce agli autori un sistema automatizzato per la produzione editoriale, dalla creazione della copertina al formato del libro; ma si possono creare anche ebook, calendari e album fotografici
 - Nel 2006 Lulu ha allargato la propria attività all'Europa
-  
+<img src="img/LM6-LibroElettronico/LULU.png" />
 
-## BOOKABOOK
+## BookABook
 
-- Vengono pubblicati i libri che raggiungono certi obiettivi in una
-  campagna di crowdfunding nella quale i lettori possono pre
+- Vengono pubblicati i libri che raggiungono certi obiettivi in una campagna di crowdfunding nella quale i lettori possono pre
   ordinare il libro
-  
-- Nata nel 2014 a Milano, ha ricevuto premi e riconoscimenti
-  internazionali
-  
+- Nata nel 2014 a Milano, ha ricevuto premi e riconoscimenti internazionali
 - https://bookabook.it
-  
+ <img src="img/LM6-LibroElettronico/bookabook.png" />
 
-## YOU CAN PRINT IT
 
-- Piattaforma italiana di slef-publishing che fornisce servizi editoriali
-  
-- Leggete l’intervista sulle prospettive dell’autopubblicazione:
-  
-  http://www.viverediscrittura.it/10-domande-sul-self-publishing-intervista-a-youcanprint/
-  
-- L’auto produzione si distingue sia dalla normale edizione sia dall'edizione a spese
-  dell'autore
-  
-- Nel primo caso tutte le spese sono a carico dell'editore, che si incarica di
-  realizzare e distribuire l'opera, promettendo una remunerazione del diritto
-  d'autore in genere in forma percentuale
-  
-- Nel secondo caso, quello dell'editoria a pagamento, esiste sempre la gura
-  dell'editore, ma le spese sono sopportate in tutto o in parte dall'autore o da chi lo
-  sponsorizza
-  
-- Nel caso di autoedizione l'autore, invece, si incarica di seguire tutte le fasi della
-  realizzazione dell'opera, avvalendosi eventualmente di qualche gura
-  professionale esterna
-  
+## You Can Print IT
+Piattaforma italiana di self-publishing che fornisce servizi editoriali
+- Leggete l’intervista sulle [prospettive dell’autopubblicazione](http://www.viverediscrittura.it/10-domande-sul-self-publishing-intervista-a-youcanprint/)
 
-## APPLICAZIONI EREADER
-
-- Esistono numerose applicazioni per leggere e valutare un
-  prodotto
+L’auto produzione si distingue sia dalla normale edizione sia dall'edizione a spese dell'autore
+- Nel primo caso tutte le spese sono a carico dell'editore, che si incarica di realizzare e distribuire l'opera, promettendo una remunerazione del diritto d'autore in genere in forma percentuale
+- Nel secondo caso, quello dell'editoria a pagamento, esiste sempre la figura dell'editore, ma le spese sono sopportate in tutto o in parte dall'autore o da chi lo sponsorizza
+- Nel caso di autoedizione l'autore, invece, si incarica di seguire tutte le fasi della realizzazione dell'opera, avvalendosi eventualmente di qualche figura professionale esterna
+  
+## Applicazioni eReader
+Esistono numerose applicazioni per leggere e valutare un prodotto
 - Adobe Digital Edition 4.5
 - Cool Reader, Firefox con estensione EPUBReader
 - Readium, plugin di Firefox, in sviluppo SDK per ePub3!!
@@ -427,100 +379,71 @@ Microsoft ha reso disponibile in forma di preview la prima build di Fluid Framew
 - Kindle, Nook, Azardi
 
 ## AZARDI, IGP
-
-- AZARDI, 43.1 del 2016, InfoGrid Paci c
+AZARDI, 43.1 del 2016, InfoGrid Pacific
 - ePUB3 reader per desktop
 - Per tutti i sistemi operativi Linux, Mac e Windows
-- Supporta ePub3 e ePub a layout sso, JavaScript e SMIL,
-  HTML5, XHTML5, audio mp3, video mp4
-- Per ottimare il codice applicare gli stili nei le che importate,
-  e de nire la sequenza degli elementi
+- Supporta ePub3 e ePub a layout sso, JavaScript e SMIL, HTML5, XHTML5, audio mp3, video mp4
+- Per ottimare il codice applicare gli stili nei le che importate, e definire la sequenza degli elementi
 - Esportare nel formato .epub o KF8 per Kindle
 
 ## CALIBRE
 
-- Calibre, Open Source, strumento multipiattaforma di gestione di e-book:
-  - Consente di creare e di leggere eBook
-  - Supporta ePUB e Kindle MOBI
-  - Consente la conversione tra formati (incluso il formato AZW3)
-  - Consente la gestione dei metadati e l’organizzazione di collezioni e librerie
-  - Supporta diversi e-book reader sincronizzando le librerie relative (Kindle,
-    Sony, Nook…)
-  - Consente ricerche in diversi negozi
-  - Fornisce una funzione per raccogliere news da giornali online e
-    trasformarle in eBooks
+Calibre, Open Source, strumento multipiattaforma di gestione di e-book:
+- Consente di creare e di leggere eBook
+- Supporta ePUB e Kindle MOBI
+- Consente la conversione tra formati (incluso il formato AZW3)
+- Consente la gestione dei metadati e l’organizzazione di collezioni e librerie
+- Supporta diversi e-book reader sincronizzando le librerie relative (Kindle, Sony, Nook…)
+- Consente ricerche in diversi negozi
+- Fornisce una funzione per raccogliere news da giornali online e trasformarle in eBooks
 
-#### MANUALI DI CALIBRE
+### Manuali di Calibre
+Editing eBooks : https://manual.calibre-ebook.com/edit.html
 
-- Editing eBooks :
-  - https://manual.calibre-ebook.com/edit.html
-- Video tutorial per diverse funzionalità (Grand Tour) e per
-  editing:
-  - https://calibre-ebook.com/demo#tutorials
+Video tutorial per diverse funzionalità (Grand Tour) e per editing: 
+https://calibre-ebook.com/demo#tutorials
 
-#### CONVERSIONE DI FORMATI IN CALIBRE
-
-- Molto di cile la conversione da PDF a ePUB
+### Conversione di formati in Calibre
+- Molto difficile la conversione da PDF a ePUB
 - Meglio la conversione da RTF o HTML a ePUB
 - Si può anche redarre il le ePUB partendo da le TXT
-- Maggiore lavoro per la de nizione degli elementi del testo e
-  della sua struttura
+  - Maggiore lavoro per la definizione degli elementi del testo e della sua struttura
 - In input: ePUB, HTML, RTF, ODT, MOBI, TXT …
-- In output: ePUB, LIT, MOBI, AZW (visibile poi solo su
-  kindle)
+- In output: ePUB, LIT, MOBI, AZW (visibile poi solo su kindle)
 
-#### CONSIGLI PER LA CONVERSIONE
-
+#### Consigli per la conversione
 Per facilitare la conversione in formato ePUB occorre:
-
-- Non inserire formattazione inutile. Usare pochi semplici stili
-  ed essere coerenti
+- Non inserire formattazione inutile. Usare pochi semplici stili ed essere coerenti
 - Non lasciare spazi tra i paragrafi
 - Inserire immagini alla ne del paragrafo se possibile
 - Eliminare la numerazione automatica delle pagine
 - Eventuali note solo a fine capitolo o fine libro
 - Evitare tabelle, riquadri o box di espansione
 
-## CONVERSIONE DA .doc A EBOOK
-
-- Salvare in formato rtf e con Calibre esportare in ePUB
-  
-- con OpenOffice o LibreOffice convertire in .ePUB tramite
-  l’estensione Writer2ePub scaricabile da [lukesblog](https://lukesblog.it/)
-  
+## Conversione da .doc a eBook
+Salvare in formato rtf e con Calibre esportare in ePUB
+ 
+- con OpenOffice o LibreOffice convertire in .ePUB tramite l’estensione Writer2ePub scaricabile da [lukesblog.it](https://lukesblog.it/)
 - salvare in HTML e intervenire sul codice aggiungendo stili con CSS
-  
 - salvare in txt e intervenire molto pesantemente sul codice e
   sugli stili
-  
-- Con Pandoc si può partire da Markdown per avere un
-  semplice HTML o .doc
-  
+- con Pandoc si può partire da Markdown per avere un semplice HTML o .doc
 
-## LE IMMAGINI IN EBOOK
-
-- Gli schermi dei device hanno dimensioni molto diverse
-  
+## Le immagini in eBook
+Gli schermi dei device hanno dimensioni molto diverse  
 - È opportuno che le immagini siano JPEG o PNG di circa 100/150 kb
-  
 - Dimensioni delle immagini 600x800 px per schermi di 5/6”
   
-- Applicare con rigore e coerenza gli stili che vengono poi convertiti
-  in codice CSS durante la fase di esportazione in ePUB
+Applicare con rigore e coerenza gli stili che vengono poi convertiti in codice CSS durante la fase di esportazione in ePUB
   
-  - Questa attenzione rende il codice ePUB più semplice e pulito
-- Definire la struttura del testo, tenendo conto dei diversi elementi
-  (titolo, crediti, prefazione, capitoli o sezioni, indice…)
-  
-- importare i file dei media
-  
+- Questa attenzione rende il codice ePUB più semplice e pulito
+- Definire la struttura del testo, tenendo conto dei diversi elementi (titolo, crediti, prefazione, capitoli o sezioni, indice…)
+- Importare i file dei media
 - Esportazione in ePUB
-  
 - Conversione eventuale in altri formati (kindle)
   
-
+****************************************************
 ## Lettura attraverso Browser
-
 - Per attivare le potenzialità di condivisione che il web
   permette, ad esempio per annotazioni condivise o per logging
   delle azioni degli utenti serve una soluzione serverside
