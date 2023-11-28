@@ -1,5 +1,4 @@
 # Libro Digitale
-
 Il libro elettronico è un *documento digitale* per la lettura.
 
 Il formato principale prende il nome di **ePUB** ed è stato definito dal **W3C**, anche Kindle conosciuto come **MOBI** o **AZW3** è comunque importante.
@@ -9,28 +8,23 @@ Questi documenti vengono distribuiti principalmente attraverso piattaforme chius
 Questi formati competono con altre soluzioni che hanno maggiori vantaggi in termini di mantenibilità e interoperabilità, come i documenti collaborativi o i webbook.
 
 ## Modalità di lettura
-
-Ci sono diversi modelli di lettura che possono influenzare la percezione dell'utente e la fruibilità del contenuto di un testo
+Ci sono diversi modelli di lettura che possono influenzare la percezione dell'utente e la fruibilità del contenuto di un testo.
 
 ### Lettura sequenziale
-
 È il modello di lettura più tradizionale, in cui gli utenti seguono un flusso lineare di contenuti da una pagina o schermata all'altra.
 
 Questo modello è tipico per i libri stampati e molti ebook digitali. È adatto sopratutto alla narrativa o alla saggistica divulgativa.
 
 ### Lettura non lineare
-
 In questo modello, gli utenti possono accedere ai contenuti in modo non sequenziale. Questo si realizza attraverso strumenti di ipertestualità, collegamenti interni o menu di navigazione che consentono agli utenti di saltare direttamente a sezioni specifiche del contenuto.
 Questo modello è comune in documenti tecnici, manuali online e contenuti educativi interattivi.
 
 ### Lettura visuale
-
 Questo modello pone un'enfasi particolare sull'aspetto visuale del contenuto. Può coinvolgere l'uso di immagini, grafici, diagrammi e layout visivamente accattivanti per migliorare l'esperienza di lettura.
 
 Questo è spesso importante per le riviste, i fumetti, i libri illustrati e i materiali didattici che richiedono una componente visiva significativa.
 
 ### Lettura testuale
-
 In questo modello, l'attenzione si concentra principalmente sul testo, eliminando altri elementi per ottenere maggiore semplicità e chiarezza.
 
 Gli ebook tradizionali e molti documenti di testo online seguono questo modello.
@@ -38,15 +32,16 @@ Gli ebook tradizionali e molti documenti di testo online seguono questo modello.
 La documentazione di una libreria, una API o un software è forse un intermedio tra visuale e testuale, si privilegia la semplicità ma è importante formattare il codice in modo da semplificare la lettura visiva, alcuni diagrammi posso aiutare il lettore a orientarsi.
 
 ### Lettura collaborativa
-
 Alcune piattaforme offrono modelli di lettura che incorporano elementi collaborativi. Ad esempio, la possibilità di condividere annotazioni, commenti o discussioni direttamente nel contesto del testo.
 
 Questo modello può promuovere l'interazione tra gli utenti e arricchire l'esperienza di lettura.
 
 ### Lettura interattiva
+Questi modelli spesso integrano elementi interattivi per coinvolgere gli utenti e migliorare l'esperienza di apprendimento. 
 
-Questi modelli spesso integrano elementi interattivi per coinvolgere gli utenti e migliorare l'esperienza di apprendimento. Piattaforme di apprendimento online, ebook interattivi e
-risorse educative digitali spesso adottano questi modelli di lettura interattivi per migliorare l'engagement e facilitare l'apprendimento attivo. L'obiettivo è offrire un'esperienza di apprendimento più coinvolgente e personalizzata rispetto alla tradizionale lettura sequenziale.
+Piattaforme di apprendimento online, ebook interattivi e risorse educative digitali spesso adottano questi modelli di lettura interattivi per migliorare l'engagement e facilitare l'apprendimento attivo. 
+
+L'obiettivo è offrire un'esperienza di apprendimento più coinvolgente e personalizzata rispetto alla tradizionale lettura sequenziale.
 
 ### Lettura adattiva
 
@@ -101,7 +96,6 @@ Nelle tappe di avvicinamento all’e-book troviamo lavori pionieristici e intuiz
 > Prototipo dell'Enciclopedia Mecánica di Angela Ruiz Robles del Museo Nazionale della Scienza e della Tecnologia di A Coruña
 
 Studio delle interfacce di lettura e digitalizzazione elettronica dei testi:
-
 - Alan Kay, anni ‘70, al PARC della Xerox, quando i computer erano grandi
   mainframe lavora all’idea di una informatica personale e di strumenti
   portatili. Dynabook strumento personale multifunzionale
@@ -127,8 +121,7 @@ L'ebook necessita anche di un punto di accesso, uno store:
 ## Dispositivi
 
 **eReader** : dispositivi per la lettura di testi
-- Basato su tecnologia per la visualizzazione dei caratteri, E-Ink, che non emette luce come un normale display dello schermo
-  ma riflette la luce ambientale come un foglio di carta. 
+- Basato su tecnologia per la visualizzazione dei caratteri, E-Ink, che non emette luce come un normale display dello schermo ma riflette la luce ambientale come un foglio di carta.
 - Tecnologia inventata da Jacobson, 1996, fondatore di E-Ink
 - Adottata da quasi tutti i dispositivi eReader, generalmente a 16 tonalità di grigio
 
@@ -141,8 +134,8 @@ L'ebook necessita anche di un punto di accesso, uno store:
 Distinguiamo tra **formati immagine** e **formati di testo**:
 
 ### Formati d'immagine
-I formati di immagine hanno layout fissi, il che significa che il testo e le immagini sono
-posizionati in modo specifico sulla pagina. 
+I formati di immagine hanno layout fissi, il che significa che il testo e le immagini sono posizionati in modo specifico sulla pagina. 
+
 Alcuni elementi di adattamento sono dati da:
 - zoom, rotazione, salvataggio, esportazione, stampa
 - separazione del testo dallo sfondo e anche la ricerca su tutto il testo, se l’immagine è stata trattata con un sistema di riconoscimento ottico dei caratteri
@@ -241,6 +234,7 @@ I più comuni usati con eBook sono
 - Apple Fairplay DRM
 - Amazon DRM
 - Adobe ADEPT DRM
+
 #### Effetti del DRM
 - Limitare il numero di device in cui un utente può caricare i suoi eBook
 - Accesso a tempo limitato
@@ -248,7 +242,7 @@ I più comuni usati con eBook sono
 - Limitare il trasferimento
 
 #### Compatibilità
--Un eBook comprato su iBookstore, non lo posso leggere su un Kobo
+- Un eBook comprato su iBookstore, non lo posso leggere su un Kobo
 - Il formato Kindle di Amazon è supportato da molti ma se vi applico il DRM di Amazon, allora solo i device Amazon e le sue app potranno leggerlo
 
 Nel caso di Adobe DRM c’è una più ampia compatibilità
@@ -257,7 +251,6 @@ Si può realizzare una forma di social DRM applicando strumenti di digital water
 Ad *esempio* con l'aggiunta di informazioni visibili o invisibili per scoraggiare la copia e la circolazione.
 
 ## Fattori di successo
-
 - Sviluppati per la lettura su dispositive mobile. Serve lo stesso confort e libertà del libro di carta
 - *Testo che si adatta* (**re-owable**). Mantenere la leggibilità su qualunque schermo
 - *Lettura sia online che offline*. HTML sta solo ora (versione 5) aprendosi alla leggibilità o ine che è il vantaggio tradizionale degli eBook
@@ -354,8 +347,7 @@ Un ePub editor multipiattaforma libero, open source
 
 ## BookABook
 
-- Vengono pubblicati i libri che raggiungono certi obiettivi in una campagna di crowdfunding nella quale i lettori possono pre
-  ordinare il libro
+- Vengono pubblicati i libri che raggiungono certi obiettivi in una campagna di crowdfunding nella quale i lettori possono preordinare il libro
 - Nata nel 2014 a Milano, ha ricevuto premi e riconoscimenti internazionali
 - https://bookabook.it
  <img src="img/LM6-LibroElettronico/bookabook.png" />
@@ -440,25 +432,74 @@ Applicare con rigore e coerenza gli stili che vengono poi convertiti in codice C
 - Definire la struttura del testo, tenendo conto dei diversi elementi (titolo, crediti, prefazione, capitoli o sezioni, indice…)
 - Importare i file dei media
 - Esportazione in ePUB
-- Conversione eventuale in altri formati (kindle)
+- Conversione eventuale in altri formati (Kindle)
   
-****************************************************
 ## Lettura attraverso Browser
-- Per attivare le potenzialità di condivisione che il web
-  permette, ad esempio per annotazioni condivise o per logging
-  delle azioni degli utenti serve una soluzione serverside
-  fruibile con qualsiasi browser
-- [EPUB.js](https://github.com/futurepress/epub.js/) questa soluzione per pagina web ospitate su
-  un server che include la libreria
-  - Inclusione di un documento ePUB
-  - Riferimento a porzioni del documento tramite URI
-  - Annotazioni attraverso [hypothes.is](https://web.hypothes.is/)
+Per superare i limiti delle piattaforme di distribuzione chiuse e per abbassare il costo di fruizione degli e-book si può pensare di usare il browser come lettore.
+
+Esistono diversi plug-in per i diversi browser
+- Chrome: EPUBReader, Readium, ePUB Reader
+- Si tratta comunque di una soluzione che richiede un’azione dell’utente e offre un contesto di fruizione frammentato.
+
+Per attivare le potenzialità di condivisione che il web permette, ad esempio per annotazioni condivise o per logging delle azioni degli utenti serve una soluzione serverside fruibile con qualsiasi browser.
+
+[EPUB.js](https://github.com/futurepress/epub.js/) offre questa soluzione per pagina web ospitate su un server che include la libreria
+- Inclusione di un documento ePUB
+- Riferimento a porzioni del documento tramite URI
+- Annotazioni attraverso [hypothes.is](https://web.hypothes.is/)
 
 ## Layer di annotazioni
-
-- Il progetto [hypothes.is](https://web.hypothes.is/) intende realizzare un layer di
-  annotazioni che può essere usato da gruppi di lavoro che
-  intendono annotare pagine web
+Il progetto [hypothes.is](https://web.hypothes.is/) intende realizzare un layer di annotazioni che può essere usato da gruppi di lavoro che intendono annotare pagine web
 - Distinzione tra owner e user di una risorsa weB
 - Per annottare è richiesto un account a hypothes.is
 - Esistono delle [API](https://h.readthedocs.io/en/latest/api-reference/v2/#tag/annotations) per accedere alle annotazioni
+
+## Anatomia di un ePub
+
+### -Meta -Inf
+Nella directory *META-INF* abbiamo solitamente un solo file
+> container.xml
+
+Contiene il file principale dell’applicazione, il file root che il reader dovrà leggere per sapere come organizzare il documento
+
+```
+ <?xml version="1.0" encoding="UTF-8"?>
+<container version="1.0"
+xmlns="urn:oasis:names:tc:opendocument:xmlns:
+container">
+ <rootfiles>
+ <rootfile full-path="OEBPS/content.opf"
+media-type="application/oebps-package+xml"/>
+ </rootfiles>
+</container>
+```
+
+### -OEBPS
+Nella directory *OEBPS* abbiamo i file che compongono l’ebook.
+
+Il più importante è root file, tipicamente *content.opf*
+
+OPF è l'acronimo di Open Packaging Format, per cui a volte l'OPF viene chiamato **Package File**.
+
+Contiene i metadati e le informazioni strutturali e bibliografiche dell’ebook: cosa c’è e dove si trova.
+
+Potremo poi avere:
+- una directory *images* per le immagini
+- una directory *css* o *styles* per i fogli di stile
+- una directory *fonts* per i font
+
+### -OPF
+Il file OPF è composto da un'intestazione XML e da quattro sezioni:
+1. La sezione **metadata**, che fornisce al reader informazioni di descrizione del libro
+2. La sezione **manifest**, che indica al reader dove trovare i contenuti
+3. La sezione **spines**, che indica al reader in che ordine deve visualizzare i file (opzionale)
+4. La sezione **guide**, che indica al reader dove trovare file speciali come la copertina o l’indice (opzionale)
+
+### -NCX
+Un altro file che compare quasi sempre nella directory principale è il file *NCX* o **file di navigazione**.
+
+Si tratta del menu a tendina disponibile in qualsiasi pagina, per permettere al lettore di navigare verso qualsiasi punto del libro.
+
+Ogni elemento del file è contenuto all’interno di un elemento *navMap* ed è raggruppato grazie all’elemento *navPoint*
+- Al suo interno gli elementi *navLabel* e text indicano al reader cosa visualizzare nel menu
+- L’elemento *content* indica a quale file inviare il reader quando un utente seleziona l'elemento
