@@ -57,7 +57,7 @@ Non è obbligatoria. Se è assente, viene usata una dichiarazione di default det
 La RCS definisce lunghezze e sintassi standard (come l'uso del carattere "<" per indicare l'inzio del tag).
 
 ### Document Type Declaration
-DTD: ```<!DOCTYPE nome TIPO [markup] > ```
+DTD: ```<!DOCTYPE nome TIPO [markup] >```
 
 La dichiarazione del tipo del documento serve a specificare le regole che permettono di verificare la correttezza strutturale di un documento.
 
