@@ -21,9 +21,9 @@ Definiamo **markup** ogni mezzo per rendere esplicita una particolare interpreta
 
 Per *esempio*, tutte quelle aggiunte al testo scritto che permettono di renderlo più fruibile.
 
-Oltre a rendere il testo più leggibile, il markup permette anche di specificare ulteriori usi del testo
+Oltre a rendere il testo più leggibile, il markup permette anche di specificare ulteriori usi del testo.
 
-Con il markup per sistemi informatici, specifichiamo le modalità esatte di utilizzo del testo nel sistema stesso
+Con il markup per sistemi informatici, specifichiamo le modalità esatte di utilizzo del testo nel sistema stesso.
 
 # SGML
 **Standard Generalized Markup Language**: concepito già negli anni ‘60 divenne standard ISO nel ‘86
@@ -46,7 +46,7 @@ Un documento in un linguaggio di markup definito sulla base di SGML è sempre co
 
 ![Documento SGML con evidenziate le 3 parti principali](img/LT3-FormatiMarcatura-SGML/Documento_SGML.png)
 
-### SGML DECLARATION
+### SGML Declaration
 La dichiarazione SGML contiene le istruzioni di partenza delle applicazioni SGML: 
 ``` <!SGML “ISO 8879:1986” ...> ```
 
@@ -57,14 +57,13 @@ Non è obbligatoria. Se è assente, viene usata una dichiarazione di default det
 La RCS definisce lunghezze e sintassi standard (come l'uso del carattere "<" per indicare l'inzio del tag).
 
 ### Document Type Declaration
-DTD: ```html <!DOCTYPE nome TIPO [markup] > ```
+DTD: ```<!DOCTYPE nome TIPO [markup] > ```
 
-La dichiarazione del tipo del documento serve a specificare le regole che permettono di verificare la correttezza strutturale di un documento
+La dichiarazione del tipo del documento serve a specificare le regole che permettono di verificare la correttezza strutturale di un documento.
 
-Vengono cioè definiti gli elementi ammissibili, il contesto in cui possono apparire, ed altri eventuali vincoli strutturali
+Vengono cioè definiti gli elementi ammissibili, il contesto in cui possono apparire, ed altri eventuali vincoli strutturali.
 
-Nella terminologia SGML, si parla di modellare una classe (cioè una collezione omogenea) di documenti attribuendogli 
-una dichiarazione
+Nella terminologia SGML, si parla di modellare una classe (cioè una collezione omogenea) di documenti attribuendogli una dichiarazione.
 
 ### Istanza del documento
 L’istanza del documento è quella parte del documento che contiene il testo vero e proprio, dotato del markup appropriato.
@@ -94,7 +93,7 @@ Un elemento è individuato da un tag iniziale, un contenuto ed un tag finale.
 ### Attributi
 Gli attributi sono informazioni aggiuntive sull’elemento che non fanno effettivamente parte del contenuto (metainformazioni).
 
-Essi sono posti dentro al tag iniziale dell’elemento e tipicamente hanno la forma nome=“valore”
+Essi sono posti dentro al tag iniziale dell’elemento e tipicamente hanno la forma nome=“valore”.
 
 ![Esempi di attributi](img/LT3-FormatiMarcatura-SGML/Attributi.png)
 
@@ -106,11 +105,11 @@ Esse permettono di riutilizzare lo stesso frammento in molte posizioni garantend
 ![Esempi di entità](img/LT3-FormatiMarcatura-SGML/Entita.png)
 
 ### #PCDATA
-#PCDATA (Processed Character DATA) rappresenta il contenuto vero e proprio del documento
+**#PCDATA** (*Processed Character DATA*): rappresenta il contenuto vero e proprio del documento.
 
 Esso corrisponde alle parole, gli spazi e la punteggiatura che costituiscono il testo. Eventuali entità vengono processate per ottenerne il testo corrispondente.
 
-#CDATA I linguaggi di markup definiscono anche Character Data.
+**#CDATA**: I linguaggi di markup definiscono anche Character Data.
 
 Un contenuto testuale puro senza alcuna sostituzione o espansione di testo. Serve ad esempio per codice sorgente che non deve essere interpretato dal parser SGML.
 
