@@ -94,11 +94,87 @@ Qualità richiesta e tecnologia adottata influiscono in modo inversamente propor
 
 ![Grafico correlazione quantità-tempo-tecnologia](img/LM2-ProcessoEditoriale/Grafico_Quant-temp-tecn.png)
 
+## Buone pratiche
+- Definire la struttura prima dello stile
+- Utilizzare formati portabili
+- Non dipendere da software proprietari
+- Gestire il versioning
+- Contenuto: testo, audio, grafica, video, AR
+- Tipografica, stile e identità visuale
+- Bibliografia, metadati, catalogazione
+- Diritti d’autore
+
+## Definire il flusso
+Il processo può variare, tradizionalmente le fasi chiave sono:
+- Ideazione
+- Acquisizione dei contenuti
+- Revisione e redazione
+- Progettazione grafica
+- Produzione
+- Distribuzione
+Ognuna di queste fasi può richiedere un flusso di lavoro che coinvolge competenze professionali diverse.
+
+Ad _esempio_ i contenuti devono essere 
+1. di qualità,
+2. impaginati e organizzati graficamente
+3. valutati per agli aspetti del diritto d’autore
+
+Inoltre un prodotto può essere il risultato di contenuti di diversa natura: testo, audio, grafica, AR ...
+
+Ogni contenuto può richiedere un suo flusso di produzione in parte indipendente ed in parte coordinato con gli altri flussi di produzione.
+
+### BPMN
+Lo standard più diffuso per la definizione di flussi di esecuzione è BPMN (_Business Process Modeling Notation_) 2.0 di OMG
+Ad esempio come editor si può usare https://bpmn.io
+
+![Elementi base del BPMN](img/LM2-ProcessoEditoriale/BPMN_Elementi.png)
+
+### Flusso di pubblicazione scientifica
+![Pubblicazione Scientifica rappresentata con BPMN](img/LM2-ProcessoEditoriale/BPMN_PubblicazioneScientifica.png)
+
+![Immagine Mancante]()
+
+### Gestione del versioning
+La piattaforma che ha meglio interpretato le funzioni di gestione del versioning di documenti è GiHub.
+
+Lo scopo principale di GitHub.com è quello di facilitare il controllo di versione e il tracciamento di issue nello sviluppo del software.
+
+Per il controllo delle versioni consente di effettuare richieste di pull per proporre modifiche al codice sorgente. Gli utenti che hanno la possibilità di rivedere le modifiche proposte possono vedere una diff delle modifiche richieste e approvarle.
+
+Nella terminologia di Git, l’azione di registrazione delle modifiche apportate a un file è chiamata _commit_, conferma, e una sua istanza è un _commit_. 
+La cronologia di tutti i _commit_ viene conservata e può essere visualizzata in un secondo momento.
+
+Un manuale completo è [Pro Git Book](https://git-scm.com/doc)
+
+![SLIDE 18]()
+![SLIDE 19]()
+
+#### Gestire gli aggiornamenti
+SLIDE 20
+
+Le operazioni essenziali per gestire un progetto di versioning sono:
+- Creare e utilizzare un repository
+- Avviare e gestire un nuovo branch
+- Apportare modifiche a un file e inviarle a GitHub come commit
+- Aprire e unire una richiesta di pull
+
+#### Creazione di un repository
+
+#### Collegare una directory locale
+
+#### Gestire gli aggiornamenti
+
+#### Creare un branch
+25
+
+#### Creare un fork
+SLIDE 26
+
 ## Ideazione e acquisizione dei contenuti
 
 ![Fasi Ideazione e acquisizione dei contenuti](img/LM2-ProcessoEditoriale/Ideazione_e_acquisizione_dei_contenuti.png)
 
-## Studio e analisi del tema
+### Studio e analisi del tema
 
 Per analizzare il tema è utile osservare come questo viene trattato nelle comunità di riferimento:
 
@@ -118,6 +194,9 @@ Per analizzare il tema è utile osservare come questo viene trattato nelle comun
     
 
 In questo modo possiamo identificare i competitor, il target, le comunità di riferimento e il customer journey
+
+### Definizione delle personas
+// Slide 29-32
 
 ## Gestione documentale
 
