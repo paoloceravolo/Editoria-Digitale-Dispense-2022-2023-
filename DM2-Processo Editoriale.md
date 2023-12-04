@@ -146,11 +146,18 @@ La cronologia di tutti i _commit_ viene conservata e può essere visualizzata in
 
 Un manuale completo è [Pro Git Book](https://git-scm.com/doc)
 
-![SLIDE 18]()
-![SLIDE 19]()
+![Memorizzazione dei dati come cambiamenti di ogni file da una versione di base](img/LM2-ProcessoEditoriale/Git_Versioning_01.png)
+![Memorizzazione dei dati come snapshot del progetto nel tempo](img/LM2-ProcessoEditoriale/Git_Versioning_01.png)
 
 #### Gestire gli aggiornamenti
-SLIDE 20
+Working directory o workspace:
+spazio di lavoro locale
+- **Staging o directory di cache**: spazio che contiene i file pronti per essere committati
+- **Stash**: spazio in cui salvare le modifiche mentre si lavoro ad altro
+- **Local repository**: spazio che contiene tutti i file comitati e le informazioni sui branch. Il main è un repository usato per collegare le diverse branch
+- **Remote**: spazio che contiene tutte le versioni del progetto
+![Git Workflow](img/LM2-ProcessoEditoriale/Git_Workflow.png)
+
 
 Le operazioni essenziali per gestire un progetto di versioning sono:
 - Creare e utilizzare un repository
@@ -159,16 +166,85 @@ Le operazioni essenziali per gestire un progetto di versioning sono:
 - Aprire e unire una richiesta di pull
 
 #### Creazione di un repository
+Un repository viene solitamente utilizzato per organizzare un singolo progetto.
+- I repository possono contenere cartelle e file, immagini, video, fogli di calcolo e insiemi di dati: tutto ciò di cui il progetto ha bisogno
+- Spesso, i repository includono un file README, un file con informazioni sul progetto. I file README sono scritti nel linguaggio Markdown
+- Creando il progetto è anche possibile impostarlo come progetto pubblico o privato e scegliere la licenza da applicare
+
+![Creazione repository su Git](img/LM2-ProcessoEditoriale/Git_CreazioneRepository.png)
 
 #### Collegare una directory locale
+È possibile collegare una directory locale ad un repository
+- Una volta nella directory digitare per inizializzarla
+``` $ git init -b main ```
+- Aggiungere i file della directory in una lista di elementi che potremo salvare attraverso commit
+```$ git add *```
+- Salvare le modifiche nel repository locale
+```$ git commit -m "First commit”```
+- Collegare il repository locale al repository remoto
+```
+$ git remote add origin <REMOTE_URL>
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+```
+- Inviare le modifiche del repository locale al repository remoto
+```$ git push -u origin main```
 
 #### Gestire gli aggiornamenti
+Il più semplice workflow di gestione delle modifiche si limita a caricare le
+modifiche locali nel repository remoto
+```
+$ git status
+$ git add *
+$ git commit -m "my comment"
+$ git push
+```
+- Per clonare un repository
+```
+$ git clone <REMOTE_URL>
+$ git init
+$ git remote add origin <REMOTE_URL>
+```
+- Per ridefinire la struttura dei file, ad esempio quando si fa copia e incolla
+```$ git clean -f```
 
 #### Creare un branch
-25
+Per lavorare su una nuova versione di un documento e decidere in seguito se integrare le modifiche è possibile creare dei branch
+- Se ci è stato assegnato il ruolo di collaboratore ci si può semplicemente spostare dal master e creare un branch
+```
+$ git checkout -b revcap1
+$ git pull
+```
+- A questo punto è possibile fare modifiche al documento
+```
+$ git add .
+$ git commit -a -m ‘Revising section 3 of cap1’
+$ git push origin revcap1
+```
+- A questo punto è possibile fare una pull request
+  - Visitare il repository originale su GitHub. Dovrebbe apparire un messaggio che indica che è stato recentemente creato un nuovo ramo. Fare clic sul pulsante "Compare & pull request”. Dopo aver creato la richiesta di pull, è possibile rivedere le modifiche e discuterle con i manutentori del progetto. Se tutto sembra a posto, cliccare di nuovo sul pulsante "Create pull request" per inviare la richiesta
+- I manutentori del progetto esamineranno la pull request e potranno richiedere modifiche o accettarla
+
+![Creazione un branch su Git](img/LM2-ProcessoEditoriale/Git_CreateBranch.webp)
 
 #### Creare un fork
-SLIDE 26
+Se non si possiede il ruolo di collaboratore è possibile creare un fork del progetto.
+**Fork del Repository**: sulla pagina del repository GitHub a cui si desidera contribuire, cliccare sul pulsante "_Fork_" nell'angolo in alto a destra della pagina. Questo creerà una copia del repository nel tuo account GitHub.
+- A questo punto è possibile clonare il Fork in un repository locale: copiando l'URL del fork dalla barra degli indirizzi del browser, poi attraverso il terminale:
+``` $ git clone <URL del repository> ```
+- Si può poi creare un nuovo branch per gestire le modifiche:
+``` $ git checkout -b feature/duo-nome-feature ```
+- Si possono a questo punto effettuare le modifiche:
+```
+$ git add .
+$ git commit -a -m ‘Revising feature’
+$ git push origin feature/tuo-nome-feature
+```
+- Si può a questo punto creare una pull request:
+  - Visitare la pagina del fork su GitHub. Dovrebbe apparire un messaggio che indica che è stato aggiornato un branch. Si può ora cliccare sul pulsante "Confronta e crea richiesta di pull”. Aggiungere un titolo e una descrizione dettagliata per la tua richiesta di pull. Si può a questo punto inviare la Pull request
+- I manutentori del progetto esamineranno la pull request e decideranno se accettarla
+
 
 ## Ideazione e acquisizione dei contenuti
 
@@ -196,7 +272,31 @@ Per analizzare il tema è utile osservare come questo viene trattato nelle comun
 In questo modo possiamo identificare i competitor, il target, le comunità di riferimento e il customer journey
 
 ### Definizione delle personas
-// Slide 29-32
+Le personas sono personaggi di fantasia, creati per rappresentare i diversi tipi di utenti che potrebbero utilizzare un prodotto.
+
+La creazione di personas aiuta il progettista a capire le esigenze, le esperienze, i comportamenti e gli obiettivi degli utenti.
+
+La creazione di personas aiuta a identificare le diverse esigenze degli utenti e supporta la progettazione fornendo dei punti di riferimento alle diverse fasi della progettazione.
+
+La creazione di personas può avvenire attraverso diversi strumenti:
+- Raccolta di dati di comportamento degli utenti
+- Raccolta di dati attraverso interviste e focus groups
+- Creazione sulla base della sensibilità del progettista
+
+![Esempi di personas](img/LM2-ProcessoEditoriale/Personas.webp)
+
+Lo scopo di lavorare con le personas è quello di poter sviluppare soluzioni, prodotti e servizi basati sulle esigenze e sugli obiettivi degli utenti
+
+- Andrebbero descritti includendo dettagli sull'istruzione, lo stile di vita, gli interessi, i valori, gli obiettivi, i bisogni, i limiti, i desideri, gli atteggiamenti e i modelli di comportamento dell'utente.
+- Aggiungete alcuni dettagli personali di fantasia per rendere la persona un personaggio realistico
+- Date un nome a ciascuna delle vostre personas
+- Create 1-2 pagine di descrizioni per ogni persona
+
+Preparate situazioni o scenari per le personas
+
+La definizione di uno scenario può aiutare meglio la comprensione delle soluzioni,
+- A questo scopo, dovreste descrivere una serie di situazioni specifiche che potrebbero innescare l'uso del prodotto o del servizio che state progettando
+- Gli scenari di solito iniziano collocando la persona in un contesto specifico con un problema che vuole o deve risolvere
 
 ## Gestione documentale
 
