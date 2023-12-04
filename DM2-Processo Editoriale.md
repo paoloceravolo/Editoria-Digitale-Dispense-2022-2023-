@@ -34,8 +34,8 @@ La portabilità si riferisce alla capacità di un dispositivo, di un'applicazion
 - Permette di sfruttare al massimo i processi basati sulla esternalità della rete
   
 - <u>Riduce i costi di produzione e allarga la capacità di penetrazione del mercato</u>
-  
-![Loghi XML CSV e JSON](img/LM2-ProcessoEditoriale/Loghi_xml-csv-json.png)
+
+<img src="img/LM2-ProcessoEditoriale/Loghi_xml-csv-json.png" height="100"/>
 
 ![Comparazione uso di JSon CSV e XML](img/LM2-ProcessoEditoriale/Usage_comparison_json-csv-xml.png)
 
@@ -132,7 +132,7 @@ Ad esempio come editor si può usare https://bpmn.io
 ### Flusso di pubblicazione scientifica
 ![Pubblicazione Scientifica rappresentata con BPMN](img/LM2-ProcessoEditoriale/BPMN_PubblicazioneScientifica.png)
 
-![Immagine Mancante]()
+![Processo di revisione con BPMN](img/LM2-ProcessoEditoriale/BPMN_ReviewProcess.png)
 
 ### Gestione del versioning
 La piattaforma che ha meglio interpretato le funzioni di gestione del versioning di documenti è GiHub.
@@ -146,8 +146,22 @@ La cronologia di tutti i _commit_ viene conservata e può essere visualizzata in
 
 Un manuale completo è [Pro Git Book](https://git-scm.com/doc)
 
-![Memorizzazione dei dati come cambiamenti di ogni file da una versione di base](img/LM2-ProcessoEditoriale/Git_Versioning_01.png)
-![Memorizzazione dei dati come snapshot del progetto nel tempo](img/LM2-ProcessoEditoriale/Git_Versioning_01.png)
+<figure>
+  <img src="img/LM2-ProcessoEditoriale/Git_Versioning_01.png" height="250"/>
+  <figcaption>
+    <i> Memorizzazione dei dati come cambiamenti di ogni file da una versione di base </i>
+  </figcaption>
+</figure>
+
+<br/><br/><br/>
+
+<figure>
+  <img src="img/LM2-ProcessoEditoriale/Git_Versioning_02.png" height="250"/>
+  <figcaption>
+    <i> Memorizzazione dei dati come snapshot del progetto nel tempo </i>
+  </figcaption>
+</figure>
+
 
 #### Gestire gli aggiornamenti
 Working directory o workspace:
@@ -156,8 +170,8 @@ spazio di lavoro locale
 - **Stash**: spazio in cui salvare le modifiche mentre si lavoro ad altro
 - **Local repository**: spazio che contiene tutti i file comitati e le informazioni sui branch. Il main è un repository usato per collegare le diverse branch
 - **Remote**: spazio che contiene tutte le versioni del progetto
-![Git Workflow](img/LM2-ProcessoEditoriale/Git_Workflow.png)
 
+<img src="img/LM2-ProcessoEditoriale/Git_Workflow.jpg" height="500"/>
 
 Le operazioni essenziali per gestire un progetto di versioning sono:
 - Creare e utilizzare un repository
@@ -171,7 +185,7 @@ Un repository viene solitamente utilizzato per organizzare un singolo progetto.
 - Spesso, i repository includono un file README, un file con informazioni sul progetto. I file README sono scritti nel linguaggio Markdown
 - Creando il progetto è anche possibile impostarlo come progetto pubblico o privato e scegliere la licenza da applicare
 
-![Creazione repository su Git](img/LM2-ProcessoEditoriale/Git_CreazioneRepository.png)
+![Creazione repository su Git](img/LM2-ProcessoEditoriale/Git_CreateRepository.png)
 
 #### Collegare una directory locale
 È possibile collegare una directory locale ad un repository
