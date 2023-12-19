@@ -71,17 +71,17 @@ interessato ad XML
 
 **EAI (Enterprise Application Integration)**, ovvero l’integrazione tra applicazioni all’interno di un’azienda 
 
-![SLIDE 12](img/DT4-FormatiMarcatura-XML/)
+![SLIDE 12](img/LT4-FormatiMarcatura-XML/)
 
 Con XML semplici file di testo possono essere usati per condividere dati o per configurare applicazioni (leggibilità per macchina e utente): RSS, Calendar, Apache
 
 **TEI (Text Encoding Initiative)**, per codifica di testi letterari .
 
 ## Multicanale
-![SLIDE 13](img/DT4-FormatiMarcatura-XML/)
+![SLIDE 13](img/LT4-FormatiMarcatura-XML/)
 
 ### Web 2.0
-![SLIDE 14](img/DT4-FormatiMarcatura-XML/)
+![SLIDE 14](img/LT4-FormatiMarcatura-XML/)
 Ora sostituito da JSON
 
 ## Inforset XML
@@ -89,21 +89,107 @@ XML Infoset è un modello astratto dei dati XML
 - descrive le relazioni valide tra gli elementi di un XML
 - è un modo alternativo di definire la sintassi che risulta più adeguato all’uso di applicazioni come parser, strumenti di query, API di vari linguaggi
 
-![SLIDE 14](img/DT4-FormatiMarcatura-XML/)
+![Infoset XML](img/LT4-FormatiMarcatura-XML/Infoset_XML.png)
 
-[](https://www.ukoln.ac.uk/metadata/dcmi/dc-elem-prop/)
+Source: https://www.ukoln.ac.uk/metadata/dcmi/dc-elem-prop/
 
 ## Sintassi
+Sintassi semplice ma rigida:
+- dichiarazione XML
+- la dichiarazione di schema è opzionale
+- è richesto un nodo radice
+- chiusura degli elementi
+- corretto annidamento (albero)
+- rispettare il vincolo di “case sensitive”
+- elemento - attributo - valore
+- il ritorno a capo è sempre memorizzato con un LF
+- caratteri riservati < > ‘ “ &
+- commenti e CDATA
+
+
+```xml
+<?xml version-"1.0" encoding-"UTF-8"?»
+<poem type="elegy">
+ <author>Rupert Brooke</author>
+ <date>1912</date>
+ <!-- The title is not original but imposed to the scope of this collection-->
+ <title>Song</title>
+ <stanza>
+  <line> And suddenly the wind comes soft, </line>
+  <line> And Spring is here again; </line>
+  <line> And the hawthorn quickens with buds of green </line>
+  <line> And my heart with buds of pain. </line>
+ </stanza>
+ <stanza>
+  <line> My heart all Winter lay son numb, </line>
+  <line> The earth so dead and frore, </line>
+  <line> That I never thought the Spring would come again </line>
+  <line> Or my heart wake any more. </line>
+ </stanza>
+ <stanza>
+  <line> But Winter`s broken and earth has woken, </line>
+  <line> And the small birds cry again; </line>
+  <line> And the hawthorn hedge puts forth its buds, </line>
+  <line> And my heart puts forth its pain. </line>
+ </stanza>
+ <source>
+  <![CDATA[ http://www.example.org/docbook/xml/4.1.2/repository.xml&poem ]]>
+ </source>
+</poem>
+```
 
 ### Documenti ben formati
+Se la sintassi è rispettata il documento **è ben formato**
+- Un programma che definisce se un documento è ben formato è detto parser
+- Seguendo le regole sintattiche il **parser** analizza il documento seguendo la sua struttura ad albero se non riesce a costruire l’albero il documento non è valido
+- Alcuni parser costruiscono una rappresentazione in memoria del documento, da sfruttare ai fini di interrogazione
 
 ### Documenti validi
+**È valido** un documento conforme a uno schema DTD o XML Schema (xsd)
+- Lo schema descrive la struttura di un documento XML e alcuni vincoli di integrità sui dati
+- La struttura (albero XML) è conforme allo schema ovvero è un’istanza dello schema
 
 ### Dichiarazione
+Parte dello standard XML 1.0
+Nodo DOCTYPE
+- riporta il riferimento all’URI del DTD <br/>
+ es:  
+``` <!DOCTYPE archivioDomande SYSTEM "pdd_0_2.dtd"> ```
+- SYSTEM indica uno schema locale. Alcuni DTD molto utilizzati hanno un “nome” pubblico (PUBLIC); come il DTD di XHTML, <br/>
+   es:  ``` <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN“ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> ```
 
 ### Nodi di un DTD
+- Nodi ordinari: documento ed elementi
+- Nodi per attributi: vincoli sugli attributi (nome e tipo)
+- Nodi per i valori (#PCDATA)
+- Nodi speciali
+ - nodi che descrivono l’ordine degli elementi sequenza o alternativa
+ - indicatori di cardinalità
 
 #### Elementi
+**Dichiarazioni di elementi**
+Ogni dichiarazione di elemento contiene il nome dell’elemento e il tipo di dati definito da uno tra i seguenti quattro tipi:
+- Altri elementi
+- Contenuto di testo PCDATA
+- Qualunque altro elemento (parola chiave ANY)
+- Elemento vuoto (parola chiave EMPTY)
+
+```<!ELEMENT EMAIL (TO, FROM, CC, SUBJECT, BODY)>```
+
+Le specifiche di contenuto possono essere costituite da un insieme di alternative separate da pipe (|):
+```<!ELEMENT EXAMPLE (#PCDATA|x|y|z)*>```
+Indicatori di cardinalità:
+- una o più occorrenze – 1..* oppure +
+- zero o una occorrenza – 0..1 oppure ?
+- zero o più occorrenze – 0..* oppure *
+
+Se una dichiarazione di elemento utilizza la parola chiave ANY, l’elemento potrà avere qualsiasi tipo di contenuto disposto in un qualsiasi ordine :
+``` <!ELEMENT TEST ANY>```
+
+Per dichiarare che un elemento non può avere alcun contenuto, si utilizza la parola chiave EMPTY
+```<!ELEMENT soluzione EMPTY>```
+Un elemento dichiarato come elemento vuoto può avere attributi:
+```<soluzione lettera="b" />```
 
 #### Attributi
 
