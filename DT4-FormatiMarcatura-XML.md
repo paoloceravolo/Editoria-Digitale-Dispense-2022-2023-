@@ -372,8 +372,33 @@ Il prefisso del spazio dei nomi, a meno che si tratti di xml o di **xmlns**, DEV
 ```
 
 ### Elementi di XSD
+Un elemento può essere dichiarato come
+- Semplice
+ - Un elemento semplice è un elemento che potrà contenere solo tipi di dati standard (string, date, boolean, ecc.) o tipi di dati definiti dall’utente purchè siano derivati da tipi standard
+ - Non potrà contenere altri elementi o attributi
+ - È anche possibile aggiungere restrizioni (facets) al tipo di dato al fine di limitare il suo possibile contenuto
+- Complesso
+ - Un elemento complesso contiene altri elementi e/o attributi
+  - Elementi vuoti, elementi che contengono solo altri elementi elementi che contengono solo testo, elementi che contengono altri elementi e testo
 
 ### Elemento semplice
+La sintassi per definire un tipo semplice è : ```<xs:element name=“xxxx” type=“yyyy”/>```
+
+Dove xxxx è il nome dell’elemento e yyyy è il tipo
+
+Ad esempio nel documento XML
+```xml
+<cognome>Rossi</cognome>
+<eta>33</eta>
+<datanascita>1972-03-27</datanascita>
+```
+
+Le rispettive definizioni saranno
+```xml
+<xs:element name=“cognome” type=“xs:string”/>
+<xs:element name=“eta” type=“xs:integer”/>
+<xs:element name=“datanascita” type=“xs:data”/>
+```
 
 ### Tipi di dati comuni
 
