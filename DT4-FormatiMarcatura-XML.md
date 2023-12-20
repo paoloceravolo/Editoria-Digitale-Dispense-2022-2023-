@@ -192,34 +192,184 @@ Un elemento dichiarato come elemento vuoto può avere attributi:
 ```<soluzione lettera="b" />```
 
 #### Attributi
+In un DTD, gli attributi vengono dichiarati utilizzando:
+
+```<!ATTLIST ElementName AttributeName Type Default>```
+- _ElementName_ rappresenta il nome dell’elemento a cui vengono associati gli attributi
+- _AttributeName_ rappresenta il nome dell’attributo
+- _Type_ identifica il tipo di attributo dichiarato
+- _Default_ specifica le impostazioni predefinite relative all’attributo
 
 ##### Tipi di attributo
+- **CDDATA** : Un attributo di tipo CDATA utilizza dati generici in formato carattere.
+- **ENTITY** : Il valore dell'attributo fa riferimento a un'entità dichiarata nel DTD (argomento spiegato successivamente).
+- **ENTITIES** : è equivalente all'attributo ENTITY, ma consente l'utilizzo di valori separati da spazi.
+- **ID** : Il valore dell’attributo deve essere un **identificatore univoco**. In un documento XML, un solo attributo di tipo ID puo’ essere definito. Viceversa, il parser produce un errore.
+- **IDREF** : Il valore deve essere un riferimento a un ID associato ad un altro elemento del documento XML. Se l’attributo non corrisponde ad valore esistente, il parser produrrà un errore.
+- **IDREFS** : È equivalente all’attributo IDREF, ma consente l’utilizzo di più valori separati da spazi.
+- **NMTOKEN** : Il valore dell’attributo puo’ contenere caratteri alfanumerici (numeri e lettere) e i caratteri "." (punto), "-" (trattino), "_" (underscore), ":" (due punti). Permette un controllo più fine su ciò che verrà specificato come valore dell'attributo. 
+- **NMTOKENS** : È equivalente all’attributo NMTOKEN, ma consente l’utilizzo di più valori separati da spazi. 
+- **Enumerated** : Il valore dell’attributo deve corrispondere a uno dei valori inclusi. Ad esempio: ```<!ATTLIST MyAttribute (valore1 | valore2)>```.  
 
 #### Entità
+Un'entità è un modo per definire singoli blocchi di informazioni.
+Faccio riferimento ad entità esterne o interne per includerle in documenti. Possono essere file diversi o risorse accessibili via URL
+
+XML usa un meccanismo di riferimenti per includere un’entità in un’altra (ad esempio includere una parte di codice XML contenuto in un certo file, all’interno di un documento XML)
 
 ***Esempio di entità***
+Dichiarazione di entità generale interna (in DTD)
+```xml
+ <!ENTITY digits “0123456789”>
+```
+``` xml
+ <!ENTITY LR1 "light requirement: mostly shade“>
+```
 
-***Esempio di entità***
+Uso di entità generale interna (in documento XML)
+```xml 
+ <numeri>&digits;</numeri>
+```
+```xml 
+ <dicitura>&LR1;</dicitura>
+```
+
+***Esempio DTD***
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT poem (author+, date, title, stanza+, source?)>
+
+<!ATTLIST poem type (elegy|ballad|song) #IMPLIED>
+
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT stanza (line+)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT line (#PCDATA)>
+```
 
 # XML schema
-
 ## Cos'è uno schema XML
+Gli Schemi XML sono un miglioramento dei DTD.
+
+Sono documenti XML e descrivono la struttura di un documento XML
+- Definisce gli elementi che possono apparire in un documento
+- Definisce le relazioni tra elementi (padre-figlio)
+- Definisce l’ordine degli elementi
+- Definisce il numero degli elementi
+- Definisce quando un elemento può contenere testo o essere vuoto
+- Definisce il tipo di elementi ed attributi
+- Definisce valori fissi o di default per elementi ed attributi
 
 ## XML schema vs DTD
+I DTD sono ancora molto diffusi, ma vengono via via sostituiti
+dagli Schemi XML.
+
+XML Schema ha dei vantaggi rispetto DTD:
+- Sono adatti per futuri ampliamenti
+- Sono più completi ed dettagliati dei DTD
+- Sono documenti XML
+- Supportano i tipi di dati (datatypes)
+- Supportano i namespace
+
+Gli schemi XML sono stati proposti da Microsoft. Sono diventati una raccomandazione del W3C nel Maggio 2001.
 
 ## Supporto dei tipi di dati
+Uno dei maggiori punti di forza di XML Schema è quello di
+supportare i tipi di dati (datatypes)
+
+Grazie a questo supporto
+- È più facile descrivere la struttura di un documento
+- È più facile controllare la correttezza dei dati
+- È più facile lavorare con dati provenienti da database
+- È più facile definire restrizioni sui dati
+- È più facile definire il formato dei dati
+- È più facile convertire dati da un tipo all’altro
 
 ## Estendibilità
+Come XML anche gli schemi sono estendibili.
+
+Con uno schema è possibile:
+- Riusare uno schema all’interno di altri
+- Creare dei propri tipi di dati derivandoli da quelli standard
+- Fare riferimento a più schemi dallo stesso documento
 
 ***Esempio: documento XML***
-
+```xml
+<EMAIL>
+ <TO>mrossi@rossi.it</TO>
+ <FROM>pbianchi@bianchi.it</FROM>
+ <CC>gverdi@verdi.it</CC>
+ <SUBJECT>Primo DTD</SUBJECT>
+ <BODY>Doc XML con un DTD</BODY>
+</EMAIL> 
+```
 ***Esempio: DTD***
-
+Quello che segue è il DTD corrispondente
+```xml
+<!ELEMENT EMAIL (TO, FROM, CC, SUBJECT, BODY)>
+ <!ELEMENT TO (#PCDATA)>
+ <!ELEMENT FROM (#PCDATA)>
+ <!ELEMENT CC (#PCDATA)>
+ <!ELEMENT SUBJECT (#PCDATA)>
+ <!ELEMENT BODY (#PCDATA)>
+```
 ***Esempio: XSD***
+```xml
+<?xml version=“1.0” encoding=“ISO-8859-1”?>
+<xs:schema xmlns:xs=“http://www.w3c.org/2001/XMLSchema”
+ targetNamespace=“http://www.mioindirizzo.org”
+  elementFormDefault=“qualified”>
+ <xs:element name=“EMAIL”>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name=“TO” type=“xs:string”/>
+    <xs:element name=“FROM” type=“xs:string”/>
+    <xs:element name=“CC” type=“xs:string”/>
+     <xs:element name=“SUBJECT” type=“xs:string”/>
+    <xs:element name=“BODY” type=“xs:string”/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+```
 
 ## L'elemento schema
+È l’elemento radice di ogni XML schema.
+
+Può contenere alcuni attributi. _Esempio_:
+```
+ <xs:schema xmlns:xs=“http://www.w3c.org/2001/XMLSchema”
+  targetNamespace=“http://www.mioindirizzo.org”
+  elementFormDefault=“qualified”>
+```
+Il seguente frammento indica che gli elementi e i datatype usati nello schema (schema, element, complexType, sequence) appartengono al namespace ```http://www.w3c.org/2001/XMLSchema```
+
+```xmlns:xs=“http://www.w3c.org/2001/XMLSchema”```
+
+Indica inoltre che gli elementi appartenenti a questo namespace devono essere preceduti da xs:
+- Il frammento ```targetNamespace=“http://miapagina.org”``` indica che gli elementi definiti dallo schema ```(EMAIL, TO, FROM, CC, SUBJECT e BODY)``` appartengono al namespace ```“http://miapagina.org”```
+- Il frammento ```elementFormDefault=“qualified”``` indica che gli elementi usati nei documenti XML conformi a questo schema, hanno nomi qualificati
 
 ### Spazio dei nomi
+Il prefisso del spazio dei nomi, a meno che si tratti di xml o di **xmlns**, DEVE essere dichiarato:
+- In un attributo di dichiarazione del spazio dei nomi
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/stylesheets/rss.css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:trackback="http://madskills.com/public/xml/rss/module/
+ trackback/">
+```
+
+- Nel tag iniziale dell’elemento in cui il prefisso è usato o in un elemento antenato
+ ```xml
+<!-- il spazio dei nomi dell’elemento 'price' è http://ecommerce.example.org/schema -->
+<edi:price xmlns:edi='http://ecommerce.example.org/schema'
+ units='Euro'>32.18</edi:price>
+```
 
 ### Elementi di XSD
 
