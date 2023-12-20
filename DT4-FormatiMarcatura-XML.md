@@ -401,16 +401,129 @@ Le rispettive definizioni saranno
 ```
 
 ### Tipi di dati comuni
+XML Schema ha 41 tipi di dati predefiniti, i più comuni ed usati sono :
+- xs:string
+- xs:decimal
+- xs:integer
+- xs:boolean
+- xs:data
+- xs:time
 
 ### Valori di default e fissi
+Gli elementi semplici possono avere un valore di default oppure
+un valore fisso
+- Un **valore di default** è automaticamente assegnato all’elemento nel caso non ne siano assegnati altri: <br/>
+```xml
+ <xs:element name=“color” type=“xs:string” default=“red”/>
+```
+- Un **valore fisso** viene automaticamente assegnato all’elemento:
+```xml
+<xs:element name=“color” type=“xs:string” fixed=“red”/>
+```
 
 ## Restrizioni sul contenuto
+Le restrizioni (facet) sono usate per specificare condizioni restrittive sui possibili valori degli elementi.
 
+*Esempio*: Il codice seguente definisce un elemento età il cui valore dovrà essere compreso tra 0 e 100.
+```xml
+<xs:element name=“eta”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:integer”>
+   <xs:minInclusive value=“0”/>
+   <xs:maxInclusive value=“100” />
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
 ### Insiemi di valori: lista
-
+Il seguente codice limita i possibili valori ad un insieme definito
+```xml
+<xs:element name=“marca”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:enumeration value=“Audi”/>
+   <xs:enumeration value=“Volkswagen”/>
+   <xs:enumeration value=“BMW”/>
+  <xs:restriction/>
+ </xs:simpleType>
+</xs:element>
+```
 ### Pattern
+Per limitare il contenuto di un elemento XML ad un serie di
+lettere, si usa un vincolo di pattern.
+
+_Esempio 1_: una sola lettera minuscola tra a e z.
+```xml
+<xs:element name=“lettera”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:pattern value=“[a-z]”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
+
+_Esempio 2_: prima lettera maiuscola seguita da 1 o più lettere minuscole.
+```xml
+<xs:element name=“lettera”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:pattern value=“[A-Z][a-z]+”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
+
+_Esempio 3_: una sola lettera x oppure la sola lettera y oppure la sola lettera z (tutte minuscole).
+```xml
+<xs:element name=“scelta”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:pattern value=“[xyz]”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
+
+_Esempio 4_: la sola stringa "maschio" oppure "femmina".
+```xml
+<xs:element name=“sesso”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:pattern value=“maschio|femmina”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
+
+_Esempio 5_: 8 caratteri composti da:
+- lettere minuscole OR
+- lettere maiuscole OR
+- cifre da 0 a 9.
+```xml
+<xs:element name=“password”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:pattern value=“[a-z][A-Z][0-9]{8}”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
 
 ### Restrizioni sulla lunghezza
+Per limitare la lunghezza dei valori degli elementi si usano ivincoli **minLength**, **maxLength**.
+
+Definiamo l’elemento password con una lunghezza minima di 5 caratteri e massima di 8
+```xml
+<xs:element name=“password”>
+ <xs:simpleType>
+  <xs:restriction base=“xs:string”>
+   <xs:minLength=“5”/>
+   <xs:maxLength=“8”/>
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+```
 
 ## Attributi
 
