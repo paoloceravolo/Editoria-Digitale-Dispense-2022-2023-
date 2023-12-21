@@ -526,25 +526,155 @@ Definiamo l’elemento password con una lunghezza minima di 5 caratteri e massim
 ```
 
 ## Attributi
+Tutti gli attributi sono dichiarati come tipi semplici (simple type), ma solo elementi complessi (complex element) possono avere attributi
+
+La sintassi per la definizione di un attributo è la seguente: ``` <xs:attribute name=“xxxx” type=“yyyy”/> ``` dove xxxx è il nome dell’attributo e yyyy è il tipo.
 
 ### Definire un attributo
+Se ad esempio ho un documento XML:
+```<cognome lingua=”eng”>Rossi</cognome>```
+
+Corrisponde alla dichiarazione di attributo:
+```xml
+<xs:attribute name=“lingua” type=“xs:string”/>
+```
+
+Sintassi per dichiarare attributi fissi, di **default**, **obbligatori** e **opzionali**
+```xml
+<xs:attribute name=“cognome” type=“xs:string fixed=“eng”/>
+<xs:attribute name=“cognome” type=“xs:string default=“eng”/>
+<xs:attribute name=“lang” type=“xs:string” use=“required”/>
+<xs:attribute name=“lang” type=“xs:string” use=“optional”/>
+```
 
 #### Tipi complessi
+Un elemento complesso contiene altri elementi e/o attributi
+
+Ci sono quattro tipi di elementi complessi:
+- Elementi vuoti
+- Elementi che contengono solo altri elementi
+- Elementi che contengono solo testo
+- Elementi che contengono altri elementi e testo
 
 ***Esempi***
+Elemento complesso vuoto:
+```xml
+<prodotto id=“23223”/>
+```
+
+Elemento che contiene solo altri elementi:
+```xml
+<impiegato>
+<nome>Mario</name>
+<cognome>Rossi</cognome>
+</impiegato>
+```
+
+Elemento che contiene solo testo:
+```xml
+<cibo tipo=“dessert”>Gelato</cibo>
+```
+
+Elemento che contiene sia testo che altri elementi:
+```xml
+<descrizione>
+ Accaduto il
+ <data lang=“italian”>
+  31-01-1999
+ </data>
+</descrizione>
+```
 
 ## Indicatori
+**Indicatori d’ordine**:
+- Sequence
+- Choice
+- All
+**Indicatori di occorrenza**:
+- maxOccours
+- minOccours
+**Indicatori di gruppo**:
+- Group name
+- attributeGroup name
 
 ### Indicatori d'ordine
+Indicano quale deve essere l’ordine con cui devono apparire gli elementi.
+**All**: Specifica, per default, che gli elementi possono comparire in qualsiasi ordine
+**Choice**: Indica che potrà comparire solo uno degli elementi specificati
+**Sequence**: Indica che gli elementi dovranno comparire nella sequenza indicata
 
 ### Indicatori di occorrenza
+Sono utilizzati per indicare quanti elementi possono comparire nel documento.
 
-#### Complextype
+Si noti che se non viene indicato, viene applicato un valore di 1 sia per ```minOccurs``` che per ```maxOccurs```.
 
+È possibile indicare che un elemento possa comparire infinite volte usando
+```maxOccurs = “unbounded”```
+
+### Complextype
+La sitassi per i complex type è la seguente:
+```xml
+<xsd:element name="config">
+ <xsd:complexType>
+  <xsd:choice minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="pdp" type="config:PDPType"/>
+   <xsd:element name="Factory type="config:AttributeFactoryType"/>
+  </xsd:choice>
+ </xsd:complexType>
+ <xsd:attribute name="defaultPDP" type="xsd:string" use="required"/>
+</xsd:element>
+<xsd:complexType name="PDPType">
+ <xsd:choice minOccurs="0" maxOccurs="unbounded">
+  <xsd:element name="attributeFinderModule" type="config:ClassType"/>
+  <xsd:element name="resourceFinderModule" type="config:ClassType"/>
+  <xsd:element name="policyFinderModule" type="config:ClassType"/>
+ </xsd:choice>
+ <xsd:attribute name="name" type="xsd:string" use="required"/>
+</xsd:complexType>
+```
 #### Riferire un complextype
-
+Esistono due modi per riferire un complex type:
+```xml
+<xsd:element name="Studenti">
+<xsd:complexType>
+<xsd:choice>
+ <xsd:element name="studente" ref="StudentType"/>
+ <xsd:element name="studente-diplomato" type="GraduateStudent"/>
+</xsd:choice>
+</xsd:complexType>
+ </xsd:element>
+```
+La differenza è sottile:
+- _ref_ riferisce un elemento e quindi anche il suo nome
+- _type_ riferisce un tipo e quindi solo le sue componenti
+- Dichiarazioni globali e locali possono essere fatte in base dove si piazza la dichiarazione di complextype, se sotto la radice (sxhema) oppure all’interno di un altra dichiarazione
 ***Esempio XSD***
+```xml
+<xsd: complexType name="Student">
+<xsd:choice>
+ <xsd:element name="studente" type="StudentType"/>
+ <xsd:element name="studente-diplomato" type="GraduatedStudent"/>
+</xsd:choice>
+</xsd:complexType>
 
+<xsd:complexType name="StudentType">
+ <xsd:sequence>
+  <xsd:element name="cognome" type="xsd:string"/>
+  <xsd:element name="nome" type="xsd:string"/>
+  <xsd:element name="classe" type="ClassType"/>
+  <xsd:element name="pagella">
+   <xsd:complexType mixed="true">
+    <xsd:sequence>
+     <xsd:element name="matematica" type="ListOfMarks"/>
+     <xsd:element name="italiano" type="ListOfMarks"/>
+     <xsd:element name="edmusicale" type="ListOfMarks"/>
+    </xsd:sequence>
+   </xsd:complexType>
+  </xsd:element>
+ </xsd:sequence>
+ <xsd:attribute name="matricola" type="xsd:integer"/>
+</xsd:complexType>
+```
 ### Indicatori di gruppo
 
 #### Attributi di gruppo
