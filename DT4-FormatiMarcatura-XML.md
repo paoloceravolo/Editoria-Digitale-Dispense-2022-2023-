@@ -71,17 +71,17 @@ interessato ad XML
 
 **EAI (Enterprise Application Integration)**, ovvero l’integrazione tra applicazioni all’interno di un’azienda 
 
-![SLIDE 12](img/LT4-FormatiMarcatura-XML/)
+![B2B/EAI](img/LT4-FormatiMarcatura-XML/B2B_EAI.png)
 
 Con XML semplici file di testo possono essere usati per condividere dati o per configurare applicazioni (leggibilità per macchina e utente): RSS, Calendar, Apache
 
 **TEI (Text Encoding Initiative)**, per codifica di testi letterari .
 
 ## Multicanale
-![SLIDE 13](img/LT4-FormatiMarcatura-XML/)
+![Multicanale](img/LT4-FormatiMarcatura-XML/Multicanale.png)
 
 ### Web 2.0
-![SLIDE 14](img/LT4-FormatiMarcatura-XML/)
+![Web 2.0](img/LT4-FormatiMarcatura-XML/Web2.png)
 Ora sostituito da JSON
 
 ## Inforset XML
