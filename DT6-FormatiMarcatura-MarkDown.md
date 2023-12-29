@@ -24,11 +24,11 @@ Markdown è un **linguaggio estremamente portabile**
 
 ## Applicazione
 Markdown è nato per il web esistono quindi diverse applicazioni nel web
-- Jekyll un generatore di pagine HTML statiche
-- Ghost e WordPress.com e altri CMS
+- [Jekyll](https://www.markdownguide.org/tools/jekyll/) un generatore di pagine HTML statiche
+- [Ghost](https://www.markdownguide.org/tools/ghost/) e WordPress.com e altri CMS
 
 Markdown può essere usato per appunti e annotazioni, per generare presentazioni per la documentazione del software o per creare documenti
-- Leanpub è un servizio che partendo da file in formato markdown genere un ebook
+- [Leanpub](https://leanpub.com/) è un servizio che partendo da file in formato markdown genere un ebook
 - [Remarkjs](https://remarkjs.com/) è un generatore di presentazioni da markdown
 - Diversi sistemi di collaborazione come Wiki, Slack e Mattermost supportano markdown
 
