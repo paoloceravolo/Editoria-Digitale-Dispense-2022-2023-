@@ -173,6 +173,7 @@ Regole particolari
   
 ## Commenti
 Un carattere di percento ```%``` (tranne che nella forma ```\%```) per LaTeX significa ignora il resto della riga, l’interruzione di riga, e tutti gli spazi bianchi all’inizio della riga successiva.
+
 ![Commenti](img/LT7-FormatiMarcatura-Latex/Commenti.jpg)
 
 ## Margini e interlinea
@@ -187,13 +188,14 @@ Un carattere di percento ```%``` (tranne che nella forma ```\%```) per LaTeX sig
 \begin{onehalfspace}...\end{onehalfspace}
 ```
 ## Struttura del documento
-I simboli indicano se l’opzione è predefinita, applicabile o non
-applicabile
+I simboli indicano se l’opzione è predefinita, applicabile o non applicabile.
+
 ![Struttura del documento](img/LT7-FormatiMarcatura-Latex/StrutturaDocumento.png)
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 ### Struttura di una tesi di laurea
 I simboli indicano se l’opzione è predefinita, applicabile o non applicabile.
+
 ![Struttura tesi di laurea](img/LT7-FormatiMarcatura-Latex/StrutturaTesi.png)
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
@@ -203,19 +205,100 @@ Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/
 - ```\appendix``` - appendici
 
 ## Stile di pagina
+È possibile definire uno stile di pagina attraverso il pacchetto \pagestyle{<stile>}
+- ```Plain```: mette i numeri di pagina nel piede, lasciando vuota la testatina. È lo stile predefinito nelle classi article e report
+- ```Empty```: lascia testatina e piede vuoti
+- ```Headings```: lascia il piede vuoto e compone le testatine come segue: il numero di pagina è sempre posto nel margine esterno, seguito dal titolo del capitolo corrente nella testatina di sinistra e preceduto dal titolo del paragrafo corrente in quella di destra
+  - È lo stile predefinito nella classe book e agisce nello stesso modo nelle classi report e article
+- ```myheadings``` è simile a headings nel risultato e va usato quando non si vuole che le testatine dipendano dai titoli delle sezioni (capitolo e paragrafo) correnti. L’utente deve specificarne il contenuto a ogni nuovo capitolo (o paragrafo, se la classe è article), dando ```\markboth``` per comporle entrambe oppure ```\markright``` per comporre soltanto quella di destra
 
 ## Riferimenti incrociati
+Nei documenti si trovano spesso riferimenti incrociati a sezioni, figure, tabelle, teoremi e altri elementi.
+
+Per realizzarli si usano i comandi standard
+- ```\label{<etichetta>}``` assegna agli elementi contrassegnati un’etichetta arbitraria e univoca
+- ```\ref{<etichetta>}``` produce il numero dell’elemento messo in etichetta
+- ```\pageref{<etichetta>}``` produce il numero di pagina in cui l’elemento compare
 
 ## Equazioni
+Per scrivere un simbolo matematico o un equazione lungo il
+teso bisogna metterlo tra ```$ $```
+_Esempio:_ ```$y=f(x)=x^{2}+\frac{1}{2}x$```
 
+Per inserirla come una ambiente:
+```latex
+\begin{equation} o \[ (no number)
+ y=f(x)=x^{2}+\frac{1}{2}x
+ \end{equation} o \]
+```
 ## Tabelle inline
-
+Si possono ottenere in vario modo ecco un esempio
+```latex
+\begin{center}
+ \begin{tabular}{ll}
+ \toprule
+ Alcaloide & Origine \\
+ \midrule
+ atropina & belladonna \\
+ morfina & papavero \\
+ \bottomrule
+ \end{tabular}
+ \end{center}
+```
 ## Tabelle floating
+La versione inline significa nel testo
+- Se si vuole che sia floating (ovvero non ancorata ad punto del testo) occorre usare un ambiente specifico per tabular ovvero _Table_
+```latex
+\begin{table}[<preferenze di collocazione>] …
+\end{table}
+```
+- Tutti gli ambienti floating
+- Possono essere etichettati (label) ed avere una caption e posso
+specificare come debbano essere disposte nella pagina
+``` \caption[<didascalia breve>]{<didascalia normale>}```
 
 ## Immagini
-
+Anche le immagini sono gestite attraverso un ambiente floating denominato figure
+```latex
+\begin{figure}
+ \begin{center}
+ \includegraphics[width=xcm,height=ycm]
+{figure.eps}
+ \end{center}
+\end{figure}
+```
 ## Comandi di compilazione
+- ```latex file.tex``` : produce file.dvi
+- ```xdvi file.dvi &``` : visualizzare il file
+- ```dvips file.dvi``` : converte il .dvi in .ps
+- ```ps2pdf file.ps``` : converte il .ps in .pdf
 
 ## LaTex per produrre epub
+Un uso interessante di LaTeX è quello per produrre direttamente un formato ePub al posto di PDF
+- Per farlo si può usare il pacchetto _tex4ebook_
+  - https://ctan.org/pkg/tex4ebook
+- Si compila verso ebook, e se serve si possono usare comandi addizionali
+del pacchetto tipici per materiale ebook
+Prerequisiti
+- installazione di un motore latex: [Texlive](https://www.tug.org/texlive/),
+  [MacTeX](https://www.tug.org/mactex/),
+  [MiKTeX](https://miktex.org/),
+- Installazione del pacchetto [tex4ebook](https://github.com/michal-h21/tex4ebook/blob/master/INSTALL.md)
+- Installazione del pacchetto [tex4ht](https://github.com/michal-h21/make4ht/blob/master/INSTALL.md)
+- Installazione di [Pandoc](https://pandoc.org/)
 
 ## Grafica dichiarativa
+TikZ e PGF sono pacchetti TeX per la creazione programmatica di grafica.
+
+TikZ si basa su PGF e consente di creare grafica sofisticata in modo piuttosto intuitivo e semplice.
+
+```latex
+\begin{tikzpicture}[
+ node distance=1cm and 1.2cm,
+ thick,
+ nodes={align=center},
+ >={Latex[scale=.9]},
+ …
+```
+[TikZ su GitHub](https://github.com/pgf-tikz/pgf)
+[TikZ per esempi](https://tikz.net/)
