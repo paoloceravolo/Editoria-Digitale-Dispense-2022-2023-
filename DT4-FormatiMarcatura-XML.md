@@ -675,14 +675,153 @@ La differenza è sottile:
  <xsd:attribute name="matricola" type="xsd:integer"/>
 </xsd:complexType>
 ```
+
+```xml
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <xsd:element name="Studenti">
+ <xsd:complexType>
+ <xsd:choice>
+  <xsd:element name="studente" ref="StudentType"/>
+  <xsd:element name="studente-diplomato" ref="GraduateStudent"/>
+ </xsd:choice>
+ </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="StudentType">
+ <xsd:complexType>
+  <xsd:sequence>
+   <xsd:element name="cognome" type="xsd:string"/>
+   <xsd:element name="nome" type="xsd:string"/>
+   <xsd:element name="classe" type="ClassType"/>
+   <xsd:element name="pagella">
+    <xsd:complexType mixed="true">
+     <xsd:sequence>
+      <xsd:element name="matematica" type="ListOfMarks"/>
+      <xsd:element name="italiano" type="ListOfMarks"/>
+      <xsd:element name="edmusicale" type="ListOfMarks"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name="matricola" type="xsd:integer"/>
+ </xsd:complexType>
+ </xsd:element>
+
+ <xsd:complextType name="GraduateStudent">
+  <xsd:all>
+   <xsd:element name="stuedente" ref="StudentType"/>
+   <xsd:element name="Laurea" ref="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+</xsd:schema>
+```
 ### Indicatori di gruppo
+Gli indicatori di gruppo sono usati per definire insiemi di elementi correlati.
+
+**Gruppi di elementi**: Sono definiti con una dichiarazione come la seguente:
+```xml
+<xs:group name=“gruppopersona”>
+ <xs:sequence>
+  <xs:element name=“nome” type=“xs:string”>
+  <xs:element name=“cognome” type=“xs:string”>
+  <xs:element name=“datanascita” type=“xs:date”>
+ </xs:sequence>
+</xs:group>
+```
+Dopo aver definito un gruppo nel modo precedente, sarà possibile usarlo all’interno di altre definizioni più complesse:
+```xml
+<xs:element name=“person” type=“personinfo” />
+<xs:complexType>
+ <xs:sequence>
+  <xs:group ref=“gruppopersona” />
+  <xs:element name=“nazionalita” type=“xs:string” />
+ </xs:sequence>
+</xs:complexType>
+```
 
 #### Attributi di gruppo
-
+Gli attributi di gruppo sono definiti come segue:
+```xml
+<xs:attributeGroup>
+ ...
+</xs:attributeGroup>
+```
+Anche in questo caso, dopo aver definito un gruppo di attributi, sarà possibile richiamarli in altre dichiarazioni
 ***Esempio***
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+ <xs:element name="poem">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="author"/>
+    <xs:element ref="date"/>
+    <xs:element ref="title"/>
+    <xs:element minOccurs="4" max0ccurs "4" ref="stanza"/>
+    <xs:element ref="source"/>
+   </xs:sequence>
+   <xs:attribute name="type" use="required" type="xs:NCName"/>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="author" type="xs:string"/>
+ <xs:element name="date"_type="xs:date"/>
+ <xs:element name-"title" type="xs:NCName"/>
+ <xs:element name="stanza">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element minOccurs="4" max0ccurs="4" ref="line"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs: element name="line" type="xs:string"/>
+ <xs: element name="source" type="xs:anyURI"/>
+</xs:schema>
+```
 
 ## Validatori per XML schema
+[DecisionSoft XML Schema Validator](http://tools.decisionsoft.com/schemaValidate.html) – solo online
+
+[XSV (XML Schema Validator)](http://www.ltg.ed.ac.uk/~ht/xsv-status.html) – tool da riga di comando
+
+Editor XML: XMLSpy, oXygen, Exchenger XML
+Eclipse + plugins (XML Buddy, XSD Infoset) – open source, installazione non semplicissima
+http://www.eclipse.org
 
 ## Tecnologie XML
+**XHTML, CSS**
 
+**DTD** (Document Type Definition): può essere usato per definire modelli di documenti XML
 
+**XSD** (XML Schema): come DTD, ma in sintassi XML, oltre che più potente e versatile
+
+**Namespaces**: è un metodo per definire elementi ed attributi usato da XML per associarli ad un URI
+
+**XSL** (eXtensible Stylesheet Language): simile a CSS
+
+**XSLT** (XSL Transformation): è più potente di CSS. Può essere usato per trasformare i file XML in altri formati, non solamente HTML
+
+**XQL** (XML Query Language): dà la possibilità, tramite query, di estrarre dati da documenti XML
+
+**XPath** (XML Pattern Matching): è un linguaggio per identificare porzioni precise di file XML
+
+**XLink** (XML Link Language): permette di inserire elementi all’interno di documenti XML in modo da creare collegamenti fra diverse risorse XML
+
+**XPointer** (XML Pointer Language): supporta l’indirizzamento dentro la struttura interna di documenti XML
+
+**DOM** (Document Object Model): definisce la rappresentazione in memoria (struttura ad albero), le interfacce e metodi per manipolare documenti XML
+- [libxml2](https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home)
+  parser e toolkit per il linguaggio C
+- [Saxon](https://saxon.sourceforge.net/)
+   processore per Java, JavaScript, .NET
+- [Xerces](https://xerces.apache.org/)
+   progetto Apache per C++ Java e Perl
+- [xslt-processor](https://www.npmjs.com/package/xslt-processor)
+   pacchetto per Node.js
+- [Lxml](https://lxml.de/)
+   liberaria basata su libxml e libxslt per Python
+
+**SAX** (Simple API for XML): è un’interfaccia per leggere e manipolare file XML attraverso eventi
+- [SAX](https://www.ibm.com/docs/en/i/7.3?topic=codes-xml-sax-parse-xml-document)
+  progetto IBM per manipolazione di documenti XML
+- [Expat](https://libexpat.github.io/)
+  libreria stream per il linguaggio C
