@@ -31,6 +31,7 @@ Fornisce automazione per la maggior parte delle attività di composizione tipogr
 - Oggi anche altri formati come PDF, Word, HTML
 - Con la giusta estensione anche ePUB
   -  Usarlo non è facile ma il risultato è estremamente professionale
+
 ![Interfaccia LaTex](img/LT7-FormatiMarcatura-Latex/Output.png)
 
 ## Documento e classi
@@ -100,12 +101,15 @@ documentclass[<opzioni>]{<classe>}
 ```
 Opzioni: impostazioni generali del documento
 - I simboli indicano se l’opzione è predefinita, applicabile o non applicabile
+
 ![Opzioni](img/LT7-FormatiMarcatura-Latex/Opzioni.png)
+
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 
 ### Packages
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
+
 -```10pt, 11pt, 12pt```: impostano la dimensione del font principale del documento. Omettendo l’opzione, il valore predefinito è 10pt.
 - ```a4paper, a5paper```: definiscono le dimensioni del foglio, che per impostazione predefinita è nel formato
 letterpaper.
@@ -160,6 +164,7 @@ al volo sorpresa gentil farfalletta.
 
 ## Caratteri speciali
 ![Caratteri speciali](img/LT7-FormatiMarcatura-Latex/CaratteriSpeciali.png)
+
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 ## Spazi e righe vuote
@@ -191,12 +196,14 @@ Un carattere di percento ```%``` (tranne che nella forma ```\%```) per LaTeX sig
 I simboli indicano se l’opzione è predefinita, applicabile o non applicabile.
 
 ![Struttura del documento](img/LT7-FormatiMarcatura-Latex/StrutturaDocumento.png)
+
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 ### Struttura di una tesi di laurea
 I simboli indicano se l’opzione è predefinita, applicabile o non applicabile.
 
 ![Struttura tesi di laurea](img/LT7-FormatiMarcatura-Latex/StrutturaTesi.png)
+
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 - ```\frontmatter``` - “materiale iniziale”, non numera le sezioni e numera le pagine con numeri romani minuscoli (i, ii, iii, eccetera)
