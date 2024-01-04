@@ -181,10 +181,10 @@ Questo spesso causa problemi di compatibilità perché non tutte le applicazioni
 
 Se all'inizio del file è presente un tag BOM, si tratta di un testo in formato Unicode:
 
-- UTF-8 = EF BB BF 
-- UTF-16 Big Endian = FE FF 
-- UTF-16 Little Endian = FF FE 
-- UTF-32 Big Endian = 00 00 FE FF  
+- UTF-8 = EF BB BF
+- UTF-16 Big Endian = FE FF
+- UTF-16 Little Endian = FF FE
+- UTF-32 Big Endian = 00 00 FE FF 
 - UTF-32 Little Endian = FF FE 00 00
 
 Premere [qui](https://validator.w3.org/i18n-checker/) per accedere al validatore di W3C
