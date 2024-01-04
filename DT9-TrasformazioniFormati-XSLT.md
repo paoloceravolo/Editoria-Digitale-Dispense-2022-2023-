@@ -86,38 +86,149 @@ transform = etree.XSLT(etree.parse('simple.xsl'))
 s = str(transform(dom))
 print(s)
 ```
+Nel nostro esempio le regole di trasformazione incluse nel file XSLT potranno essere espresse come:
+```xsl
+<xsl:stylesheet version="1.0" xmlns:xsl=“http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="div">
+ <html>
+  <h1><xsl:value-of select="@n"/>: <xsl:value-ofselect="head"/></h1>
+  <p>Ingredients:<xsl:apply-templates select="list/item"/></p>
+  <p><xsl:value-of select="p"/></p>
+ </html>
+</xsl:template>
+</xsl:stylesheet>
+```
+Con XSLT è possibile definire anche dei parametri che modificheranno la trasformazione.
 
+Con la libreria C _libxslt_ da linea di comando abbiamo:
+- _stringparam_ per passare una copia nome del parametro e valore in formato stringa:
+```xsl
+xsltproc --stringparam someVariable Value template.xsl
+example.xml > output.xml
+```
+- _param_ per passare una copia nome del parametro e identificatore di un nodo:
+```xsl
+xsltproc --param anotherVariable /foo/bar template.xsl
+example.xml > output.xml
+```
+- nel nostro esempio andranno uniti in questo modo:
+```xsl
+xsltproc --stringparam someVariable Value --param
+anotherVariable /foo/bar template.xsl example.xml >
+output.xml
+```
 ## Dichiarazione
+L’elemento radice di un foglio di stile può essere ```<xsl:stylesheet>``` oppure ```<xsl:transform>```.
 
+Secondo lo standard del W3C, la dichiarazione corretta dovrebbe essere:
+
+``` <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3c.org/1999/XSL/Transform">```
+
+Per la versione 2 di XSLT, tipicamente supportata da Saxon, richiede una diversa dichiarazione. Nella dichiarazione è possibile inserire ulteriori namespace da usare nel foglio di stile.
+```xsl
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version=“2.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:dc="http://purl.org/dc/elements/1.1">
+```
 ## Riferimento a XSL
+Secondo lo standard sarebbe necessario indicare nel file XML a quale file XSL esso fa riferimento
+
+``` <?xml-stylesheet type="text/xsl"href="elencocd-primo.xsl"?>```
+
+Questa dichiarazione di fatto può essere omessa se l’applicazione su cui ci si basa riceve come parametri un XML di input, un XSL per la trasformazione e un output per il risultato.
 
 ## XSL:TEMPLATE
+Un foglio di stile XSL è formato da un insieme di template.
+
+Ogni elemento ```<xsl:template>``` contiene delle regole da applicare quando uno specifico nodo viene trovato
+
+L’attributo match è usato per associare il template con un elemento XML utilizzando _XPath_:
+- \/ l’elemento radice
+- \* qualsiasi elemento
+- _text()_ il testo contenuto in un elemento
+- _name_ un elemento di nome name
+- _@name_ un attributo di nome name
+
+L’XSL che segue contiene un solo template e fornisce un output in HTML.
 
 ### Esempio
+![Esempio XSL:TEMPLATE](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLTemplate.jpg)
 
 ### Dettagli
+I documenti XSL sono documenti XML, quindi iniziano con la dichiarazione tipica:
+```xsl
+<?xml version="1.0" encoding="ISO-8859-1"?>
+```
+- L’elemento ```<xsl:stylesheet>``` definisce l’inizio del documento
+- L’elemento ```<xsl:template>``` definisce l’inizio di un template
+- L’attributo ```match="/"``` definisce la corrispondenza con l’elemento radice / del documento XML sorgente
+- L’elemento ```<xsl:value-of>``` può essere usato per estrarre un valore da un elemento XML e aggiungerlo al flusso di output della trasformazione
 
+Nell’esempio che segue notiamo l’utilizzo di XPath al fine di identificare specifici elementi del file XML sorgente.
 ### Esempio
+![Esempio XPath](img/LT9-TrasformazioniFormati-XSLT/Esempio_XPath.jpg)
 
 ### Nozione di nodo corrente
+![Nodo corrente](img/LT9-TrasformazioniFormati-XSLT/NodoCorrente.jpg)
 
-### Osservazioni
+Il risultato della valutazione di un’espressione XPath è un insieme di elementi, quindi zero, uno o più d’uno.
+- L’output è ancora un po’ deludente in quanto viene visualizzato solo il primo cd
+- PERCHE' VIENE VISUALIZZATO SOLO IL PRIMO CD?
 
 ## XSL:FOR-EACH
+L’elemento ```<xsl:for-each>``` può essere usato per selezionare ogni elemento XML corrispondente ad un dato XPath
+- Quello che segue è il listato corretto relativo al nostro esempio
+- A questo punto tutti gli elementi essenziali sono stati aggiunti e l’output dovrebbe essere soddisfacente
 
 ### Esempio
+![Esempio XSL:FOR-EACH 1](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLForEach_01.jpg)
+![Esempio XSL:FOR-EACH 2](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLForEach_02.jpg)
 
 ## Filtrare l'output
+Aggiungiamo qualche criterio di controllo (ancora come espressione XPath)
+```xsl
+ <xsl:for-each select='elenco/ cd[autore="Radiohead"]'>
+```
+Con questa condizione otteniamo in output solo i cd dei Radiohead
+
+![Filtrare Output](img/LT9-TrasformazioniFormati-XSLT/FiltrareOutput.jpg)
 
 ## XSL:SORT
+- L’elemento ```<xsl:sort>``` serve per ordinare l’output
+- L’output e l’ordinamento si ottenere in un unico passo inserendo l’elemento ```<xsl:sort>```
+Quella che segue è la versione modificata del file XSL
 
 ### Esempio
+![XSL:SORT](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLSort.jpg)
 
-## Problema
+**Problema**
+![XSL:SORT](img/LT9-TrasformazioniFormati-XSLT/XSLSort_Problema.jpg)
+L'output html ordina gli elementi **cd** secondo il valore dell'elemento **preferenza** interpretato come stringa di caratteri.
 
 ### Soluzione: Data-Type
+```xsl
+<xsl:for-each select="elenco/cd">
+ <xsl:sort data-type="number" select="preferenza"/>
+ <tr>
+ <td><xsl:value-of select="titolo"/></td>
+ <td><xsl:value-of select="autore"/></td>
+ </tr>
+</xsl:for-each>
+```
+![Soluzione: Data-Type](img/LT9-TrasformazioniFormati-XSLT/Soluzione_DataType.jpg)
+Ora l’ordinamento è corretto.
 
 ## XSL:IF
+L’elemento ```<xsl:if>``` contiene una serie di istruzioni che verranno eseguite solo se la condizione specificata è vera
+
+La condizione viene messa sotto forma di attributo e funziona come segue:
+```xsl
+<xsl:if test="prezzo &gt; 10">
+ qualche istruzione
+</xsl:if>
+```
+Otterremo in output i soli cd il cui prezzo è maggiore di 10.
+![XSL:SORT](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLIf.jpg)
 
 ## XSL:CHOOSE
 
