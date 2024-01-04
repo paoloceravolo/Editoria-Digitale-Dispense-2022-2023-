@@ -181,8 +181,29 @@ L’elemento ```<xsl:for-each>``` può essere usato per selezionare ogni element
 - A questo punto tutti gli elementi essenziali sono stati aggiunti e l’output dovrebbe essere soddisfacente
 
 ### Esempio
-![Esempio XSL:FOR-EACH 1](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLForEach_01.jpg)
-![Esempio XSL:FOR-EACH 2](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLForEach_02.jpg)
+```xsl
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns=http://www.w3c.org/1999/XSL/Trasform>
+<xsl:template match="/">
+ <html> <body>
+  <h2>La mia collezione di CD</h2>
+  <table border="1">
+   <tr bgcolor="#9acd32">
+    <th align="left">Titolo</th>
+    <th align="left">Autore</th>
+   </tr>
+  <xsl:for-each select="elenco/cd">
+   <tr>
+    <td><xsl:value-of select="titolo"/></td>
+    <td><xsl:value-of select="autore"/></td>
+   </tr>
+  </xsl:for-each>
+  </table>
+ </body></html>
+</xsl:template>
+</xsl:stylesheet>
+```
+![Esempio XSL:FOR-EACH](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLForEach.jpg)
 
 ## Filtrare l'output
 Aggiungiamo qualche criterio di controllo (ancora come espressione XPath)
@@ -203,6 +224,7 @@ Quella che segue è la versione modificata del file XSL
 
 **Problema**
 ![XSL:SORT](img/LT9-TrasformazioniFormati-XSLT/XSLSort_Problema.jpg)
+
 L'output html ordina gli elementi **cd** secondo il valore dell'elemento **preferenza** interpretato come stringa di caratteri.
 
 ### Soluzione: Data-Type
@@ -216,6 +238,7 @@ L'output html ordina gli elementi **cd** secondo il valore dell'elemento **prefe
 </xsl:for-each>
 ```
 ![Soluzione: Data-Type](img/LT9-TrasformazioniFormati-XSLT/Soluzione_DataType.jpg)
+
 Ora l’ordinamento è corretto.
 
 ## XSL:IF
@@ -228,29 +251,166 @@ La condizione viene messa sotto forma di attributo e funziona come segue:
 </xsl:if>
 ```
 Otterremo in output i soli cd il cui prezzo è maggiore di 10.
-![XSL:SORT](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLIf.jpg)
+
+![XSL:IF](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLIf.jpg)
 
 ## XSL:CHOOSE
+L’elemento ```<xsl:choose>``` è usato insieme agli elementi ```<xsl:when>``` e ```<xsl:otherwise>``` per esprimere condizioni multiple
+
+La sintassi da usare è la seguente:
+```xsl
+<xsl:choose>
+ <xsl:when test="condizione">
+fai qualcosa
+ </xsl:when>
+ <xsl:otherwise>
+fai altro
+ </xsl:otherwise>
+</xsl:choose>
+```
+Nell’esempio i cd di prezzo maggiore a 11, verranno visualizzati in colore diverso dagli altri.
 
 ### Esempio
+```xsl
+<xsl:for-each select="elenco/cd">
+ <tr>
+ <td><xsl:value-of select="autore"/></td>
+ <xsl:choose>
+  <xsl:when test="prezzo &gt; 11">
+   <td bgcolor="#ff00ff">
+    <xsl:value-of select="titolo"/>
+   </td>
+  </xsl:when>
+  <xsl:otherwise>
+   <td> <xsl:value-of select="titolo"/> </td>
+  </xsl:otherwise>
+ </xsl:choose>
+ </tr>
+```
+![XSL:CHOOSE](img/LT9-TrasformazioniFormati-XSLT/Esempio_XSLChoose.jpg)
 
 ## Valori di un attributo
+Nel caso in cui volessi partire da un sorgente come
+```xsl
+<ref target="http://www.it.ox.ac.uk/">IT Services</ref>
+```
+per ottenere l’output
+```xsl
+<a href="http://www.it.ox.ac.uk/">IT Services</a> .
+```
 
+non possiamo definire il templare in questo modo
+```xsl
+<xsl:template match="ref"> <a href="@target">
+<xsl:apply-templates/> </a>
+</xsl:template>
+```
+Perché nell’attributo _@href_ sarebbe stampato il valore _‘@target’_ dovremo servirci delle { } per indicare che l’espressione deve essere valutata
+```xsl
+<xsl:template match="ref"> <a href="{@target}">
+ <xsl:apply-templates/> </a>
+</xsl:template>
+```
 ## XSL:APPLY-TEMPLATES
+L’elemento ```<xsl:apply-templates>``` applica una regola di template all’elemento corrente oppure ai nodi figli dell’elemento corrente.
 
-## Pushing e Pulling
+Se all’elemento ```<xsl:apply-templates>``` si aggiunge l’attributo select, le regole verranno applicate solamente ai nodi che corrispondono al valore dell’attributo.
 
+### Pushing e Pulling
+Due stili di parsing sono possono caratterizzare i fogli di stile XSLT
+
+#### pull
+In questo caso le trasformazioni si organizzano attorno a un elemento principale (di solito corrispondente alla radice \/) attraverso indicazioni specifiche, come ```<xsl:for-each>``` o ```<xsl:value-of>```, è possibile definire trasformazioni per i suoi sottoelementi. Più semplice da capire ma vincola le trasformazioni alla struttura del documento sorgente
+
+Ad esempio nella costruzione di una lista useremo l’approccio **pull** in questo modo
+```xsl
+<xsl:template match="listPerson">
+ <ul>
+  <xsl:for-each select="person">
+   <li> <xsl:value-of select="persName"/> </li>
+  </xsl:for-each>
+ </ul>
+</xsl:template> 
+```
+
+#### push
+In questo caso viene costruito un template diverso per ogni elemento, l’innestamento dei diversi template e la richiesta di applicazione tramite ```<xsl:apply-templates>``` produce il risultato complessivo. Più difficile visualizzare il risultato finale delle trasformazioni ma l’approccio è adatto a documenti in cui la struttura può variare
+
+Useremo l’approccio **push** in questo modo
+```xsl
+<xsl:template match="listPerson">
+ <ul>
+  <xsl:apply-templates select=“person”/>
+ </ul>
+ </xsl:template>
+ <xsl:template match="person">
+  <li>
+  <xsl:value-of select=“persName”/>
+  </li>
+</xsl:template>
+```
 ### Esempio
+```xsl
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xml" href="ptable-...xsl"?>
+<PERIODIC_TABLE>
+ <ATOM STATE="GAS">
+  <NAME>Hydrogen</NAME>
+  <SYMBOL>H</SYMBOL>
+  <ATOMIC_NUMBER>1</ATOMIC_NUMBER>
+  <ATOMIC_WEIGHT>1.00794</ATOMIC_WEIGHT>
+  <BOILING_POINT UNITS="Kelvin">20.28</BOILING_POINT>
+  <MELTING_POINT UNITS="Kelvin">13.81</MELTING_POINT>
+ </ATOM>
+ <ATOM STATE="GAS">
+  <NAME>Helium</NAME>
+  <SYMBOL>He</SYMBOL>
+  <ATOMIC_NUMBER>2</ATOMIC_NUMBER>
+  <ATOMIC_WEIGHT>4.0026</ATOMIC_WEIGHT>
+  <BOILING_POINT UNITS="Kelvin">4.216</BOILING_POINT>
+  <MELTING_POINT UNITS="Kelvin">0.95</MELTING_POINT>
+ </ATOM>
+</PERIODIC_TABLE>
+```
+![Pushing and Pulling](img/LT9-TrasformazioniFormati-XSLT/PushingPulling_01.jpg)
+
+![Pushing and Pulling](img/LT9-TrasformazioniFormati-XSLT/PushingPulling_02.jpg)
 
 ## XLS:CALL-TEMPLATE
+- Un elemento ```xsl:call-template``` invoca un template identificandolo attraverso il nome
+- Diversamente da ```xsl:apply-templates```, ```xsl:calltemplate``` NON cambia il nodo corrente <br/>
+ ```<xsl:call-template name='nome template'>```
 
 ## XSL:COPY-OF & XSL:VARIABLE
-
+- L'elemento xsl:copy-of può essere usato per copiare un insieme di nodi nel l'albero risultante senza che vengano applicate conversioni a stringe come accadrebbe se si usasse xsl:value-of <br/>
+```<xsl:copy-of select=”espressione”>```
+- L'elemento xsl:variable può essere usato per definire una variabile globale ad uno stylesheet (se definito come elemento di primo livello) oppure una variabile locale ad un contesto (se definita a livello inferiore)
+```xsl
+<xsl:variable name="publishers" select="//publisher>
+...
+<xsl:for-each select="$publishers">
+```
 ## Riferimenti incrociati
+Esiste un meccanismo per questo: gli attributi ID, IDREF e IDREFS definiti da un DTD, ed utilizzabili grazie alla funzione id di XPath. Questo meccanismo ha diversi limiti, tuttavia:
+- deve esistere un DTD esterno
+- solo un attributo puo' essere definito di tipo ID in un documento
+- Un elemento non può avere più di un ID e un particolare ID può essere associato ad un solo elemento
 
 ## Chiavi XSL
+Una chiave è composta da una tripla contenente:
+- il nodo che possiede la chiave match;
+- il nome della chiave name;
+- il valore della chiave use.
+
+Le chiavi XSL, definite con ```<xsl:key name="..." match="..." use="..."/>```, sono un modo per gestire riferimenti incrociati tra elementi di un documento XML senza necessità di uno schema.
 
 ## Funzione Key
+La funzione key si esprime con la seguente sintassi: ```nodeset key(string, object)```
+- L’argomento string: il nome di una chiave definita da un elemento xsl:key
+- L’argomento object: viene convertito dalla funzione string in valore alfanumerico
+- Viene restituito come valore l'insieme dei nodi che hanno una chiave dal valore use uguale al risultato della conversione di object
+
+_Esempio:_ key('idkey', @id)
 
 ## XSLT 2.0
 Nel Gennaio 2007 XSLT 2.0 è stato promosso a recommendation W3C.
