@@ -237,7 +237,8 @@ L'output html ordina gli elementi **cd** secondo il valore dell'elemento **prefe
  </tr>
 </xsl:for-each>
 ```
-![Soluzione: Data-Type](img/LT9-TrasformazioniFormati-XSLT/Soluzione_DataType.jpg)
+
+<img src="img/LT9-TrasformazioniFormati-XSLT/Soluzione_DataType.jpg" height="250px"/>
 
 Ora l’ordinamento è corretto.
 
