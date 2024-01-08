@@ -17,7 +17,8 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 
 - può contenere qualsiasi tipo di dati, codificato in codice binario a scopo di archiviazione o utilizzo.
 - solitamente sono concepiti come sequenze di byte: le singole cifre bit che costituiscono il file sono raggruppate in gruppi di otto.
-- alcuni contengono header, cioè contenitori di metadati usati dai programmi associati ai file per riconoscerne ed interpretarne il contenuto. <br/>
+- alcuni contengono header, cioè contenitori di metadati usati dai programmi associati ai file per riconoscerne ed interpretarne il contenuto.
+  
   *Esempio:* un file GIF può contenere più immagini, e gli header sono utilizzati per identificare e descrivere ciascun blocco di dati.
 
 ## File di testo
@@ -25,7 +26,7 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 - contiene solo caratteri alfabetici, che compongono un testo leggibile direttamente dagli utenti
 - non hanno bisogno di installare programmi appositi
 - sono molto utilizzati per
-  - file indirizzati all'utente,
+  - file indirizzati all'utente
   - documenti
   - codice sorgente
 - garantiscono una buona portabilità tra SO
@@ -33,7 +34,8 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 ## File eseguibile
 
 - contiene un programma eseguibile per un computer, cioè un programma scritto in linguaggio macchina nel formato adatto ad essere caricato dal sistema operativo
-- gli eseguibili sono dipendenti dalla piattaforma <br/>
+- gli eseguibili sono dipendenti dalla piattaforma
+
   *Esempio:* un file eseguibile per un sistema Microsoft Windows non è direttamente utilizzabile in sistemi Unix o Mac OS (a meno di non usare un software di emulazione).
 
 Questa restrizione è dovuta a tre motivi:
