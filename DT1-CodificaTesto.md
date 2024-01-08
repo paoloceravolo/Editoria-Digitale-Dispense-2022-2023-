@@ -17,7 +17,8 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 
 - può contenere qualsiasi tipo di dati, codificato in codice binario a scopo di archiviazione o utilizzo.
 - solitamente sono concepiti come sequenze di byte: le singole cifre bit che costituiscono il file sono raggruppate in gruppi di otto.
-- alcuni contengono header, cioè contenitori di metadati usati dai programmi associati ai file per riconoscerne ed interpretarne il contenuto. <br/>
+- alcuni contengono header, cioè contenitori di metadati usati dai programmi associati ai file per riconoscerne ed interpretarne il contenuto.
+  
   *Esempio:* un file GIF può contenere più immagini, e gli header sono utilizzati per identificare e descrivere ciascun blocco di dati.
 
 ## File di testo
@@ -25,7 +26,7 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 - contiene solo caratteri alfabetici, che compongono un testo leggibile direttamente dagli utenti
 - non hanno bisogno di installare programmi appositi
 - sono molto utilizzati per
-  - file indirizzati all'utente,
+  - file indirizzati all'utente
   - documenti
   - codice sorgente
 - garantiscono una buona portabilità tra SO
@@ -33,7 +34,8 @@ Le regole con cui interpretare il file sono chiamate formato del file.
 ## File eseguibile
 
 - contiene un programma eseguibile per un computer, cioè un programma scritto in linguaggio macchina nel formato adatto ad essere caricato dal sistema operativo
-- gli eseguibili sono dipendenti dalla piattaforma <br/>
+- gli eseguibili sono dipendenti dalla piattaforma
+
   *Esempio:* un file eseguibile per un sistema Microsoft Windows non è direttamente utilizzabile in sistemi Unix o Mac OS (a meno di non usare un software di emulazione).
 
 Questa restrizione è dovuta a tre motivi:
@@ -181,10 +183,10 @@ Questo spesso causa problemi di compatibilità perché non tutte le applicazioni
 
 Se all'inizio del file è presente un tag BOM, si tratta di un testo in formato Unicode:
 
-- UTF-8 = EF BB BF 
-- UTF-16 Big Endian = FE FF 
-- UTF-16 Little Endian = FF FE 
-- UTF-32 Big Endian = 00 00 FE FF  
+- UTF-8 = EF BB BF
+- UTF-16 Big Endian = FE FF
+- UTF-16 Little Endian = FF FE
+- UTF-32 Big Endian = 00 00 FE FF 
 - UTF-32 Little Endian = FF FE 00 00
 
 Premere [qui](https://validator.w3.org/i18n-checker/) per accedere al validatore di W3C
