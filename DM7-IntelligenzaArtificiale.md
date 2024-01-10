@@ -157,12 +157,59 @@ Approccio molto usato molto nei modelli linguistici per predire la parola succes
 ![Algoritmi di ML](img/LM7-IntelligenzaArtificiale/AlgoritmiPL.jpg)
 
 ### Percettrone
+Nel 1958 Frank Rosenblatt propose un algoritmo ispirato al comportamento delle sinapsi che chiamo **percettrone**.
+
+Si tratta di entità con uno strato di ingresso ed uno di uscita ed una regola di apprendimento basata sulla minimizzazione dell’errore che in base alla valutazione sull'uscita effettiva della rete rispetto ad un dato ingresso altera i pesi delle connessioni (sinapsi) come differenza tra l'uscita effettiva e quella desiderata.
+
+Ci fu un iniziale entusiasmo ma poco dopo Marvin Minsky e Seymour Papert dimostrarono i limiti del percettrone e cioè la sua capacità di riconoscere **solamente funzioni linearmente separabili** (ad esempio la funzione logica XOR non può essere implementata da un percettrone).
+
+Seguì quindi una fase nella quale questo approccio fu poco studiato.
+
+![Percettrone Formula](img/LM7-IntelligenzaArtificiale/PercettroneFormula.png)
+
+![Percettrone esempio](img/LM7-IntelligenzaArtificiale/PercettroneEsempio.svg)
 
 ### Algoritmo di apprendimento standard
+L'algoritmo di apprendimento standard è un algoritmo iterativo che ad ogni iterazione calcola l’output del percettrone e lo confronta con il risultato desiderato quindi, il vettore dei pesi viene aggiornato come segue:
+
+$`w^{t+1}=w^t + \alpha(g(x^t)-f(x^t)) x^t`$
+
+Dove g(x) è il risultato desiderato, f(x) è il risultato ottenuto e α è una costante che regola la velocità dell’apprendimento
 
 ## Reti neurali
+Organizzando i percettroni in una rete a più strati (strati nascosti) è possibile fornire funzioni di risposta non lineari
+
+![Rete neurale](img/LM7-IntelligenzaArtificiale/ReteNeurale.png)
+
+![Rete neurale schema](img/LM7-IntelligenzaArtificiale/ReteNeuraleSchema.png)
+
+- L’apprendimento dei pesi di una rete neuronale è un processo lungo e stupido
+- Ogni esempio corretto aggiusta un po’ i pesi finché non raggiungiamo un’accuratezza accettabile
+
+![Apprendimento supervisionato](img/LM7-IntelligenzaArtificiale/ApprendimentoSupervisionato.webp)
 
 ### Apprendimento non supervisionato
+Fin qui abbiamo visto esempi di apprendimento supervisionato: le risposte da fornire per i diversi dati in ingresso sono validate utilizzando la risposta attesa (ground truth)
+
+> Si dice che nella fase di addestramento gli esempi sono annotati
+
+Esistono algoritmi che lavorano attraverso **procedure non supervisionate**: obiettivo dell’algoritmo è suddividere, **segmentare** i dati in ingresso in gruppi omogenei (cluster)
+
+> Una volta annotati i cluster possono essere visti come delle classi
+
+Le tecniche di apprendimento non supervisionato lavorano confrontando i dati e ricercando **similarità** o **differenze**
+
+Un esempio tipico è l’algoritmo di clustering **K-means**: permette di suddividere un insieme di osservazioni in k gruppi, dove k è un valore deciso a priori.
+
+L'algoritmo segue una procedura iterativa. Inizialmente crea _k_ partizioni ognuna associata a dei punti chiamati centroidi e assegna ad ogni partizione i dati osservati, o casualmente oppure calcolando la distanza dai centroidi.
+Quindi ri-calcola il centroide di ogni gruppo costituendo una nuova partizione. Vengono ricalcolati i centroidi per i nuovi cluster finché la distanza media intra-cluster non è minima.
+
+_Un esempio di animazione:_
+[![Un esempio di animazione](https://img.youtube.com/vi/BVFG7fd1H30/0.jpg)](https://www.youtube.com/watch?v=BVFG7fd1H30)
+
+Questo algoritmo è poco robusto rispetto all’aggiornamento dei dati in quanto all’introduzione di nuove osservazioni dobbiamo eseguire nuovamente il procedimento 
+
+Algoritmi di clustering più robusti all’aggiornamento identificano i gruppi sulla base di una soglia di densità 
 
 ## Una tassonomia del AU
 
