@@ -3,7 +3,7 @@
 Abbiamo visto che uno dei punti critici del processo di produzione editoriale è rappresentato dall’acquisizione dei contenuti
 - Per permettere che il prodotto sia **percepito come utile** i contenuti devono raggiungere i **bisogni del target** e farlo con un **livello di qualità adeguato**
 - Questo porta a elevati costi di produzione dei contenuti in quanto richiedono si deve passare da un **processo creativo** e di **elaborazione manuale**
-- 
+
 ![Acquisizione dei contenuti](img/LM7-IntelligenzaArtificiale/AcquisizioneContenuti.jpg)
 
 ## Generazione automatica dei contenuti
@@ -212,24 +212,110 @@ Questo algoritmo è poco robusto rispetto all’aggiornamento dei dati in quanto
 Algoritmi di clustering più robusti all’aggiornamento identificano i gruppi sulla base di una soglia di densità 
 
 ## Una tassonomia del AU
+Se aggiungiamo dati al contesto molte soluzioni prodotte non sono più valide
+![Tassonomia AU](img/LM7-IntelligenzaArtificiale/)
 
 ## Validazione
-
-### Precision e recall
+Precision (precisione) e Recall (recupero o richiamo), sono due comuni metriche di qualità di un sistema predittivo.
+La precisione può essere vista come una misura di esattezza o fedeltà, mentre il recupero è una misura di completezza.
+![Precision e recall](img/LM7-IntelligenzaArtificiale/)
 
 ### Overfitting
+Nel valutare il grado di generalità del modello appreso:
+- Il modello si dice **sotto specificato (uderfitting)** se Precision e/o Recall sono basse
+- Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati, quindi non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
+![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/)
+
+Due fattori che influenzano
+l’overfitting o underfitting sono:
+- **Distorsione del modello (bias)**: abbiamo usato alcune assunzioni errate
+- **Variabilità del dominio (variance)**: che produce un modello molto sensibile alle
+fluttuazioni
+
+![Distorsione e Variabilità](img/LM7-IntelligenzaArtificiale/)
 
 ### Confronto
+Per valutare la qualità del modello è sempre necessario identificare un termine di paragone, un baseline model
+- Il modello sarà di qualità se la sua accuratezza sarà superiore alla baseline
+- La **Zero Rule** o ZeroR è una procedura di riferimento per gli algoritmi di
+classificazione il cui risultato è semplicemente la frequenza della classe più frequente nei dati.
+<br/> Se il 65% degli elementi di un dataset appartiene a una classe, ZeroR predice pere tutti gli elementi del dataset quella classe. 
+<br/> La precision sarà quindi del 65%
+
+![Zero Rule](img/LM7-IntelligenzaArtificiale/)
 
 ### Validazione stativa vs dinamica
+Precision e Recall offrono una misura statica della qualità del processo di apprendimento ma questo è largamente insufficiente.
+
+> Sono rari i contesti nei quali un algoritmo addestrato si trova a lavorare sempre con gli stessi dati
+
+Una prima contromisura è quella di valutare il modello appreso dall’algoritmo attraverso diversi dati di test.
+
+In questo modo sarà possibile valutare il **grado di generalità del modello** appreso
 
 ### Qualità del campione
+Il training set deve quindi essere rappresentativo e non introdurre bias.
+
+Un classico criterio di imparzialità è la sezione casuale dei dati, ma quanti dati servono per rappresentare le istanze?
+
+Dipende dalla complessità del problema (lineare - non lineare) e dell’algoritmo (numero di dimensioni, features, parametri)
+
+> Alcuni dicono: la numerosità migliore è quella massima che si può raccogliere
+
+Un criterio è dato dall’identificazioni di fattori moltiplicatori.
+
+> 50-100-1000 per ogni classe del problema
+10-30 il numero di feature modellate
+10-30 il numero di parametri dell’algoritmo
 
 ## Aggiornamenro della conoscenza
+Il tema dell’aggiornamento della conoscenza è altresì critico:
+- Quanto è costoso per un algoritmo aggiornare il modello?
+  - in termini di dimensione dei dati di addestramento (training set) o in termini di tempo
+- Il dominio che sto trattando presenta evoluzioni diacroniche (dominio stazionario o non stazionario - presenza di concept drift)
+  - L’evoluzione può essere: improvvisa (sudden), graduale (gradual), incrementale (incremental) oppure ricorrente (recurrent)
+![Aggiornamento dalla conoscienza](img/LM7-IntelligenzaArtificiale/)
 
 ## Large Language Models
+I Large Language Models sono modelli di linguaggio avanzati addestrati su vasti corpus di testo per comprendere e generare linguaggio naturale.
 
-## Fine-Tuning
+Questi modelli sono sono ottenuti attraverso reti neurale addestrate utilizzando metodi di self-supervised learning
+- Al modello vengono presentate sequenze di parole parzialmente mascherate, alcuni token sono intenzionalmente nascosti, e deve prevedere i token mancanti
+
+Sono caratterizzati da dimensioni massicce, spesso con miliardi di parametri, che consentono loro di catturare complessità linguistiche e semantiche
+
+Tra i più noti si trovano
+- BERT di Google (340M)
+- GPT-3 (175B) e GPT-4 (8x220B ~ 1.8T) di OpenAI
+- LLaMA (65B) di Meta
+- Mistral AI (7B, 8x7B, 8x30B)
+
+I Large Language Models hanno rivoluzionato il Natural Language Processing (NLP), consentendo comprensione del contesto, generazione di testi coerenti e traduzione automatica più accurata.
+
+Possono essere impiegati per aiutare nella creazione di contenuti, generando testi, risposte e persino codice in modo automatico.
+
+Per ottenere i risultati migliori è importante:
+1. Contestualizzare bene la richiesta attraverso opportune tecniche di **prompt engineering**:
+<br/> metodi di interrogazione del modello che favoriscono la corretta contestualizzazione del dominio d’interesse e della tipologia di output richiesto
+2. Adattare i modelli attraverso il **fine-tuning**:
+<br/> una fase aggiuntiva di addestramento per adattare il modello a uno specifico compito o a a contenuti di uno specifico dominio
+
+### Prompt engineering
+Qualsiasi interrogazione a un LLM
+
+Alcuni si spingono a definirlo un modo di programmare i LLM o addirittura un nuovo modo di programmare i computer
+
+Si tratta in gran parte di una competenza empirica di comporre e formattare il prompt per massimizzare le prestazioni del modello su un compito desiderato
+
+È importante ricordare che i LLM sono modelli addestrati per completare testi e che si organizzano attraverso un numero molto elevato di parametri.
+
+Quindi:
+- L’obiettivo del prompt engineering è quello di configurali in coerenza con il compito desiderato
+- È possibile “ingannarli” spingendo per l’esecuzione di un compito a cui normalmente non rispondono
+
+[SLide 57]
+
+### Fine-Tuning
 
 ### Metodi di Fine-Tuning
 
