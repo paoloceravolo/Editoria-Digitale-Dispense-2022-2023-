@@ -81,7 +81,7 @@ Questa nozione è alla base dei processi di **apprendimento supervisionato**.
 - Induzione
 - Transduzione
 
-![](img/LM7-IntelligenzaArtificiale/)
+![Esempio apprendimento  supervisionato](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoSupervisionato.jpg)
 
 #### Funzioni dell'apprendimento supervisionato
 Classificazione: 
@@ -96,7 +96,7 @@ Regressione
 - Induzione
 - Deduzione
 
-![](img/LM7-IntelligenzaArtificiale/)
+![Esempio apprendimento non supervisionato](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoNonSupervisionato.jpg)
 
 #### Funzioni dell'apprendimento non supervisionato
 Clustering:
@@ -123,7 +123,7 @@ Association:
 
 ![Schema Apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoRinforzo.jpg)
 
-![Apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/)
+![Esempio apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoRinforzo.jpg)
 
 ### Apprendimento auto-supervisionato
 Nell’apprendimento auto-superivisionato self-supervised learning, l'obiettivo è sfruttare informazioni intrinseche presenti nei dati stessi per addestrare un modello, senza l'utilizzo di etichette fornite esternamente.
@@ -136,7 +136,7 @@ Quindi, creiamo un compito di predizione dove il modello deve imparare a predire
 
 Approccio molto usato molto nei modelli linguistici per predire la parola successiva dato una sequenza di parole.
 
-![Apprendimento Auto-supervisionato](img/LM7-IntelligenzaArtificiale/)
+![Apprendimento Auto-supervisionato](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoAutoSupervisionato.jpg)
 
 ![Schema procedure di apprendimento](img/LM7-IntelligenzaArtificiale/ProcedureApprendimento.png)
 
@@ -213,26 +213,26 @@ Algoritmi di clustering più robusti all’aggiornamento identificano i gruppi s
 
 ## Una tassonomia del AU
 Se aggiungiamo dati al contesto molte soluzioni prodotte non sono più valide
-![Tassonomia AU](img/LM7-IntelligenzaArtificiale/)
+![Tassonomia AU](img/LM7-IntelligenzaArtificiale/TassonomiaAU.png)
 
 ## Validazione
 Precision (precisione) e Recall (recupero o richiamo), sono due comuni metriche di qualità di un sistema predittivo.
 La precisione può essere vista come una misura di esattezza o fedeltà, mentre il recupero è una misura di completezza.
-![Precision e recall](img/LM7-IntelligenzaArtificiale/)
+![Precision e recall](img/LM7-IntelligenzaArtificiale/PrecisionRecall.png)
 
 ### Overfitting
 Nel valutare il grado di generalità del modello appreso:
 - Il modello si dice **sotto specificato (uderfitting)** se Precision e/o Recall sono basse
 - Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati, quindi non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
-![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/)
+![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_a.png)
 
+![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_b.png)
 Due fattori che influenzano
 l’overfitting o underfitting sono:
 - **Distorsione del modello (bias)**: abbiamo usato alcune assunzioni errate
-- **Variabilità del dominio (variance)**: che produce un modello molto sensibile alle
-fluttuazioni
+- **Variabilità del dominio (variance)**: che produce un modello molto sensibile alle fluttuazioni
 
-![Distorsione e Variabilità](img/LM7-IntelligenzaArtificiale/)
+![Distorsione e Variabilità](img/LM7-IntelligenzaArtificiale/DistorsioneVariabilita.png)
 
 ### Confronto
 Per valutare la qualità del modello è sempre necessario identificare un termine di paragone, un baseline model
@@ -242,7 +242,7 @@ classificazione il cui risultato è semplicemente la frequenza della classe più
 <br/> Se il 65% degli elementi di un dataset appartiene a una classe, ZeroR predice pere tutti gli elementi del dataset quella classe. 
 <br/> La precision sarà quindi del 65%
 
-![Zero Rule](img/LM7-IntelligenzaArtificiale/)
+![Zero Rule](img/LM7-IntelligenzaArtificiale/ZeroRule.webp)
 
 ### Validazione stativa vs dinamica
 Precision e Recall offrono una misura statica della qualità del processo di apprendimento ma questo è largamente insufficiente.
@@ -274,7 +274,7 @@ Il tema dell’aggiornamento della conoscenza è altresì critico:
   - in termini di dimensione dei dati di addestramento (training set) o in termini di tempo
 - Il dominio che sto trattando presenta evoluzioni diacroniche (dominio stazionario o non stazionario - presenza di concept drift)
   - L’evoluzione può essere: improvvisa (sudden), graduale (gradual), incrementale (incremental) oppure ricorrente (recurrent)
-![Aggiornamento dalla conoscienza](img/LM7-IntelligenzaArtificiale/)
+![Aggiornamento dalla conoscienza](img/LM7-IntelligenzaArtificiale/AggiornamentoConoscenza.png)
 
 ## Large Language Models
 I Large Language Models sono modelli di linguaggio avanzati addestrati su vasti corpus di testo per comprendere e generare linguaggio naturale.
@@ -330,6 +330,7 @@ Non dimentichiamo che il prompt engineering ha limiti intrinseci
 #### Esempio Prompt engineering
 **Task:** identifying the label and category of hateful tweets
 **Prompt:**
+```
 Think you are a linguistic and law expert, and your job is to identify the best match of language type of the sentences below based on the provided list of labels which is: {Hate Speech, Offensive Language, Abusive Language, Discriminative, Irony, cyberbullying, Slur, Aggressiveness, Stereotypes, Body Shame}.
 
 Also detect the category of each sentence based on this list:
@@ -340,7 +341,7 @@ Please add some explanation and specify the tokens that lead you to the specifie
 Give me the JSON format by fields text, label, tokens, category and explanation.
 
 Here is the list of sentences that are separated by newlines: {list_of_comments} 
-
+```
 **Output:**
 Possiamo usare questo output per creare un set di dati per l'addestramento di un modello specializzato
 
@@ -393,6 +394,14 @@ Il fine-tuning del modello è un processo in cui un modello preallenato, che ha 
   <br/> DeepSpeed è una libreria software di deep learning che accelera l'addestramento di modelli parallelizzando l’uso della memoria
 - **ZeRO**
   <br/> ZeRO è una forma di parallelismo dei dati efficiente dal punto di vista della memoria che consente di accedere alla memoria aggregata della GPU di tutti i dispositivi disponibili, senza l'inefficienza causata dalla replica dei dati nel parallelismo dei dati
+
+La libreria [transformers](https://huggingface.co/docs/transformers/index) di Hugging Face offre molteplici metodo per il training di algoritmi
+- Qui un [esempio](https://colab.research.google.com/drive/1tG9eqttfnqHoQqmsiacywUG9ilUhoiCk?usp=sharing#scrollTo=0Y99UKM_RGgu) di flusso per il fine-tuning di LLaMA
+
+Un framework piuttosto completo per il fine-tuning di LLM è [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl#axolotl)
+
+Tutti richiedono disponibilità di GPU.
+
 
 ### Dataset
 L’approccio più adatto a un progetto di editoria digitale è probabilmente il Finetuning di tipo I
