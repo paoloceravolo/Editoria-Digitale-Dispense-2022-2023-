@@ -313,10 +313,110 @@ Quindi:
 - L’obiettivo del prompt engineering è quello di configurali in coerenza con il compito desiderato
 - È possibile “ingannarli” spingendo per l’esecuzione di un compito a cui normalmente non rispondono
 
-[SLide 57]
+Vediamo 7 strategie per un buon prompt engineering:
+1. Essere descrittivi: più informazioni si riescono a fornire meglio è
+2. Usare esempi: sono ottimi per contestualizzare un dominio
+3. Richiedere risposte strutturate: in questo modo è possibile definire meglio il compito e ottenere il formato più adatto
+4. Descrivere una catena di elementi con un crescente livello di dettaglio
+5. Assegnare al modello un ruolo definendo il suo livello di competenza e di esperienza
+6. Tenete aperto il “dialogo”: lasciate che il modello vi faccia delle domande o chiarite cosa non vi soddisfa delle sue risposte
+7. Riflettere, rivedere e perfezionare
+
+Non dimentichiamo che il prompt engineering ha limiti intrinseci
+1. Lo spazio di configurazione è limitato: non tutte le informazioni pertinenti possono essere inserite nella finestra dei contenuti
+2. Le strategie da utilizzare dipendono dal modello: ogni LLM ha sue peculiarità che devono essere verificate prima di considerare un prompt efficace
+3. Un modello generico può essere inefficiente sia dal punto di vista della accuratezza che dei costi: un modello specializzato più piccolo può superare un modello generale più grande
+
+#### Esempio Prompt engineering
+**Task:** identifying the label and category of hateful tweets
+**Prompt:**
+Think you are a linguistic and law expert, and your job is to identify the best match of language type of the sentences below based on the provided list of labels which is: {Hate Speech, Offensive Language, Abusive Language, Discriminative, Irony, cyberbullying, Slur, Aggressiveness, Stereotypes, Body Shame}.
+
+Also detect the category of each sentence based on this list:
+{Gender, Sexual orientation, Religion, Disability, Nationality, Race, Ethnicity}.
+
+Please add some explanation and specify the tokens that lead you to the specified label.
+
+Give me the JSON format by fields text, label, tokens, category and explanation.
+
+Here is the list of sentences that are separated by newlines: {list_of_comments} 
+
+**Output:**
+Possiamo usare questo output per creare un set di dati per l'addestramento di un modello specializzato
+
+Per un esempio più completo: [outomatic grader](https://github.com/ShawhinT/YouTube-Blog/blob/main/LLMs/langchain-example/automatic_grader-example.ipynb)
+
+![Output ChatGPT](img/LM7-IntelligenzaArtificiale/PromptEngineeringOutput.jpg)
 
 ### Fine-Tuning
+Il fine-tuning del modello è un processo in cui un modello preallenato, che ha già appreso alcuni schemi e caratteristiche su un ampio set di dati, viene ulteriormente addestrato (o "raffinato") su un set di dati più piccolo e specifico, noto come dominio
+- Evita il costo elevato di addestrare un grande modello da zero in termini di risorse computazionali e tempo
+- Consente di adattare il modello a dati più aggiornati
+- Consente di adattare il modello allo specifico task che dovrà eseguire
+- Consente di ridurre i rischi di distorsione
+- Può consentire di aumentare il livello di privacy della conoscenza inclusa nel modello
+
+#### Le fasi del fine-tuning:
+1. **Preparazione del dataset**
+  <br/> Si prepara il dataset per la messa a punto pulendolo, dividendolo in set di addestramento, validazione e test e assicurandosi che sia compatibile con il modello
+2. **Scelta del metodo di fine-tunig** 
+  <br/> Si definisce una metodologia di fine-tunig che è adeguata al task che si vuole realizzare
+3. **Inizializzazione del modello** 
+  <br/> Si inizia con un LLM pre-addestrato, come GPT-3 o LLaMA, e lo si inizializza con i suoi pesi pre-addestrati
+4. **Adattamento** 
+  <br/> Il modello viene addestrato su un set di dati specifico per l'attività. Durante l'addestramento, i pesi del modello vengono aggiornati tramite backpropagation e discesa del gradiente in base ai dati forniti. È possibile implementare meccanismi di arresto anticipato per evitare l'overfitting
+5. **Regolazione degli iperparametri**
+  <br/>  La messa a punto consiste nel regolare iperparametri come il tasso di apprendimento, la dimensione del batch e la forza di regolarizzazione per ottimizzare le prestazioni del modello
+6. **Validazione**
+  <br/>  Si monitorano le prestazioni del modello su un set di dati di convalida separato durante il processo di addestramento. Questa fase aiuta a valutare il grado di apprendimento del modello e l'eventuale overfitting rispetto ai dati di addestramento. Se i risultati non sono soddisfacenti si procede a rieseguire le fasi precedenti
+7. **Test**
+  <br/>  Una volta completato l'addestramento, si valuta il modello su un set di dati di prova separato che non ha mai visto prima. Questa fase fornisce una misura imparziale delle prestazioni del modello e della sua capacità di gestire dati nuovi e sconosciuti. 
 
 ### Metodi di Fine-Tuning
+![Metodi di Fine Tuning](img/LM7-IntelligenzaArtificiale/MetodiFineTuning.webp)
+
+- **Feature-based**
+  <br/> Utilizza un LLM pre-addestrato come estrattore di caratteristiche, trasformando il testo in ingresso in un vettore di dimensioni fisse. Un classificatore predice la probabilità di attribuire una classe ai vettori generati dal LLM. Durante l'addestramento, cambiano solo i pesi del classificatore, il che rende il sistema poco dispendioso in termini di risorse ma potenzialmente meno performante
+- **Finetuning I**
+  <br/> Migliora il LLM pre-addestrato aggiungendo ulteriori strati di neuroni. Durante l'addestramento, vengono regolati solo i pesi dei nuovi strati, mantenendo congelati i pesi dell'LLM pre-addestrato. Negli esperimenti ha mostrato prestazioni leggermente migliori rispetto all'approccio feature-based
+- **Finetuning II**
+  <br/> L'intero modello, compreso il LLM, viene riaddestrato, consentendo l'aggiornamento di tutti i pesi del modello. Questo metodo richiede molte risorse, ma può offrire le prestazioni migliori. Un rischio è il catastrophic forgetting, una situazione in cui le nuove caratteristiche sovrascrivono le vecchie conoscenze
 
 ### Librerie di Fine-Tuning
+- **Low Ranking Adaptation (LoRA)** 
+  <br/> LoRA Utilizza metodi di approssimazione a basso rango per ridurre i costi computazionali e finanziari dell'adattamento di modelli con miliardi di parametri, a compiti o domini specifici
+- **Quantized LoRA (QLoRA)** 
+  <br/> QLoRA riduce significativamente l'utilizzo della memoria, pur mantenendo le prestazioni del fine-tuning completo a 16 bit. Questo risultato si ottiene retropropagando i gradienti attraverso un modello linguistico pre-addestrato congelato e quantizzato a 4 bit in adattatori di basso rango
+- **Parameter Efficient Fine Tuning (PEFT)**
+  <br/> PEFT è una tecnica che adatta in modo efficiente i modelli regolando solo un piccolo insieme di parametri, riducendo i costi di calcolo e di archiviazione. Combatte l'oblio catastrofico, regolando i parametri chiave per compiti specifici, e offre prestazioni paragonabili a quelle di una messa a punto completa
+- **DeepSpeed**
+  <br/> DeepSpeed è una libreria software di deep learning che accelera l'addestramento di modelli parallelizzando l’uso della memoria
+- **ZeRO**
+  <br/> ZeRO è una forma di parallelismo dei dati efficiente dal punto di vista della memoria che consente di accedere alla memoria aggregata della GPU di tutti i dispositivi disponibili, senza l'inefficienza causata dalla replica dei dati nel parallelismo dei dati
+
+### Dataset
+L’approccio più adatto a un progetto di editoria digitale è probabilmente il Finetuning di tipo I
+
+In questo caso il dataset deve essere preparato fornendo una serie di esempi di risposte attese che il LLM userà per contestualizzare il suo modello di risposta
+
+_Esempio_ con OpenAI il formato è il seguente:
+```
+messages: [
+ {
+   role: "system",
+   content:
+     "Shooketh is an AI bot that answers in the style of Shakespeare's literary works.",
+   },
+   { role: "user", content: "What counsel hath thy father imparted?" },
+   {
+     role: "assistant",
+     content:
+       "Arise with rectitude, young warrior, and stiffen thine upper lip forthwith.",
+   },
+]
+```
+_Esempio_ con LLaMa il formato è il seguente:
+```
+<s>[INST] Me gradué hace poco de la carrera de medicina ¿Me podrías aconsejar para conseguir rápidamente un puesto de trabajo? [/INST]
+Esto vale tanto para médicos como para cualquier otra profesión tras finalizar los estudios aniversarios y mi consejo sería preguntar a cuántas personas haya conocido mejor. En este caso, mi primera opción sería hablar con otros profesionales médicos, echar currículos en hospitales y cualquier centro de salud. En paralelo, trabajaría por mejorar mi marca personal como médico mediante un blog o formas digitales de comunicación como los vídeos. Y, para mejorar las posibilidades de encontrar trabajo, también participaría en congresos y encuentros para conseguir más contactos. Y, además de todo lo anterior, seguiría estudiando para presentarme a las oposiciones y ejercer la medicina en el sector público de mi país. </s>
+```
