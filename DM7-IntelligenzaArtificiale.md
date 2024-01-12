@@ -48,9 +48,9 @@ y:
 X -> y
 ```
 
-![Apprendimento Automatico Iceberg](img/LM7-IntelligenzaArtificiale/ApprendimentoAutomaticoIceberg.png)
+![Apprendimento Automatico Iceberg](img/LM7-IntelligenzaArtificiale/ApprendimentoAutomaticoIceberg.jpg)
 
-![Schema Apprendimento Automatico](img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoAutomaticoIceberg.png)
+![Schema Apprendimento Automatico](img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoAutomatico.jpg)
 ## Retroazione
 I processi retroattivi o retroregolati possono essere considerati la forma più semplice di AU.
 
@@ -60,7 +60,7 @@ Il concetto è stato introdotto dal matematico americano Norbert Wiener negli an
 
 In questo caso il modello è definito inizialmente da un insieme di procedure ma i valori dei punti di decisione sono aggiornati attraverso aggiustamenti progressivi
 
-![Schema Retroazione](img/LM7-IntelligenzaArtificiale/Schema_Retroazione.png)
+![Schema Retroazione](img/LM7-IntelligenzaArtificiale/Schema_Retroazione.jpg)
 
 
 ## Procedure di apprendimento
@@ -103,7 +103,7 @@ Clustering:
 - Raggruppare esempi accumunati da stesse proprietà
 - Dati categorici / dati numerici
 
-![Clustering](img/LM7-IntelligenzaArtificiale/Clustering.jpg)
+![Clustering](img/LM7-IntelligenzaArtificiale/Clustering.png)
 
 Dimension Reduction: 
 - Individuare la dimensioni di maggior importanza in un dataset
