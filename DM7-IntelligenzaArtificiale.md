@@ -4,7 +4,7 @@ Abbiamo visto che uno dei punti critici del processo di produzione editoriale è
 - Per permettere che il prodotto sia **percepito come utile** i contenuti devono raggiungere i **bisogni del target** e farlo con un **livello di qualità adeguato**
 - Questo porta a elevati costi di produzione dei contenuti in quanto richiedono si deve passare da un **processo creativo** e di **elaborazione manuale**
 
-![Acquisizione dei contenuti](img/LM7-IntelligenzaArtificiale/AcquisizioneContenuti.jpg)
+<img src="img/LM7-IntelligenzaArtificiale/AcquisizioneContenuti.jpg" height="150px"/>
 
 ## Generazione automatica dei contenuti
 In generale il processo di acquisizione dei contenuti comporta elevati costi di produzione in quanto richiedono si deve passare da un **processo creativo** e di **elaborazione manuale**.
@@ -31,7 +31,7 @@ La diffusione dei sistemi generativi per immagini e i contenuti audio a portato 
 - **Generazioni di video**: la capacità di generare simultaneamente illustrazioni e tracce audio e testo basate su testo di partenza offre un potenziale significativo per l'integrazione multimediale era generazione di video
 
 ## Evoluzione storica
-![Artificial Intelligence, Machine Learning e Deep Learning](img/LM7-IntelligenzaArtificiale/AI_ML_DL.png)
+<img src="img/LM7-IntelligenzaArtificiale/AI_ML_DL.png" height="200px"/>
 
 Artificial Intelligence, Machine Learning e Deep Learning possono essere considerati termini in relazione di iperonimia
 
@@ -47,10 +47,10 @@ L’obiettivo di un processo di AU è la costruzione di un **modello di risposta
 y:
 X -> y
 ```
+<img src="img/LM7-IntelligenzaArtificiale/ApprendimentoAutomaticoIceberg.jpg" height="250px"/>
 
-![Apprendimento Automatico Iceberg](img/LM7-IntelligenzaArtificiale/ApprendimentoAutomaticoIceberg.jpg)
+<img src="img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoAutomatico.jpg" height="200px"/>
 
-![Schema Apprendimento Automatico](img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoAutomatico.jpg)
 ## Retroazione
 I processi retroattivi o retroregolati possono essere considerati la forma più semplice di AU.
 
@@ -60,8 +60,7 @@ Il concetto è stato introdotto dal matematico americano Norbert Wiener negli an
 
 In questo caso il modello è definito inizialmente da un insieme di procedure ma i valori dei punti di decisione sono aggiornati attraverso aggiustamenti progressivi
 
-![Schema Retroazione](img/LM7-IntelligenzaArtificiale/Schema_Retroazione.jpg)
-
+<img src="img/LM7-IntelligenzaArtificiale/Schema_Retroazione.jpg" height="150px"/>
 
 ## Procedure di apprendimento
 Il progettista non sempre conosce tutte le regole di decisione.
@@ -90,7 +89,8 @@ Classificazione:
 Regressione
 - Individuare la tendenza di evoluzione di una distribuzione
 - Predire dati numerici
-![Classificazione e Regressione](img/LM7-IntelligenzaArtificiale/ClassificazioneRegressione.jpg)
+
+<img src="img/LM7-IntelligenzaArtificiale/ClassificazioneRegressione.jpg" height="200px"/>
 
 ### Apprendimento non supervisionato
 - Induzione
@@ -103,25 +103,26 @@ Clustering:
 - Raggruppare esempi accumunati da stesse proprietà
 - Dati categorici / dati numerici
 
-![Clustering](img/LM7-IntelligenzaArtificiale/Clustering.png)
+<img src="img/LM7-IntelligenzaArtificiale/Clustering.png" height="200px"/>
 
 Dimension Reduction: 
 - Individuare la dimensioni di maggior importanza in un dataset
 - Dati categorici / dati numerici
 
-![Dimension Reduction](img/LM7-IntelligenzaArtificiale/DimensionReduction.webp)
+<img src="img/LM7-IntelligenzaArtificiale/DimensionReduction.webp" height="200px"/>
 
 Association:
 - Individuare correlazioni e probabilità condizionate di un dataset
 
-![Association](img/LM7-IntelligenzaArtificiale/Association.png)
+<img src="img/LM7-IntelligenzaArtificiale/Association.png" height="200px"/>
 
 ### Apprendimento per rinforzo
 - Azione
 - Stato
 - Ricompensa
 
-![Schema Apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoRinforzo.jpg)
+<img src="img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoRinforzo.jpg" height="150px"/>
+
 
 ![Esempio apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoRinforzo.jpg)
 
