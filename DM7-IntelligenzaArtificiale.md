@@ -123,8 +123,8 @@ Association:
 
 <img src="img/LM7-IntelligenzaArtificiale/Schema_ApprendimentoRinforzo.jpg" height="150px"/>
 
+<img src="img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoRinforzo.jpg" width="350px"/>
 
-![Esempio apprendimento per rinforzo](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoRinforzo.jpg)
 
 ### Apprendimento auto-supervisionato
 Nell’apprendimento auto-superivisionato self-supervised learning, l'obiettivo è sfruttare informazioni intrinseche presenti nei dati stessi per addestrare un modello, senza l'utilizzo di etichette fornite esternamente.
@@ -137,7 +137,7 @@ Quindi, creiamo un compito di predizione dove il modello deve imparare a predire
 
 Approccio molto usato molto nei modelli linguistici per predire la parola successiva dato una sequenza di parole.
 
-![Apprendimento Auto-supervisionato](img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoAutoSupervisionato.jpg)
+<img src="img/LM7-IntelligenzaArtificiale/Esempio_ApprendimentoAutoSupervisionato.jpg" width="350px"/>
 
 ![Schema procedure di apprendimento](img/LM7-IntelligenzaArtificiale/ProcedureApprendimento.png)
 
@@ -166,9 +166,9 @@ Ci fu un iniziale entusiasmo ma poco dopo Marvin Minsky e Seymour Papert dimostr
 
 Seguì quindi una fase nella quale questo approccio fu poco studiato.
 
-![Percettrone Formula](img/LM7-IntelligenzaArtificiale/PercettroneFormula.png)
+<img src="img/LM7-IntelligenzaArtificiale/PercettroneFormula.png" height="300px"/>
 
-![Percettrone esempio](img/LM7-IntelligenzaArtificiale/PercettroneEsempio.svg)
+<img src="img/LM7-IntelligenzaArtificiale/PercettroneEsempio.svg" height="400px"/>
 
 ### Algoritmo di apprendimento standard
 L'algoritmo di apprendimento standard è un algoritmo iterativo che ad ogni iterazione calcola l’output del percettrone e lo confronta con il risultato desiderato quindi, il vettore dei pesi viene aggiornato come segue:
@@ -180,7 +180,7 @@ Dove g(x) è il risultato desiderato, f(x) è il risultato ottenuto e α è una 
 ## Reti neurali
 Organizzando i percettroni in una rete a più strati (strati nascosti) è possibile fornire funzioni di risposta non lineari
 
-![Rete neurale](img/LM7-IntelligenzaArtificiale/ReteNeurale.png)
+<img src="img/LM7-IntelligenzaArtificiale/ReteNeurale.png" height="200px"/>
 
 ![Rete neurale schema](img/LM7-IntelligenzaArtificiale/ReteNeuraleSchema.png)
 
@@ -219,15 +219,18 @@ Se aggiungiamo dati al contesto molte soluzioni prodotte non sono più valide
 ## Validazione
 Precision (precisione) e Recall (recupero o richiamo), sono due comuni metriche di qualità di un sistema predittivo.
 La precisione può essere vista come una misura di esattezza o fedeltà, mentre il recupero è una misura di completezza.
+
 ![Precision e recall](img/LM7-IntelligenzaArtificiale/PrecisionRecall.png)
 
 ### Overfitting
 Nel valutare il grado di generalità del modello appreso:
 - Il modello si dice **sotto specificato (uderfitting)** se Precision e/o Recall sono basse
 - Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati, quindi non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
-![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_a.png)
 
-![Overfitting e Underfitting](img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_b.png)
+<img src="img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_a.png" width="350px"/>
+
+<img src="img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_b.png" width="350px"/>
+
 Due fattori che influenzano
 l’overfitting o underfitting sono:
 - **Distorsione del modello (bias)**: abbiamo usato alcune assunzioni errate
@@ -275,6 +278,7 @@ Il tema dell’aggiornamento della conoscenza è altresì critico:
   - in termini di dimensione dei dati di addestramento (training set) o in termini di tempo
 - Il dominio che sto trattando presenta evoluzioni diacroniche (dominio stazionario o non stazionario - presenza di concept drift)
   - L’evoluzione può essere: improvvisa (sudden), graduale (gradual), incrementale (incremental) oppure ricorrente (recurrent)
+
 ![Aggiornamento dalla conoscienza](img/LM7-IntelligenzaArtificiale/AggiornamentoConoscenza.png)
 
 ## Large Language Models
@@ -332,7 +336,10 @@ Non dimentichiamo che il prompt engineering ha limiti intrinseci
 **Task:** identifying the label and category of hateful tweets
 **Prompt:**
 ```
-Think you are a linguistic and law expert, and your job is to identify the best match of language type of the sentences below based on the provided list of labels which is: {Hate Speech, Offensive Language, Abusive Language, Discriminative, Irony, cyberbullying, Slur, Aggressiveness, Stereotypes, Body Shame}.
+Think you are a linguistic and law expert, and your job is to identify the best match of
+language type of the sentences below based on the provided list of labels which is:
+{Hate Speech, Offensive Language, Abusive Language, Discriminative, Irony, cyberbullying,
+Slur, Aggressiveness, Stereotypes, Body Shame}.
 
 Also detect the category of each sentence based on this list:
 {Gender, Sexual orientation, Religion, Disability, Nationality, Race, Ethnicity}.
@@ -427,6 +434,15 @@ messages: [
 ```
 _Esempio_ con LLaMa il formato è il seguente:
 ```
-<s>[INST] Me gradué hace poco de la carrera de medicina ¿Me podrías aconsejar para conseguir rápidamente un puesto de trabajo? [/INST]
-Esto vale tanto para médicos como para cualquier otra profesión tras finalizar los estudios aniversarios y mi consejo sería preguntar a cuántas personas haya conocido mejor. En este caso, mi primera opción sería hablar con otros profesionales médicos, echar currículos en hospitales y cualquier centro de salud. En paralelo, trabajaría por mejorar mi marca personal como médico mediante un blog o formas digitales de comunicación como los vídeos. Y, para mejorar las posibilidades de encontrar trabajo, también participaría en congresos y encuentros para conseguir más contactos. Y, además de todo lo anterior, seguiría estudiando para presentarme a las oposiciones y ejercer la medicina en el sector público de mi país. </s>
+<s>[INST] Me gradué hace poco de la carrera de medicina
+¿Me podrías aconsejar para conseguir rápidamente un puesto de trabajo? [/INST]
+Esto vale tanto para médicos como para cualquier otra profesión tras finalizar los
+estudios aniversarios y mi consejo sería preguntar a cuántas personas haya conocido
+mejor. En este caso, mi primera opción sería hablar con otros profesionales médicos,
+echar currículos en hospitales y cualquier centro de salud. En paralelo, trabajaría
+por mejorar mi marca personal como médico mediante un blog o formas digitales de
+comunicación como los vídeos. Y, para mejorar las posibilidades de encontrar trabajo,
+también participaría en congresos y encuentros para conseguir más contactos. Y,
+además de todo lo anterior, seguiría estudiando para presentarme a las oposiciones y
+ejercer la medicina en el sector público de mi país. </s>
 ```
