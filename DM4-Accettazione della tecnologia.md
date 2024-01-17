@@ -1,6 +1,7 @@
 # Accettazione della tecnologia
 
-Chi progetta tecnologia deve porsi il problema della sua accettazione e diffusione
+Chi progetta tecnologia deve porsi il problema della sua accettazione e diffusione.
+
 Si tratta di aspetti che richiedono un approccio multidisciplinare (ci sono molti modi per osservare il fenomeno)
 
 - Conoscenza dei riferimenti culturali di una comunità
@@ -25,7 +26,7 @@ Si tratta di aspetti che richiedono un approccio multidisciplinare (ci sono molt
     
 - **Facilità d’uso**
   
-  - **Riconoscibilità** - Gli utenti sono più propensi ad adottare una tecnologia che è simile a qualcosa che è
+  - **Riconoscibilità** - Gli utenti sono più propensi a adottare una tecnologia che è simile a qualcosa che è
     per loro familiare
   - **Usabilità** - Si riferisce alla possibilità di utilizzare la tecnologia senza sforzo, in modo efficace ed
     efficiente
@@ -36,13 +37,15 @@ Si tratta di aspetti che richiedono un approccio multidisciplinare (ci sono molt
 
 ## Roll Out di un processo di accettazione
 
-Nel momento in cui si decide in introdurre una nuova tecnologia è necessario definire chiedersi se ci sono le condizioni di accettazione Se le condizioni non sono sufficientemente solide serve studiare un piano che possa permettere l’implementazione e la distribuzione graduale delle nuove funzionalità che si intendono proporre.
+Nel momento in cui si decide in introdurre una nuova tecnologia è necessario definire chiedersi se ci sono le condizioni di accettazione.
+Se le condizioni non sono sufficientemente solide serve studiare un piano che possa permettere l’implementazione e la distribuzione graduale delle nuove funzionalità che si intendono proporre.
+
 Questo piano è spesso definito **piano di Roll Out**, il suo obbiettivo è far crescere in modo graduale i fattori di accettazione.
 Per definire questi passaggi le organizzazioni si aiutano spesso attraverso dei **Maturity Model**, dei benchmark che definiscono criteri per classificare il livello di maturità di una tecnologia, una metodologia di lavoro, un processo o un’organizzazione.
 
 ## Maturity model
 
-Tutti i modelli di maturità presentano diversi livelli crescenti di avanzamento che possono essere assegnati a diverse elementi del sistema.
+Tutti i modelli di maturità presentano diversi livelli crescenti di avanzamento che possono essere assegnati a diversi elementi del sistema.
 Uno dei più noti è il Capability Maturity Model Integration (CMMI), che prevede cinque livelli.
 
 ![Caratteristiche di capacità del Maturity Model](img/LM4-AccettazioneDellaTecnologia/Characteristics_of_Capability_Maturity_Model.png)
@@ -57,7 +60,7 @@ Source: [Use an IT maturity model by Antonella Bertoletti IBM, Cloud Adoption Le
 
 ![Timeline iPod](img/LM4-AccettazioneDellaTecnologia/ipod_timeline.png)
 
-Prima di lanciare iPhone e le sue app, Apple ha introdotto gradualmente agli utenti il nuove interfacce fino ad arrivare all'iPod Touch che è molto somigliante al primo iPhone.
+Prima di lanciare iPhone e le sue app, Apple ha introdotto gradualmente agli utenti le nuove interfacce fino ad arrivare all'iPod Touch, il quale è molto somigliante al primo iPhone.
 
 ![Confronto Itunes con AppStore](img/LM4-AccettazioneDellaTecnologia/itunes-appstore.jpg)
 
