@@ -178,14 +178,14 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
    - Le informazioni, i parametri che si passano all’elemento
    - DC spesso suggerisce di usare specifici vocabolari controllati
  - Record
-   - L’insieme delle coppie Elemento/Valore, cioè le frasi che si possono usare per zescrivere le risorsa
+   - L’insieme delle coppie Elemento/Valore, cioè le frasi che si possono usare per descrivere la risorsa
 
 #### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
->Title: Monna Franky
+>Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Date: c. 1503-1506
 <br/> ....
@@ -205,9 +205,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 #### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Publisher:
 <br/> Contributor:
@@ -241,9 +241,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 ### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Date: c. 1503-1506
 <br/> Format: olio su legno di pioppo
@@ -253,9 +253,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisa.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: chi ha creato img digitale
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Contributor: Leonardo da Vinci
 <br/> Publisher: Musée du Louvre
@@ -356,15 +356,16 @@ Molti sono i criteri che si possono usare per decidere cosa considerare individu
 - un’unità che non ammette riduzioni nel sistema di riferimento
 - un oggetto che ha una condizione di identità
 - un oggetto che è associato ad un identificatore
+
 Solitamente si considera individuo qualche cosa che permane (che identifichiamo all’interno di uno sfondo mutevole, o irrilevante, o composto da altri oggetti identificati)
 
 ## Classificare
 > https://it.wikipedia.org/wiki/Fabio_Fazio **type** https://it.wikipedia.org/wiki/Maschio
 > https://it.wikipedia.org/wiki/Luciana_Littizzetto **type**  https://it.wikipedia.org/wiki/Femmina
 
-Si tratta di affermare che un oggetto appartiene ad una classe di oggetti: ovvero **condivide con altri oggetti uno stesso insieme di proprietà**
+Si tratta di affermare che un oggetto appartiene ad una classe di oggetti: ovvero **condivide con altri oggetti uno stesso insieme di proprietà**.
 In una **buona classificazione** l’insieme di proprietà definito dalle classi dovrebbe essere:
 - reciprocamente esclusivo
 - congiuntamente esaustivo
 - pertinente
-In realtà quasi tutti i vocabolari includono diverse criteri di classificazione, diverse dimensioni o punti di osservazioni, quindi ammettono intersezioni tra le classi che appartengono a dimensioni diverse.
+In realtà quasi tutti i vocabolari includono diversi criteri di classificazione, diverse dimensioni o punti di osservazioni, quindi ammettono intersezioni tra le classi che appartengono a dimensioni diverse.
