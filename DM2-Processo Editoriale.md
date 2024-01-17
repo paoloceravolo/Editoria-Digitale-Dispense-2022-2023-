@@ -1,6 +1,7 @@
 # Produzione Editoriale
 
 Il processo di produzione editoriale è il complesso insieme di attività coinvolte nella ideazione, sviluppo, e distribuzione di materiali editoriali come libri, riviste, giornali, manuali, …
+
 La sfida è fare in modo che l’opera passi dal concepimento alla sua disponibilità per il pubblico
 Il processo può variare, tradizionalmente le fasi chiave sono:
 
@@ -58,7 +59,7 @@ che **diacronici**
 - **Sviluppo tecnologico**. L'evoluzione della tecnologia nel corso del tempo è un aspetto importante.
   
   *Esempio*: il passaggio da dispositivi desktop a dispositivi mobili, da
-  rappresentazioni 2D a rappresentazioni 3D degli contenuti visuali
+  rappresentazioni 2D a rappresentazioni 3D dei contenuti visuali
   
 - **Condizioni di mercato**. Capire quali attori del mercato possono trarre vantaggi dallo sviluppo di una tecnologia è fondamentale per capire quali sinergie si potranno produrre nel mercato.
   
@@ -119,13 +120,13 @@ Ad _esempio_ i contenuti devono essere
 2. impaginati e organizzati graficamente
 3. valutati per agli aspetti del diritto d’autore
 
-Inoltre un prodotto può essere il risultato di contenuti di diversa natura: testo, audio, grafica, AR ...
+Inoltre, un prodotto può essere il risultato di contenuti di diversa natura: testo, audio, grafica, AR ...
 
 Ogni contenuto può richiedere un suo flusso di produzione in parte indipendente ed in parte coordinato con gli altri flussi di produzione.
 
 ### BPMN
 Lo standard più diffuso per la definizione di flussi di esecuzione è BPMN (_Business Process Modeling Notation_) 2.0 di OMG
-Ad esempio come editor si può usare https://bpmn.io
+Ad esempio, come editor si può usare https://bpmn.io
 
 ![Elementi base del BPMN](img/LM2-ProcessoEditoriale/BPMN_Elementi.png)
 
