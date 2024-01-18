@@ -207,7 +207,7 @@ I simboli indicano se l’opzione è predefinita, applicabile o non applicabile.
 Source:[Lorenzo Pantieri LaTex per l'impaziente](http://www.lorenzopantieri.net/LaTeX_files/LaTeXimpaziente.pdf)
 
 - ```\frontmatter``` - “materiale iniziale”, non numera le sezioni e numera le pagine con numeri romani minuscoli (i, ii, iii, eccetera)
-- ```\mainmatter``` - “materiale principale”, numera le sezioni e le pagine con numeri arabi (la numerazione della pagine riprende da 1)
+- ```\mainmatter``` - “materiale principale”, numera le sezioni e le pagine con numeri arabi (la numerazione delle pagine riprende da 1)
 - ```\backmatter``` - “materiale finale”, non numera le sezioni e continua la numerazione araba delle pagine dal materiale principale
 - ```\appendix``` - appendici
 
@@ -228,7 +228,7 @@ Per realizzarli si usano i comandi standard
 - ```\pageref{<etichetta>}``` produce il numero di pagina in cui l’elemento compare
 
 ## Equazioni
-Per scrivere un simbolo matematico o un equazione lungo il
+Per scrivere un simbolo matematico o un'equazione lungo il
 teso bisogna metterlo tra ```$ $```
 _Esempio:_ ```$y=f(x)=x^{2}+\frac{1}{2}x$```
 
@@ -254,7 +254,7 @@ Si possono ottenere in vario modo ecco un esempio
 ```
 ## Tabelle floating
 La versione inline significa nel testo
-- Se si vuole che sia floating (ovvero non ancorata ad punto del testo) occorre usare un ambiente specifico per tabular ovvero _Table_
+- Se si vuole che sia floating (ovvero non ancorata ad un punto del testo) occorre usare un ambiente specifico per tabular ovvero _Table_
 ```latex
 \begin{table}[<preferenze di collocazione>] …
 \end{table}
