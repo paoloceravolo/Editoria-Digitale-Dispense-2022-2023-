@@ -19,7 +19,7 @@ In pratica ci sono diversi usi:
 - Scrivere l’output verso differenti periferiche (carta, web, ebook, video, voce…)
 
 ## Funzioni
-Si definiscono due funzioni di XSL:  Trasformazione e Formattazione
+Si definiscono due funzioni di XSL: Trasformazione e Formattazione
 ![Trasformazione e Formattazione](img/LT9-TrasformazioniFormati-XSLT/TrasformazioneFormattazione.gif)
 
 ## Processori
@@ -323,7 +323,7 @@ Due stili di parsing sono possono caratterizzare i fogli di stile XSLT
 #### pull
 In questo caso le trasformazioni si organizzano attorno a un elemento principale (di solito corrispondente alla radice \/) attraverso indicazioni specifiche, come ```<xsl:for-each>``` o ```<xsl:value-of>```, è possibile definire trasformazioni per i suoi sottoelementi. Più semplice da capire ma vincola le trasformazioni alla struttura del documento sorgente
 
-Ad esempio nella costruzione di una lista useremo l’approccio **pull** in questo modo
+Ad esempio, nella costruzione di una lista useremo l’approccio **pull** in questo modo
 ```xsl
 <xsl:template match="listPerson">
  <ul>
