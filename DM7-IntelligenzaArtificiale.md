@@ -9,7 +9,7 @@ Abbiamo visto che uno dei punti critici del processo di produzione editoriale è
 ## Generazione automatica dei contenuti
 In generale il processo di acquisizione dei contenuti comporta elevati costi di produzione in quanto richiedono si deve passare da un **processo creativo** e di **elaborazione manuale**.
 
-In alcuni casi si possono raggiugnere delle fonti aperte ma questo può eliminare solo una parte del processo di produzione manuale perché si deve passare in ogni caso da **selezione** e **riorganizzazione** del contenuto.
+In alcuni casi si possono raggiungere delle fonti aperte ma questo può eliminare solo una parte del processo di produzione manuale perché si deve passare in ogni caso da **selezione** e **riorganizzazione** del contenuto.
 
 Grazie a strumenti di Intelligenza Artificiale sempre più avanzati, negli ultimi anni si è provato a abbassare il costo di produzione inserendo alcune fasi di **generazione automatica dei contenuti,** che naturalmente non possono sostituire le fasi di selezione e organizzazione del contenuto.
 
@@ -56,7 +56,7 @@ I processi retroattivi o retroregolati possono essere considerati la forma più 
 
 In un controllo retroattivo il valore di una **variabile in uscita** dal sistema viene letto dal controllore che agisce **modificando l'ingresso** del sistema (ad esempio il termostato, sistema di puntamento).
 
-Il concetto è stato introdotto dal matematico americano Norbert Wiener negli anni quaranta, iniziatore della cibernetica. La teoria dei sistemi retroazionati è utilizzata in molti campi delle scienze pure, delle scienze applicate (tra cui i controlli automatici) e della biologia.
+Il concetto è stato introdotto dal matematico americano Norbert Wiener negli anni Quaranta, iniziatore della cibernetica. La teoria dei sistemi retroazionati è utilizzata in molti campi delle scienze pure, delle scienze applicate (tra cui i controlli automatici) e della biologia.
 
 In questo caso il modello è definito inizialmente da un insieme di procedure ma i valori dei punti di decisione sono aggiornati attraverso aggiustamenti progressivi
 
@@ -127,7 +127,7 @@ Association:
 
 
 ### Apprendimento auto-supervisionato
-Nell’apprendimento auto-superivisionato self-supervised learning, l'obiettivo è sfruttare informazioni intrinseche presenti nei dati stessi per addestrare un modello, senza l'utilizzo di etichette fornite esternamente.
+Nell’apprendimento auto-supervisionato self-supervised learning, l'obiettivo è sfruttare informazioni intrinseche presenti nei dati stessi per addestrare un modello, senza l'utilizzo di etichette fornite esternamente.
 
 Un esempio di self-supervised learning è la predizione di parte di un'istanza a partire dalle altre parti di quella stessa istanza.
 
@@ -144,7 +144,7 @@ Approccio molto usato molto nei modelli linguistici per predire la parola succes
 ### Altri approcci
 - **Active Learning**: l'apprendimento attivo è una tecnica in cui il modello è in grado di interrogare un operatore umano durante il processo di apprendimento al fine di risolvere possibili ambiguità. È utile quando non ci sono molti dati disponibili o i dati sono costosi da raccogliere o etichettare
 - **Multi-Task Learning**: si riferisce a un processo di apprendimento che può essere condiviso da più agenti. Per esempio, la codifica della distribuzione di parole nel testo può essere condivisa tra più compiti NLP
-- **Online Learning**: si riferisce ad algoritmi che sono in grado di apprendere da flussi continui di dati. Questi algoritmi apprendono in modo incrementale, senza la necessità di conoscere l’intero insieme dei dati, quindi con la possibilità di cancellare i dati qualora non ci fosse più spazio in memoria
+- **Online Learning**: si riferisce ad algoritmi che sono in grado di apprendere da flussi continui di dati. Questi algoritmi apprendono in modo incrementale, senza la necessità di conoscere l’intero insieme dei dati; quindi, con la possibilità di cancellare i dati qualora non ci fosse più spazio in memoria
 - **Transfer Learning**: l'apprendimento per trasferimento è un tipo di apprendimento in cui un modello viene prima addestrato su un compito, poi una parte o tutto il modello viene usato come punto di partenza per un compito correlato
 - **Ensemble Learning**: un approccio in cui due o più modalità sono adattate agli stessi dati e le previsioni di ogni modello sono combinate. L'obiettivo è quello di migliorare le prestazioni rispetto all'uso di un singolo modello
 
@@ -225,7 +225,7 @@ La precisione può essere vista come una misura di esattezza o fedeltà, mentre 
 ### Overfitting
 Nel valutare il grado di generalità del modello appreso:
 - Il modello si dice **sotto specificato (uderfitting)** se Precision e/o Recall sono basse
-- Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati, quindi non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
+- Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati; quindi, non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
 
 <img src="img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_a.png" width="350px"/>
 
@@ -284,7 +284,7 @@ Il tema dell’aggiornamento della conoscenza è altresì critico:
 ## Large Language Models
 I Large Language Models sono modelli di linguaggio avanzati addestrati su vasti corpus di testo per comprendere e generare linguaggio naturale.
 
-Questi modelli sono sono ottenuti attraverso reti neurale addestrate utilizzando metodi di self-supervised learning
+Questi modelli sono ottenuti attraverso reti neurale addestrate utilizzando metodi di self-supervised learning
 - Al modello vengono presentate sequenze di parole parzialmente mascherate, alcuni token sono intenzionalmente nascosti, e deve prevedere i token mancanti
 
 Sono caratterizzati da dimensioni massicce, spesso con miliardi di parametri, che consentono loro di catturare complessità linguistiche e semantiche
@@ -403,7 +403,7 @@ Il fine-tuning del modello è un processo in cui un modello preallenato, che ha 
 - **ZeRO**
   <br/> ZeRO è una forma di parallelismo dei dati efficiente dal punto di vista della memoria che consente di accedere alla memoria aggregata della GPU di tutti i dispositivi disponibili, senza l'inefficienza causata dalla replica dei dati nel parallelismo dei dati
 
-La libreria [transformers](https://huggingface.co/docs/transformers/index) di Hugging Face offre molteplici metodo per il training di algoritmi
+La libreria [transformers](https://huggingface.co/docs/transformers/index) di Hugging Face offre molteplici metodi per il training di algoritmi
 - Qui un [esempio](https://colab.research.google.com/drive/1tG9eqttfnqHoQqmsiacywUG9ilUhoiCk?usp=sharing#scrollTo=0Y99UKM_RGgu) di flusso per il fine-tuning di LLaMA
 
 Un framework piuttosto completo per il fine-tuning di LLM è [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl#axolotl)
