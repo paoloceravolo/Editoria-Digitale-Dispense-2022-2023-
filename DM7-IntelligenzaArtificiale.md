@@ -19,7 +19,7 @@ Questa tendenza si è rafforzata recentemente grazie ai successi e alla diffusio
 
 La diffusione dei Large Language Model (LLM) ha avuto un impatto significativo sull'editoria digitale, consentendo la generazione automatica di contenuti di vario genere
 - **Automazione della scrittura di contenuti**: automazione di una parte della produzione di contenuti editoriali, generalmente i più semplici, come resoconti finanziari, sportivi, descrizioni di prodotti …
-- Traduzione automatica di contenuti: tradurre testi in modo automatico e coerente, generalmente con la supervisione di un traduttore esperto
+- **Traduzione automatica di contenuti**: tradurre testi in modo automatico e coerente, generalmente con la supervisione di un traduttore esperto
 - **Revisione di testi**: dato un testo migliorare la fluidità espressiva, modificare lo stile, generare una versione sintetica del testo
 - **Generazione di suggerimenti creativi**: generare suggerimenti creativi per scrivere titoli accattivanti, introdurre storie o creare contenuti coinvolgenti
 - **Creazione di chatbot e assistenza virtuale**: sistemi per rispondere alle domande degli utenti, fornire informazioni e migliorare l'esperienza complessiva dell'utente
@@ -158,7 +158,7 @@ Approccio molto usato molto nei modelli linguistici per predire la parola succes
 ![Algoritmi di ML](img/LM7-IntelligenzaArtificiale/AlgoritmiPL.jpg)
 
 ### Percettrone
-Nel 1958 Frank Rosenblatt propose un algoritmo ispirato al comportamento delle sinapsi che chiamo **percettrone**.
+Nel 1958 Frank Rosenblatt propose un algoritmo ispirato al comportamento delle sinapsi che chiamò **percettrone**.
 
 Si tratta di entità con uno strato di ingresso ed uno di uscita ed una regola di apprendimento basata sulla minimizzazione dell’errore che in base alla valutazione sull'uscita effettiva della rete rispetto ad un dato ingresso altera i pesi delle connessioni (sinapsi) come differenza tra l'uscita effettiva e quella desiderata.
 
@@ -220,11 +220,14 @@ Se aggiungiamo dati al contesto molte soluzioni prodotte non sono più valide
 Precision (precisione) e Recall (recupero o richiamo), sono due comuni metriche di qualità di un sistema predittivo.
 La precisione può essere vista come una misura di esattezza o fedeltà, mentre il recupero è una misura di completezza.
 
+$`Precision=\frac{veroPositivo}{veroPositivo+falsoPositivo}`$
+
+$`Recall=\frac{veroPositivo}{veroPositivo+falsoNegativo}`$
 ![Precision e recall](img/LM7-IntelligenzaArtificiale/PrecisionRecall.png)
 
 ### Overfitting
 Nel valutare il grado di generalità del modello appreso:
-- Il modello si dice **sotto specificato (uderfitting)** se Precision e/o Recall sono basse
+- Il modello si dice **sotto specificato (underfitting)** se Precision e/o Recall sono basse
 - Il modello si dice **sovraspecificato (overfitting)** se è troppo legato agli esempi osservati; quindi, non funzionerà correttamente con dati di test diversi dai dati usati nella fase di addestramento 
 
 <img src="img/LM7-IntelligenzaArtificiale/OverfittingUnderfitting_a.png" width="350px"/>
@@ -248,7 +251,7 @@ classificazione il cui risultato è semplicemente la frequenza della classe più
 
 ![Zero Rule](img/LM7-IntelligenzaArtificiale/ZeroRule.webp)
 
-### Validazione stativa vs dinamica
+### Validazione statica vs dinamica
 Precision e Recall offrono una misura statica della qualità del processo di apprendimento ma questo è largamente insufficiente.
 
 > Sono rari i contesti nei quali un algoritmo addestrato si trova a lavorare sempre con gli stessi dati
@@ -272,7 +275,7 @@ Un criterio è dato dall’identificazioni di fattori moltiplicatori.
 10-30 il numero di feature modellate
 10-30 il numero di parametri dell’algoritmo
 
-## Aggiornamenro della conoscenza
+## Aggiornamento della conoscenza
 Il tema dell’aggiornamento della conoscenza è altresì critico:
 - Quanto è costoso per un algoritmo aggiornare il modello?
   - in termini di dimensione dei dati di addestramento (training set) o in termini di tempo
