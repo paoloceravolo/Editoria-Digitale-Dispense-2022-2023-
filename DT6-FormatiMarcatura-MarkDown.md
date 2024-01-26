@@ -17,7 +17,7 @@ Quando si crea un file formattato in Markdown, si aggiunge la sintassi di Markdo
 Markdown è un **linguaggio estremamente portabile**
 -Per un software è estremamente facile importarlo o esportarlo ed è quindi molto diffuso
 - È indipendente dalla piattaforma
-- Resiste alle evoluzione tecnologiche, tra molti anni sarà ancora supportato dal software
+- Resiste alle evoluzioni tecnologiche, tra molti anni sarà ancora supportato dal software
 - Consente di focalizzarsi sui contenuti, alcune dipendenze strutturali, rendendo la gestione degli aspetti di formattazione indipendente
 
 **contenuto, struttura e formattazione possono essere gestiti secondo cicli di vita indipendenti**

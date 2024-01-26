@@ -4,7 +4,7 @@
 
 La rivoluzione digitale ad oggi è una realtà affermata per quanto la sua spinta allo sviluppo non sia certamente compiuta, essa ha la caratteristica di trasformarsi continuamente, di espandersi progressivamente in aree diverse e di incrementare la produttività in un'ampia varietà di settori ed industrie, dalle comunicazioni fino alle più avanzate intelligenze artificiali. 
 
-I principali fattoti che differenziano l’attuale sviluppo economico rispetto al passato sono spesso identificati come : 
+I principali fattori che differenziano l’attuale sviluppo economico rispetto al passato sono spesso identificati come: 
 
 - **iperconnettività**
 - **apprendimento automatico**
@@ -115,7 +115,7 @@ XXI secolo: massimizzazione della convergenza tecnologica
 
 ## Standardizzazione
 
-Si possono distinguere diversi tipi di standard :
+Si possono distinguere diversi tipi di standard:
 
 - **Proprietari** vs. **non** **proprietari** (aperti)
 - **Prescrittivi** vs. **descrittivi**
@@ -160,7 +160,7 @@ Nazionali:
 
 - **UNI** (Ente Nazionale Italiano di Unificazione)
 - **DIN** (Deutsche Institut für Normung)
-- **ANSI** (AmericanNational Standard Institute)
+- **ANSI** (American National Standard Institute)
 
 Internazionali:
 
