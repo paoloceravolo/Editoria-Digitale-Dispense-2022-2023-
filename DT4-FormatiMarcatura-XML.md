@@ -9,6 +9,7 @@ In realtà si è imposto come formato di interscambio tra applicazioni
 - interoperabilità
 - portabilità
 - semantica dei dati
+
 Nelle applicazioni distribuite è oggi spesso sostituito da JSON
 - Migliore integrazione nel codice
 - Minore leggibilità per l’uomo
@@ -49,7 +50,9 @@ XML è un linguaggio di marcatura ispirato da SGML
 
 È stato progettato per descrivere dati, prescindendo completamente dalla loro presentazione.
 
-È estensibile, i tag non sono predefiniti, ed è quindi generico Un documento XML quando è associato ad un DTD o uno Schema è progettato per essere auto-descrittivo
+È estensibile, i tag non sono predefiniti, ed è quindi generico.
+
+Un documento XML quando è associato ad un DTD o uno Schema è progettato per essere auto-descrittivo.
 
 Nel mondo reale diversi sistemi contengono dati in formato non uniforme era quindi necessario uno standard per i formati di interscambio.
 
@@ -183,7 +186,7 @@ Indicatori di cardinalità:
 - zero o una occorrenza – 0..1 oppure ?
 - zero o più occorrenze – 0..* oppure *
 
-Se una dichiarazione di elemento utilizza la parola chiave ANY, l’elemento potrà avere qualsiasi tipo di contenuto disposto in un qualsiasi ordine :
+Se una dichiarazione di elemento utilizza la parola chiave ANY, l’elemento potrà avere qualsiasi tipo di contenuto disposto in un qualsiasi ordine:
 ``` <!ELEMENT TEST ANY>```
 
 Per dichiarare che un elemento non può avere alcun contenuto, si utilizza la parola chiave EMPTY
@@ -204,10 +207,10 @@ In un DTD, gli attributi vengono dichiarati utilizzando:
 - **CDDATA** : Un attributo di tipo CDATA utilizza dati generici in formato carattere.
 - **ENTITY** : Il valore dell'attributo fa riferimento a un'entità dichiarata nel DTD (argomento spiegato successivamente).
 - **ENTITIES** : è equivalente all'attributo ENTITY, ma consente l'utilizzo di valori separati da spazi.
-- **ID** : Il valore dell’attributo deve essere un **identificatore univoco**. In un documento XML, un solo attributo di tipo ID puo’ essere definito. Viceversa, il parser produce un errore.
-- **IDREF** : Il valore deve essere un riferimento a un ID associato ad un altro elemento del documento XML. Se l’attributo non corrisponde ad valore esistente, il parser produrrà un errore.
+- **ID** : Il valore dell’attributo deve essere un **identificatore univoco**. In un documento XML, un solo attributo di tipo ID può essere definito. Viceversa, il parser produce un errore.
+- **IDREF** : Il valore deve essere un riferimento a un ID associato ad un altro elemento del documento XML. Se l’attributo non corrisponde ad un valore esistente, il parser produrrà un errore.
 - **IDREFS** : È equivalente all’attributo IDREF, ma consente l’utilizzo di più valori separati da spazi.
-- **NMTOKEN** : Il valore dell’attributo puo’ contenere caratteri alfanumerici (numeri e lettere) e i caratteri "." (punto), "-" (trattino), "_" (underscore), ":" (due punti). Permette un controllo più fine su ciò che verrà specificato come valore dell'attributo. 
+- **NMTOKEN** : Il valore dell’attributo può contenere caratteri alfanumerici (numeri e lettere) e i caratteri "." (punto), "-" (trattino), "_" (underscore), ":" (due punti). Permette un controllo più fine su ciò che verrà specificato come valore dell'attributo. 
 - **NMTOKENS** : È equivalente all’attributo NMTOKEN, ma consente l’utilizzo di più valori separati da spazi. 
 - **Enumerated** : Il valore dell’attributo deve corrispondere a uno dei valori inclusi. Ad esempio: ```<!ATTLIST MyAttribute (valore1 | valore2)>```.  
 
@@ -269,7 +272,7 @@ dagli Schemi XML.
 
 XML Schema ha dei vantaggi rispetto DTD:
 - Sono adatti per futuri ampliamenti
-- Sono più completi ed dettagliati dei DTD
+- Sono più completi e dettagliati dei DTD
 - Sono documenti XML
 - Supportano i tipi di dati (datatypes)
 - Supportano i namespace
@@ -354,8 +357,8 @@ Indica inoltre che gli elementi appartenenti a questo namespace devono essere pr
 - Il frammento ```elementFormDefault=“qualified”``` indica che gli elementi usati nei documenti XML conformi a questo schema, hanno nomi qualificati
 
 ### Spazio dei nomi
-Il prefisso del spazio dei nomi, a meno che si tratti di xml o di **xmlns**, DEVE essere dichiarato:
-- In un attributo di dichiarazione del spazio dei nomi
+Il prefisso dello spazio dei nomi, a meno che si tratti di xml o di **xmlns**, DEVE essere dichiarato:
+- In un attributo di dichiarazione dello spazio dei nomi
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/stylesheets/rss.css"?>
@@ -382,7 +385,7 @@ Un elemento può essere dichiarato come
   - Elementi vuoti, elementi che contengono solo altri elementi elementi che contengono solo testo, elementi che contengono altri elementi e testo
 
 ### Elemento semplice
-La sintassi per definire un tipo semplice è : ```<xs:element name=“xxxx” type=“yyyy”/>```
+La sintassi per definire un tipo semplice è: ```<xs:element name=“xxxx” type=“yyyy”/>```
 
 Dove xxxx è il nome dell’elemento e yyyy è il tipo
 
@@ -401,7 +404,7 @@ Le rispettive definizioni saranno
 ```
 
 ### Tipi di dati comuni
-XML Schema ha 41 tipi di dati predefiniti, i più comuni ed usati sono :
+XML Schema ha 41 tipi di dati predefiniti, i più comuni ed usati sono:
 - xs:string
 - xs:decimal
 - xs:integer
@@ -606,7 +609,7 @@ Indicano quale deve essere l’ordine con cui devono apparire gli elementi.
 ### Indicatori di occorrenza
 Sono utilizzati per indicare quanti elementi possono comparire nel documento.
 
-Si noti che se non viene indicato, viene applicato un valore di 1 sia per ```minOccurs``` che per ```maxOccurs```.
+Si noti che, se non viene indicato, viene applicato un valore di 1 sia per ```minOccurs``` che per ```maxOccurs```.
 
 È possibile indicare che un elemento possa comparire infinite volte usando
 ```maxOccurs = “unbounded”```
@@ -647,7 +650,7 @@ Esistono due modi per riferire un complex type:
 La differenza è sottile:
 - _ref_ riferisce un elemento e quindi anche il suo nome
 - _type_ riferisce un tipo e quindi solo le sue componenti
-- Dichiarazioni globali e locali possono essere fatte in base dove si piazza la dichiarazione di complextype, se sotto la radice (sxhema) oppure all’interno di un altra dichiarazione
+- Dichiarazioni globali e locali possono essere fatte in base dove si piazza la dichiarazione di complextype, se sotto la radice (sxhema) oppure all’interno di un'altra dichiarazione
 ***Esempio XSD***
 ```xml
 <xsd: complexType name="Student">

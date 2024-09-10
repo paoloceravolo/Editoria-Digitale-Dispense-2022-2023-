@@ -84,12 +84,12 @@ Il censimento raccoglie metadati descrittivi sulla famiglia
   - Necessità di strumenti di validazione per verificare l’integrità del dato, la sua compatibilità con altri dati, l’autenticità
 
 ## Tipi di metadati
-- Ci sono diverse tipologie di metadati  
-  - Descrittivi    
-  - Strutturali    
-  - Amministrativi
-  - Tecnici    
-  - Utilizzo
+Ci sono diverse tipologie di metadati  
+- Descrittivi    
+- Strutturali    
+- Amministrativi
+- Tecnici    
+- Utilizzo
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/TipiDiMetadati.png" width="700">
 
 [Esempi](https://www.getty.edu/publications/intrometadata/setting-the-stage/)
@@ -106,14 +106,14 @@ Il censimento raccoglie metadati descrittivi sulla famiglia
 ## Classificazione multiple
 Ogni oggetto può essere classificato da diversi punti di vista e quindi essere descritto con diversi vocabolari controllati.
 - Un monumento classificato dal punto di vista della locazione geografica, dello stile architettonico, dell’uso, dei materiali usati...
-- Un *esempio* di classificazione multipla è data dall’Art & Architecture Thesaurus del Paul Getty Institute che si trova online: http://www.getty.edu/vow/AATHierarchy
+- Un *esempio* di classificazione multipla è dato dall’Art & Architecture Thesaurus del Paul Getty Institute che si trova online: http://www.getty.edu/vow/AATHierarchy
 
 ## Standard per metadati
 |     |     |
 | --- | --- |
 | __Standard di strutturazione dei dati__ | MARC (Machine-Readable Cataloging) Format, Encoded Archival Description (EAD), BIBFRAME (Bibliographic Framework), Dublin Core Metadata Element Set, Categories for the Description of Works of Art, VRA Core |
 | __Standard di valori dei dati (vocabolari controllati, thesauri, liste controllate)__ | Library of Congress Subject Headings, Name Authority File, and Thesaurus for Graphic Materials; Getty Art & Architecture Thesaurus, Union List of Artist Names (ULAN), and Thesaurus of Geographic Names; ICONCLASS; Medical |
-| __Standard di organizzazione sintattica dei dati (regole e codici di__ | Anglo-American Cataloguing Rules, Resource Description and Access, International Standard Bibliographic Description, Cataloging Cultural Objects, Describing Archives: A Content Standard |
+| __Standard di organizzazione sintattica dei dati (regole e codici di catalogazione)__ | Anglo-American Cataloguing Rules, Resource Description and Access, International Standard Bibliographic Description, Cataloging Cultural Objects, Describing Archives: A Content Standard |
 | __Formato dei dati/standard tecnici di interscambio__ | Resource Description Framework, MARC21, MARCXML, EAD XML DTD, METS, BIBFRAME, LIDO XML, Simple Dublin Core XML, Qualified Dublin Core XML, VRA Core 4.0 XML |
 
 ### Standard MARC
@@ -178,14 +178,14 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
    - Le informazioni, i parametri che si passano all’elemento
    - DC spesso suggerisce di usare specifici vocabolari controllati
  - Record
-   - L’insieme delle coppie Elemento/Valore, cioè le frasi che si possono usare per zescrivere le risorsa
+   - L’insieme delle coppie Elemento/Valore, cioè le frasi che si possono usare per descrivere la risorsa
 
 #### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
->Title: Monna Franky
+>Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Date: c. 1503-1506
 <br/> ....
@@ -205,9 +205,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 #### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Publisher:
 <br/> Contributor:
@@ -241,9 +241,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 ### *Esempio*
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisaVera.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: Leonardo da Vinci
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Date: c. 1503-1506
 <br/> Format: olio su legno di pioppo
@@ -253,9 +253,9 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 
 <img src="img/LM5-FlussiLavoroEditoriale-Metadati/EsempioMonnaLisa.jpg" width="200">
 
-> Title: Monna Franky
+> Title: Monna Lisa
 <br/> Creator: chi ha creato img digitale
-<br/> Subject: Franky del Giocondo
+<br/> Subject: Lisa del Giocondo
 <br/> Description: ritratto di donna
 <br/> Contributor: Leonardo da Vinci
 <br/> Publisher: Musée du Louvre
@@ -266,7 +266,7 @@ Un vocabolario controllato per controllare i termini che si possono usare nella 
 <br/> Relation: URI ad altra risorsa
 <br/> Rights: Musée du Louvre
 
-**Un record per l’originale, un record per l’immagine digitale e la relazione tra i due. L’immagine digitale è una rappresentazione dell’original**
+**Un record per l’originale, un record per l’immagine digitale e la relazione tra i due. L’immagine digitale è una rappresentazione dell’originale**
 
 ### Schema.org
 - Diversi motori di ricerca come Google, Bing, Yahoo sono in grado di interpretare le descrizioni di alcune tipologie di contenuti se seguono lo schema definito da schema.org
@@ -318,7 +318,8 @@ LCSH dal 1898 il prototipo di un sistema di metadati per la catalogazione del ma
 
 ## Ontologie
 Nell’ingegneria della conoscenza, la rappresentazione formale di un insieme di concetti in un determinato ambito.
-- Un insieme di termini di relazioni più complesse di quelle nei vocabolari controllati
+
+Un insieme di termini di relazioni più complesse di quelle nei vocabolari controllati
   - Sussunzione: super- o sub-class
   - Meronimia: part-of
   - Istanziazione: type-of
@@ -329,7 +330,9 @@ Nell’ingegneria della conoscenza, la rappresentazione formale di un insieme di
 
 ## Tesauri vs Ontologie
 Le ontologie sono tesauri con relazioni formali: esprimono sottoinsiemi della logica del primo ordine.
- - Nelle ontologie entità, relazioni e inferenze consentono di dedurre fatti non esplicitamente asseriti.
+
+Nelle ontologie entità, relazioni e inferenze consentono di dedurre fatti non esplicitamente asseriti.
+
 Le ontologie possono quindi essere usate in algoritmi, alcuni linguaggi
 - [OWL](https://www.w3.org/TR/owl-ref/)
 - [SWRL](https://www.w3.org/Submission/SWRL/)
@@ -351,20 +354,23 @@ Identificare un oggetto:
 > https://it.wikipedia.org/wiki/Luciana_Littizzetto
 
 Si tratta di associare un oggetto o risorsa ad un identificatore che potrà essere utilizzato in modo univoco all’interno del vocabolario.
+
 Molti sono i criteri che si possono usare per decidere cosa considerare individuo:
 - un oggetto indivisible
 - un’unità che non ammette riduzioni nel sistema di riferimento
 - un oggetto che ha una condizione di identità
 - un oggetto che è associato ad un identificatore
+
 Solitamente si considera individuo qualche cosa che permane (che identifichiamo all’interno di uno sfondo mutevole, o irrilevante, o composto da altri oggetti identificati)
 
 ## Classificare
 > https://it.wikipedia.org/wiki/Fabio_Fazio **type** https://it.wikipedia.org/wiki/Maschio
 > https://it.wikipedia.org/wiki/Luciana_Littizzetto **type**  https://it.wikipedia.org/wiki/Femmina
 
-Si tratta di affermare che un oggetto appartiene ad una classe di oggetti: ovvero **condivide con altri oggetti uno stesso insieme di proprietà**
+Si tratta di affermare che un oggetto appartiene ad una classe di oggetti: ovvero **condivide con altri oggetti uno stesso insieme di proprietà**.
 In una **buona classificazione** l’insieme di proprietà definito dalle classi dovrebbe essere:
 - reciprocamente esclusivo
 - congiuntamente esaustivo
 - pertinente
-In realtà quasi tutti i vocabolari includono diverse criteri di classificazione, diverse dimensioni o punti di osservazioni, quindi ammettono intersezioni tra le classi che appartengono a dimensioni diverse.
+
+In realtà quasi tutti i vocabolari includono diversi criteri di classificazione, diverse dimensioni o punti di osservazioni; quindi, ammettono intersezioni tra le classi che appartengono a dimensioni diverse.

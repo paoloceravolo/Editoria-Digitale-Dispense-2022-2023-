@@ -136,7 +136,7 @@ Una **codifica ISO del 1991** che permettere l'uso di caratteri nazionali europe
 
 #### ISO 8859/1
 
-Più comunemente **ISO Latin 1** è un estensione standard dell’ASCII che comprende un certo numero di caratteri degli alfabeti europei. È compatibile all’indietro con ASCII: estende i soli caratteri >127
+Più comunemente **ISO Latin 1** è un'estensione standard dell’ASCII che comprende un certo numero di caratteri degli alfabeti europei. È compatibile all’indietro con ASCII: estende i soli caratteri >127
 
 ## UNICODE
 
@@ -172,7 +172,7 @@ Se UNICODE è uno standard universale, in grado di rappresentare i caratteri di 
 - Il motivo principale è che i vecchi sistemi non si sono necessariamente evoluti contemporaneamente alla rivoluzione Unicode
 - Microsoft si è presa la libertà di creare le proprie tabelle di caratteri derivate dalle tabelle ISO-8859-x. <br/>
 Quindi, l'invio di un file di testo Windows a un server Linux o a un'applicazione proprietaria può facilmente generare disalineamenti
-- Data l’ampia numerosità di caratteri presenti in UNICODE, i font dei caratteri non sempre sono prodotti per l’intero set, quindi alcuni font possono essere applicati solo a specifici sottoinsiemi di UNICODE
+- Data l’ampia numerosità di caratteri presenti in UNICODE, i font dei caratteri non sempre sono prodotti per l’intero set; quindi, alcuni font possono essere applicati solo a specifici sottoinsiemi di UNICODE
 - **Byte Order Mark (BOM)** è una sequenza di byte UNICODE non stampabili posta all'inizio di un testo UNICODE per facilitarne l'interpretazione. <br/>
 BOM non è né standard né obbligatorio, ma rende più facile per le applicazioni compatibili determinare il sottotipo del formato Unicode e definire la direzione di lettura dei byte. <br/>
 Questo spesso causa problemi di compatibilità perché non tutte le applicazioni sanno come gestire BOM. Per le applicazioni non compatibili, questa sequenza di byte viene decodificata in ASCII esteso

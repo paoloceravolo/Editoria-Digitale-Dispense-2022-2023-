@@ -1,11 +1,11 @@
-# Libro Digitale
+# Libro Elettronico
 Il libro elettronico è un *documento digitale* per la lettura.
 
 Il formato principale prende il nome di **ePUB** ed è stato definito dal **W3C**, anche Kindle conosciuto come **MOBI** o **AZW3** è comunque importante.
 
 Questi documenti vengono distribuiti principalmente attraverso piattaforme chiuse accessibili mediante PC, dispositivi mobili o dispositivi dedicati.
 
-Questi formati competono con altre soluzioni che hanno maggiori vantaggi in termini di mantenibilità e interoperabilità, come i documenti collaborativi o i webbook.
+Questi formati competono con altre soluzioni che hanno maggiori vantaggi in termini di manutenibilità e interoperabilità, come i documenti collaborativi o i webbook.
 
 ## Modalità di lettura
 Ci sono diversi modelli di lettura che possono influenzare la percezione dell'utente e la fruibilità del contenuto di un testo.
@@ -13,7 +13,7 @@ Ci sono diversi modelli di lettura che possono influenzare la percezione dell'ut
 ### Lettura sequenziale
 È il modello di lettura più tradizionale, in cui gli utenti seguono un flusso lineare di contenuti da una pagina o schermata all'altra.
 
-Questo modello è tipico per i libri stampati e molti ebook digitali. È adatto sopratutto alla narrativa o alla saggistica divulgativa.
+Questo modello è tipico per i libri stampati e molti ebook digitali. È adatto soprattutto alla narrativa o alla saggistica divulgativa.
 
 ### Lettura non lineare
 In questo modello, gli utenti possono accedere ai contenuti in modo non sequenziale. Questo si realizza attraverso strumenti di ipertestualità, collegamenti interni o menu di navigazione che consentono agli utenti di saltare direttamente a sezioni specifiche del contenuto.
@@ -58,7 +58,7 @@ Oltre ai tradizionali librogame, i giochi di enigmi e rompicapi oggi possono esi
 
 ## Interfaccia
 
-Le informazioni contenute all'interno del'testo vengono proposte attraverso un interfaccia che ha l'obbiettivo di replicare l'esperienza di lettura di un testo su carta.
+Le informazioni contenute all'interno del testo vengono proposte attraverso un'interfaccia che ha l'obbiettivo di replicare l'esperienza di lettura di un testo su carta.
 
 Alcune funzionalità riprodotte sono:
 
@@ -164,11 +164,11 @@ Alcuni elementi di adattamento sono dati da:
 ### Formati proprietari
 - *LIT*, Il formato deriva dall’OeBPS, a cui aggiunge sistemi di protezione del contenuto di vario livello
 - *Mobipocket*, si basa sullo standard OeBPS, utilizzando documenti in XHTML e permettendo anche l’inclusione di JavaScript e interrogazioni SQL
-- *Kindle*, Il formato AZW è sostanzialmente il formato Mobipocket con uno schema di erente per la generazione del numero seriale, inoltre i le sono protetti da uno speciale sistema DRM
+- *Kindle*, Il formato AZW è sostanzialmente il formato Mobipocket con uno schema di erente per la generazione del numero seriale, inoltre i file sono protetti da uno speciale sistema DRM
 - *Multi-Touch* (.iBooks), si caratterizza per l’interazione con elementi multimediali quali gallerie fotogra che, video, diagrammi interattivi, oggetti 3D, quiz. Usato per prodotti con un grado avanzato di interazione come libri di testo, libri di cucina, libri di storia e libri illustrati
 
 ### EPUB
-*ePUB* è uno standard aperto, un aggregazione di tecnologie diverse e già esistenti.
+*ePUB* è uno standard aperto, un'aggregazione di tecnologie diverse e già esistenti.
 
 Il suo nome completo è **Electronic Publication** ed è definito da *International Digital Publishing Forum*
 
@@ -214,7 +214,7 @@ Formato proprietario mobipocket. Estensione .mobi
 - Evolve in KF8, Kindle Format 8, dal 2011 con l’uscita di Kindle Fire
 - Supporta HTML5 e CSS3
 - Un sistema proprietario di protezione dei diritti DRM
-- Vincola il le all’id dello strumento registrato su Amazon: no a 6 sullo stesso account per condivisioni familiari e personali su più device
+- Vincola il file all’id dello strumento registrato su Amazon: no a 6 sullo stesso account per condivisioni familiari e personali su più device
 - Se i device di lettura vengono dismessi occorre de-registrarsi
 
 ### Enhanced eBook
@@ -248,7 +248,8 @@ I più comuni usati con eBook sono
 Nel caso di Adobe DRM c’è una più ampia compatibilità
 
 Si può realizzare una forma di social DRM applicando strumenti di digital watermarking.
-Ad *esempio* con l'aggiunta di informazioni visibili o invisibili per scoraggiare la copia e la circolazione.
+
+Ad *esempio*, con l'aggiunta di informazioni visibili o invisibili per scoraggiare la copia e la circolazione.
 
 ## Fattori di successo
 - Sviluppati per la lettura su dispositive mobile. Serve lo stesso confort e libertà del libro di carta
@@ -256,7 +257,7 @@ Ad *esempio* con l'aggiunta di informazioni visibili o invisibili per scoraggiar
 - *Lettura sia online che offline*. HTML sta solo ora (versione 5) aprendosi alla leggibilità o ine che è il vantaggio tradizionale degli eBook
 - *Compattezza*. Per poter essere salvati anche su dispositive modesti aumentando l’audience potenziale
 - *Tecnologie aperte e standard*. Attualmente si basano su HTML aprendo ad una platea vasta di persone con le competenze giuste per contribuire
-- *Produzione economicamente non dispendiosa*. Sia la conversion dal cartaceo che la produzione di per se
+- *Produzione economicamente non dispendiosa*. Sia la conversion dal cartaceo che la produzione di per sé
 - *Distribuzione diffusa*. Negozio di eBook globali. Facili da procurare
 
 ## Fattori critici
@@ -276,7 +277,7 @@ Microsoft ha reso disponibile in forma di preview la prima build di Fluid Framew
 - Dividere il documento in più blocchi collaborativi, per poi
   analizzarli e modi cati da più App in tempo reale
 - Documenti tradotti contemporaneamente in più lingue
-- Fluid potrà interfacciarsi con Cortana o con altri servizi di intelligenza artifciale, cosi da offrire immagini, video o altri dati basati sui contenuti scritti nel documento
+- Fluid potrà interfacciarsi con Cortana o con altri servizi di intelligenza artifciale, così da offrire immagini, video o altri dati basati sui contenuti scritti nel documento
 
 ### Video DEMO
 [![Video della demo di Fluid Framework](https://img.youtube.com/vi/RMzXmkrlFNg/0.jpg)](https://www.youtube.com/watch?v=RMzXmkrlFNg)
@@ -285,7 +286,7 @@ Microsoft ha reso disponibile in forma di preview la prima build di Fluid Framew
 InDesign Creative Cloud di Adobe
 - leader mondiale nel mercato del Desktop publishing
 - Strumenti per l’impaginazione e stampa su carta e creazione di documenti e libri digitali
-- Importare le prodotti con InDesign o Word
+- Importare i prodotti con InDesign o Word
 - Applicare gli stili in InDesign, molto importante per l’ottimizzazione del codice
 - Definire la sequenza degli elementi
 - Esportare nel formato .ePUB o KF8 per Kindle
@@ -341,7 +342,7 @@ Un ePub editor multipiattaforma libero, open source
 ## LULU
 
 - Lulu è una casa editrice on demand. Nasce nel 2002 in Canada per iniziativa di Bob Young, fondatore anche di Red Hat
-- Lulu fornisce agli autori un sistema automatizzato per la produzione editoriale, dalla creazione della copertina al formato del libro; ma si possono creare anche ebook, calendari e album fotografici
+- Lulu fornisce agli autori un sistema automatizzato per la produzione editoriale, dalla creazione della copertina al formato del libro, ma si possono creare anche ebook, calendari e album fotografici
 - Nel 2006 Lulu ha allargato la propria attività all'Europa
 <img src="img/LM6-LibroElettronico/LULU.png" />
 
@@ -374,7 +375,7 @@ Esistono numerose applicazioni per leggere e valutare un prodotto
 AZARDI, 43.1 del 2016, InfoGrid Pacific
 - ePUB3 reader per desktop
 - Per tutti i sistemi operativi Linux, Mac e Windows
-- Supporta ePub3 e ePub a layout sso, JavaScript e SMIL, HTML5, XHTML5, audio mp3, video mp4
+- Supporta ePub3 ed ePub a layout sso, JavaScript e SMIL, HTML5, XHTML5, audio mp3, video mp4
 - Per ottimare il codice applicare gli stili nei le che importate, e definire la sequenza degli elementi
 - Esportare nel formato .epub o KF8 per Kindle
 

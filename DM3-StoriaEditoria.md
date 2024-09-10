@@ -7,14 +7,14 @@ Le caratteristiche principali di questa invenzione furono:
 
 - i caratteri mobili, forgiati in metallo tenero e fondibile
 
-- l'inchiostro utilizzato, non più ad acqua, ma ad l'olio
+- l'inchiostro utilizzato, non più ad acqua, ma ad olio
 
 - l'utilizzo del torchio tipografico, modellato sul torchio da vino, il quale permetteva di applicare efficacemente e con pressione uniforme l'inchiostro sulla pagina.
 
 Grazie a queste caratteristiche la sua tecnica in breve tempo si diffuse in tutta Europa.
 
 L'Italia ebbe un compito importante nella diffusione dell'industria dell'editoria, in particolare **Venezia**,  che viene considerata la **prima capitale dell’industria editoriale**.
-Questo fu possibile grazie alle sue  numerose rotte commerciali, la presenza di grossi capitali, di varie comunità nazionali e l’assenza di censura.
+Questo fu possibile grazie alle sue numerose rotte commerciali, la presenza di grossi capitali, di varie comunità nazionali e l’assenza di censura.
 
 - Nel ‘500 a Venezia si stampava la metà dei libri pubblicati in tutta Europa.
 
@@ -33,13 +33,13 @@ Tra la fine del ‘400 e la prima metà del ‘500 a Venezia furono attivi cent
 ​	![MappaEditoria](img/LM3-StoriaEditoria/diffusioneEditoria.jpeg)
 
 Nella seconda metà del ‘500 la leadership nella pubblicazione di libri passò per un certo periodo ai Paesi Bassi.
-Ad esempio la serie di testi a duodecimo (di piccolo formato) dei classici latini che gli Elzeviri (casa fondata nel 1593) iniziarono a pubblicare nel 1629 era più che all'altezza delle precedenti edizioni Aldine in termini di qualità ma era proposta a un prezzo più contenuto.
+Ad esempio, la serie di testi a duodecimo (di piccolo formato) dei classici latini che gli Elzeviri (casa fondata nel 1593) iniziarono a pubblicare nel 1629 era più che all'altezza delle precedenti edizioni Aldine in termini di qualità ma era proposta a un prezzo più contenuto.
 
 Anche la Francia si affermò come sede di importanti case di stampa, soprattutto a Parigi in collegamento con la Sorbona, la preferenza per i caratteri romanici e l’immaginazione Aldina della scuola francese contribuì all’affermazione di questo modello nei confronti dello stile gotico sviluppatosi nelle zone di influenza tedesca.
 
 In Spagna invece la stampa arriva tramite la Germania, attraverso la compagnai Ravensburg che aveva una base a Valencia, si diffonde poi a Madrid, a Seviglia, Barcellona, Saragozza e Salamanca.
 
-In Inghilterra questa nuova industria è inizialmente marginale, i caratteri e la carta per le stamperia verranno importati dal continente fino al 1567.
+In Inghilterra questa nuova industria è inizialmente marginale, i caratteri e la carta per le stamperie verranno importati dal continente fino al 1567.
 
 Quasi immediato fu l’intervento legislativo per governare questo nuovo fenomeno, dapprima soprattutto a scopi di censura in seguito per regolarne i diritti economici.
 
@@ -56,11 +56,11 @@ L’Illuminismo è periodo di grande fermento
 
 Il Romanticismo rafforza il valore dell’opera e dell’autore come strumenti di costruzione dello spirito nazionale. 
 
-Il novecento inizierà a mettere in discussione questi valori, pur continuando a praticarli. 
+Il Novecento inizierà a mettere in discussione questi valori, pur continuando a praticarli. 
 
 Il **romanzo**, come tutte le cose, non nasce all’improvviso, la sua storia è lunga: epica antica e medievale, *La storia vera* di Luciano di Samosata, II Sec., novelle medievali - *Il Decameron* 1353, *Garagantua e Pantagruel* di Rablais 1532, *Don Chisciotte della Mancia* 1615
 
-Il **romanzo moderno** è espressione dell’illuminismo e delle sue evoluzioni culturali: ascesa della borghesia, inizio della forme costituzionali di governo, diffusione della scolarità
+Il **romanzo moderno** è espressione dell’illuminismo e delle sue evoluzioni culturali: ascesa della borghesia, inizio delle forme costituzionali di governo, diffusione della scolarità
 
 - Le avventure di Robison Crusoe di Defoe 1719
 - I viaggi di Gulliver di Swift 1734
@@ -81,7 +81,7 @@ Alcuni importanti riflessi sono:
 
 ## Copyright e Diritto d'Autore
 
-L’editoria è un’industria orientata alla creazione e commercializzazione di prodotti ma non segue del tutto le regole del mercato perché al prodotto culturale è **attribuito un valore sociale**, ad esempio il prezzo è fissato per tutti i punti di vendita, l’IVA è agevolata.
+L’editoria è un’industria orientata alla creazione e commercializzazione di prodotti ma non segue del tutto le regole del mercato perché al prodotto culturale è **attribuito un valore sociale**, ad esempio il prezzo è fissato per tutti i punti di vendita, l’IVA è agevolata.
 
 Questo tipo di produzione deve inoltre inserirsi all’interno di un quadro normativo particolare: **il diritto d’autore.**
 
@@ -94,7 +94,7 @@ Prime leggi sul diritto d’autore sono del 1710 in Inghilterra, in molti paesi 
 - Regno d’Italia - 1865 - 1882 - 1925
 - Convenzione di Berna per la protezione delle opere letterarie e artistiche (CUB) - 1886
 
-La normativa vigente in Italia è del 22 aprile 1941 ma ha subito diverse revisioni anche perché a livello di UE sono stati fatti interventi di armonizzazione delle normative degli stati membri nel 1993.
+La normativa vigente in Italia è del 22 aprile 1941 ma ha subito diverse revisioni anche perché a livello di UE sono stati fatti interventi di armonizzazione delle normative degli stati membri nel 1993.
 
 Convenzione internazionale sul diritto d’autore - trattato OMPI - è in vigore dal 2002.
 
@@ -108,7 +108,7 @@ L’UE ha stabilito che lo sfruttamento economico è valido per 70 dopo la mort
 
 La direttiva UE del 17 aprile 2019 aggiorna la norma al mercato digitale. Per quanto riguarda le piattaforme di condivisione di contenuti online. In linea di principio, dovranno ottenere una licenza per le opere protette dal diritto d’autore e devono garantire ai titolari dei diritti di intervenire. Al tempo stesso, la direttiva consente agli utenti di generare e caricare liberamente contenuti per finalità di citazione, critica, rassegna, caricatura o parodia.
 
-Anche gli editori devono rispettare il GDPR. Raccogliere dati personali attraverso il consenso e rispettare il diritto all’oblio Il fruitore ha il diritto alla cancellazione dei propri dati personali, quindi i titolari hanno l’obbligo di informare della richiesta di cancellazione anche altre realtà che ne hanno fatto uso.
+Anche gli editori devono rispettare il GDPR. Raccogliere dati personali attraverso il consenso e rispettare il diritto all’oblio Il fruitore ha il diritto alla cancellazione dei propri dati personali; quindi, i titolari hanno l’obbligo di informare della richiesta di cancellazione anche altre realtà che ne hanno fatto uso.
 
 ## L'Opera
 
@@ -132,7 +132,7 @@ I media non vanno studiati solo per quanto riguarda i contenuti ma per la forma 
 
 **U. Eco *Opera Aperta* 1962**
 
-Il contenuto di un opera non è pienamente espresso nell’opera stessa, perché sia espresso richiede la d’operazione del lettore che deve riempire gli spazi di non detto attraverso la sua conoscenza enciclopedica e la sua interpretazione.
+Il contenuto di un'opera non è pienamente espresso nell’opera stessa, perché sia espresso richiede la d’operazione del lettore che deve riempire gli spazi di non detto attraverso la sua conoscenza enciclopedica e la sua interpretazione.
 
 **M. Bolter *Lo spazio dello scrivere* 1991**
 
@@ -190,7 +190,7 @@ Si definiscono nuovi quadri normativi
 
 - revisione al diritto d’autore
 
-Le strategie per affrontare questo sfide sono:
+Le strategie per affrontare queste sfide sono:
 
 - **Multicanalità**
 - **Coda lunga**
